@@ -1,0 +1,113 @@
+{
+  "id": "second-person-rules-horror-choice-cliffhanger",
+  "source": "https://x.com/Vynqorxe/status/2120209420273512670",
+  "lengthS": 120.266,
+  "language": "en",
+  "summary": "A second-person ('you') horror story told in short narrated lines with big bold captions. The viewer wakes up somewhere eerie, a mysterious stranger gives them survival rules, then a monster and a fake voice of a loved one test those rules. A two-way choice cliffhanger asks viewers to vote in the comments to decide the next part. It is shown as a split screen beside a channel-stats panel with view counts, which works as social proof.",
+  "beats": [
+    {
+      "t": "0-4s",
+      "role": "hook",
+      "pattern": "Narrator speaks in the second person as the hero wakes up alone on a night vehicle. The first frame shows a big bold story title with 'Part 1', an in-world clock and a passenger counter in the HUD. The right half of the split screen shows a stats dashboard with a huge total view count, so the hook is both the story and the proof that the series is popular."
+    },
+    {
+      "t": "4-18s",
+      "role": "setup",
+      "pattern": "Quick cuts set up the eerie scene: an empty interior, many abandoned glowing objects all ringing at once, and a ringing phone with a 'missed calls' counter. One key word per caption is highlighted in red. Ringing sound effects play under the calm, low narration."
+    },
+    {
+      "t": "18-35s",
+      "role": "build",
+      "pattern": "Push-in to a silhouette with glowing eyes, then reveal a quiet stranger sitting knee-to-knee with the hero. The passenger counter goes up. The hero checks a phone map and learns they missed their stop long ago. The PA speaker glows red and announces that the vehicle does not stop. Close-ups cut between the hero's worried face and the stranger's tired stare."
+    },
+    {
+      "t": "35-53s",
+      "role": "build",
+      "pattern": "The stranger holds up a handwritten note with three numbered survival rules. Each rule appears as a 'Survival Rule #N' card overlay while the narrator reads it. The rules are setups the story will pay off later."
+    },
+    {
+      "t": "53-60s",
+      "role": "twist",
+      "pattern": "The stranger leans in and whispers the hero's name, which the hero never said. Smash cut to the hero's wide eyes with the key words in red. The helper suddenly looks untrustworthy too."
+    },
+    {
+      "t": "60-80s",
+      "role": "build",
+      "pattern": "Lights go out one section at a time until only the hero's spot is lit. The camera goes to the dark end, where a tall red-lit figure with a glowing jagged grin stands. The passenger counter goes up again. It asks for tickets, which is the danger Rule 2 warned about. The stranger doesn't turn around and only whispers."
+    },
+    {
+      "t": "80-94s",
+      "role": "twist",
+      "pattern": "One of the abandoned phones picks up by itself. A loved one's voice (the 'mom' contact) asks sweetly for the hero's name and keeps pushing. This tests Rule 3. The camera cuts between the phone on the floor and the hero's scared face, then the stranger grabs the hero's wrist."
+    },
+    {
+      "t": "94-108s",
+      "role": "build",
+      "pattern": "The PA announces the next stop with a garbled station name over the door. The doors slide open onto total darkness, and the stranger urgently warns the hero not to get off. The shots are slow and centered on the doorway."
+    },
+    {
+      "t": "108-114s",
+      "role": "payoff",
+      "pattern": "A white-gloved hand lands on the hero's shoulder from off-screen. Jump scare: the grinning monster pops up right behind the hero's head and repeats its ticket demand. Stinger sound effect."
+    },
+    {
+      "t": "114-120s",
+      "role": "cta",
+      "pattern": "End card with 'Part 2' and a question about the choice. Two numbered options point to the open door and to staying seated, with the text 'comment 1 or 2, most votes decides the next part'. The story stops unresolved."
+    }
+  ],
+  "whyViral": "The second-person narration puts the viewer inside the story from the first second. The split-screen stats panel with millions of views gives instant social proof and curiosity. Every caption is short and punchy with one word highlighted, so it's easy to watch with the sound off. The numbered survival rules work like a game. Each rule is set up and then broken or tested (the voice asking for your name, the ticket demand), which rewards attention and makes people rewatch to catch details. Escalation keeps coming every few seconds: the passenger counter goes up, the lights go out, an untrustworthy helper, and a familiar voice turned against you. The jump scare is held until just before the end. The choice CTA ('comment 1 or 2') leaves it on a cliffhanger, drives comments that boost the algorithm, and sets up a series so viewers come back for the next part.",
+  "cast": [
+    {
+      "role": "the you-protagonist",
+      "traits": "ordinary, sleepy then terrified, mostly silent, wide-eyed reaction close-ups, stands in for the viewer"
+    },
+    {
+      "role": "the cryptic helper",
+      "traits": "old, calm, tired-eyed, gives the survival rules, mysterious and possibly untrustworthy, never turns around"
+    },
+    {
+      "role": "the monster conductor",
+      "traits": "tall, faceless in shadow, glowing jagged grin, white gloves, politely demands tickets, red-lit"
+    },
+    {
+      "role": "the fake loved one",
+      "traits": "voice only through a phone, sweet and coaxing, keeps asking for the hero's name"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "fall-asleep",
+      "wake-up-startled",
+      "look-around",
+      "check-phone",
+      "stare",
+      "hold-up-note",
+      "lean-in-whisper",
+      "wide-eyed-fear",
+      "grab-wrist",
+      "stand-in-shadow",
+      "creepy-grin",
+      "phone-ring",
+      "phone-auto-answer",
+      "hand-on-shoulder",
+      "jump-scare",
+      "doors-slide-open",
+      "lights-go-out-sequence"
+    ],
+    "settings": [
+      "night-subway-car-interior",
+      "subway-car-dark-end",
+      "subway-door-dark-platform",
+      "phone-screen-incoming-call",
+      "phone-screen-route-map",
+      "pa-speaker-closeup",
+      "handwritten-rules-note",
+      "survival-rule-card-overlay",
+      "hud-clock-and-passenger-counter",
+      "split-screen-stats-dashboard",
+      "choice-poll-end-card"
+    ]
+  },
+  "score": null
+}

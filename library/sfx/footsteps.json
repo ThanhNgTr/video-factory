@@ -1,0 +1,6 @@
+{
+  "id": "footsteps",
+  "file": "footsteps.wav",
+  "seconds": 1.6,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

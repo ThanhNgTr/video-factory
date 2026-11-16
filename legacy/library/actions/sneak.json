@@ -1,0 +1,6 @@
+{ "id": "sneak", "dur": 1.2, "loop": true, "keys": [
+  { "t": 0, "sy": 0.9, "sx": 1.06, "rot": 6, "legL": 18, "legR": -18, "armL": 105, "armR": 65, "y": 0, "face": "smug" },
+  { "t": 0.25, "legL": 0, "legR": 0, "y": -0.03 },
+  { "t": 0.5, "legL": -18, "legR": 18, "armL": 65, "armR": 105, "y": 0 },
+  { "t": 0.75, "legL": 0, "legR": 0, "y": -0.03 },
+  { "t": 1, "legL": 18, "legR": -18, "armL": 105, "armR": 65, "y": 0 } ] }

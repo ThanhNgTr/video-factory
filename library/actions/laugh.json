@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "laugh",
+  "dur": 0.5,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "rot": -4,
+      "sx": 1,
+      "sy": 1,
+      "armL": 40,
+      "armR": 40,
+      "face": "happy"
+    },
+    {
+      "t": 0.5,
+      "y": 0.01,
+      "rot": 4,
+      "sx": 1.05,
+      "sy": 0.93
+    },
+    {
+      "t": 1,
+      "y": 0,
+      "rot": -4,
+      "sx": 1,
+      "sy": 1
+    }
+  ]
+}

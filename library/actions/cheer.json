@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "cheer",
+  "dur": 0.5,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "y": 0,
+      "sx": 1.05,
+      "sy": 0.92,
+      "armL": 135,
+      "armR": 135,
+      "legL": 0,
+      "legR": 0,
+      "face": "happy"
+    },
+    {
+      "t": 0.5,
+      "y": -0.15,
+      "sx": 0.96,
+      "sy": 1.06,
+      "armL": 158,
+      "armR": 158,
+      "legL": 15,
+      "legR": 15
+    },
+    {
+      "t": 1,
+      "y": 0,
+      "sx": 1.05,
+      "sy": 0.92,
+      "armL": 135,
+      "armR": 135,
+      "legL": 0,
+      "legR": 0
+    }
+  ]
+}

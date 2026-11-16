@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "idle",
+  "dur": 2,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "sx": 1,
+      "sy": 1,
+      "armL": 20,
+      "armR": 20
+    },
+    {
+      "t": 0.5,
+      "sx": 0.99,
+      "sy": 1.03,
+      "armL": 25,
+      "armR": 25
+    },
+    {
+      "t": 1,
+      "sx": 1,
+      "sy": 1,
+      "armL": 20,
+      "armR": 20
+    }
+  ]
+}

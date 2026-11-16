@@ -1,0 +1,5 @@
+{ "id": "facepalm", "dur": 0.9, "loop": false, "keys": [
+  { "t": 0, "armL": 20, "armR": 20, "rot": 0, "sy": 1, "sx": 1, "face": "sad" },
+  { "t": 0.35, "armL": 168, "armR": 168, "rot": -6, "sy": 0.97, "sx": 1.02 },
+  { "t": 0.6, "armL": 162, "armR": 165, "rot": -9 },
+  { "t": 1, "armL": 165, "armR": 165, "rot": -7, "sy": 0.96, "sx": 1.03 } ] }

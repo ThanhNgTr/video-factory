@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "series",
+  "kind": "series",
+  "lengthS": {
+    "min": 60,
+    "max": 130
+  },
+  "beats": {
+    "min": 14,
+    "max": 26
+  },
+  "maxSpokenChars": 1300,
+  "rules": [
+    "An episodic second-person survival mystery: the narrator talks to 'you'; the viewer IS the protagonist. Most lines are narrator lines; characters speak rarely, short and unsettling.",
+    "In every line wrap 1-3 key words in *asterisks* (they render highlighted). No emoji.",
+    "Beat 1 is a cold open: the most intriguing statement, under 3 seconds, with an on-screen text card.",
+    "Set hud.title to a short game-like label (e.g. 'NIGHT 1 - FRONT DESK') and hud.counterLabel to what the viewer tracks. Set clock on beat 1 and advance it; set counter whenever it changes.",
+    "Give the viewer 2-4 numbered survival rules, each its own beat with a text card like 'RULE 1: *Never* say your name' while the narrator reads it. Later beats must test or break those rules.",
+    "Escalate: rules -> something slightly wrong -> clearly wrong. Mix narrated beats with silent tension beats (no lines).",
+    "Ask the viewer to decide or spot the anomaly at least once (drives comments).",
+    "Build to one scare near the end (tension 'scary').",
+    "End on a cliffhanger with a two-option choice: fill `choice` and make the last beat's text 'COMMENT *1* OR *2*?'. The most-voted option decides the next part.",
+    "Keep all spoken text together under the character budget; speech runs about 14 characters per second."
+  ],
+  "defaultMood": "horror"
+}

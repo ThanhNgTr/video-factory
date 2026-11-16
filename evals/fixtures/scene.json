@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "title": "The Blank Badge",
+  "mood": "horror",
+  "hud": { "title": "NIGHT 1 - FRONT DESK", "counterLabel": "GUESTS" },
+  "music": { "mood": "horror" },
+  "shots": [
+    {
+      "id": "s01",
+      "beat": "hook",
+      "set": "hotel-lobby",
+      "camera": "push",
+      "cast": [{ "id": "night-clerk", "spot": "behind-desk", "action": "idle", "face": "sleepy" }],
+      "line": { "who": "narrator", "text": "This hotel has *no floor 13*. Tonight, someone asks for it." },
+      "text": "THE BLANK BADGE",
+      "clock": "11:58 PM",
+      "counter": 0,
+      "dur": 3,
+      "lighting": "normal",
+      "sfx": [{ "id": "heartbeat", "at": 0 }]
+    },
+    {
+      "id": "s02",
+      "beat": "manager",
+      "set": "hotel-lobby",
+      "camera": "wide",
+      "cast": [
+        { "id": "night-clerk", "spot": "behind-desk", "action": "idle" },
+        { "id": "old-manager", "spot": "entrance", "toSpot": "at-desk-side", "action": "walk" }
+      ],
+      "line": { "who": "narrator", "text": "At midnight, the *old manager* walks in. He keeps his coat on." },
+      "clock": "12:00 AM",
+      "dur": 4,
+      "lighting": "normal",
+      "sfx": [{ "id": "footsteps", "at": 0.3 }]
+    },
+    {
+      "id": "s03",
+      "beat": "rule",
+      "set": "hotel-lobby",
+      "camera": "over-shoulder",
+      "focus": "old-manager",
+      "cast": [
+        { "id": "night-clerk", "spot": "behind-desk", "action": "nod" },
+        { "id": "old-manager", "spot": "at-desk-side", "action": "point" }
+      ],
+      "line": { "who": "old-manager", "text": "One rule. *Never* say your name." },
+      "text": "RULE 1: *Never* say your name",
+      "dur": 3,
+      "lighting": "normal",
+      "sfx": []
+    },
+    {
+      "id": "s04",
+      "beat": "hallway",
+      "set": "hotel-hallway",
+      "camera": "push",
+      "cast": [],
+      "line": { "who": "narrator", "text": "Long halls. Dim lights. *Every door* closed." },
+      "clock": "1:47 AM",
+      "dur": 3,
+      "lighting": "flicker",
+      "sfx": [{ "id": "flicker", "at": 1.0 }]
+    },
+    {
+      "id": "s05",
+      "beat": "girl",
+      "set": "hotel-lobby",
+      "camera": "medium",
+      "focus": "raincoat-girl",
+      "cast": [
+        { "id": "night-clerk", "spot": "behind-desk", "action": "shock", "face": "shock" },
+        { "id": "raincoat-girl", "spot": "at-desk", "action": "talk" }
+      ],
+      "line": { "who": "raincoat-girl", "text": "Room 1304, please. What is *your name*?" },
+      "counter": 1,
+      "dur": 3,
+      "lighting": "dim",
+      "sfx": [{ "id": "thud", "at": 0.1 }]
+    },
+    {
+      "id": "s06",
+      "beat": "almost",
+      "set": "hotel-lobby",
+      "camera": "closeup",
+      "focus": "night-clerk",
+      "cast": [
+        { "id": "night-clerk", "spot": "behind-desk", "action": "tremble", "face": "shock" },
+        { "id": "raincoat-girl", "spot": "at-desk", "action": "idle" }
+      ],
+      "line": { "who": "narrator", "text": "You open your mouth. And the *lights go out*." },
+      "dur": 3,
+      "lighting": "flicker",
+      "sfx": [{ "id": "stinger", "at": 2.2 }]
+    },
+    {
+      "id": "s07",
+      "beat": "end",
+      "set": "hotel-lobby",
+      "camera": "wide",
+      "cast": [],
+      "text": "COMMENT *1* OR *2*?",
+      "dur": 4,
+      "lighting": "blackout",
+      "sfx": []
+    }
+  ]
+}

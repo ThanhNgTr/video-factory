@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "old-manager",
+  "name": "Mr. Harlow",
+  "genre": "people",
+  "build": {
+    "height": 1,
+    "width": 1,
+    "head": 1
+  },
+  "skin": "#e8b48f",
+  "hair": {
+    "style": "bald-sides",
+    "color": "#e9e9e9"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#2f3446",
+    "pants": "#1f222c",
+    "accent": "#7a1f24"
+  },
+  "wear": ["top-hat", "scarf"],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-12Hz",
+    "rate": "-8%"
+  },
+  "personality": "the old night manager; calm, tired, knows the rules by heart and never explains why"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "fall",
+  "dur": 0.7,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "y": 0,
+      "rot": 0,
+      "face": "shock"
+    },
+    {
+      "t": 0.3,
+      "y": -0.1,
+      "rot": -15,
+      "armL": 120,
+      "armR": 120
+    },
+    {
+      "t": 1,
+      "y": 0.28,
+      "rot": 90,
+      "armL": 160,
+      "armR": 100,
+      "legL": 20,
+      "legR": -10
+    }
+  ]
+}

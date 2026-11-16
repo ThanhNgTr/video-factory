@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "point",
+  "dur": 0.5,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "armR": 20
+    },
+    {
+      "t": 0.4,
+      "rot": -4,
+      "armR": 100
+    },
+    {
+      "t": 1,
+      "rot": 0,
+      "armR": 90
+    }
+  ]
+}

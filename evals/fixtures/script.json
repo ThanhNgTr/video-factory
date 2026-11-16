@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "format": "skit",
+  "title": "The Blank Badge",
+  "summary": "Sam, the new night clerk, is given one rule by Mr. Harlow: never say your name. A soaked girl asks for his name anyway. Sam almost answers, and the lights go out. Cliffhanger: 1 answer her, 2 stay silent.",
+  "mood": "horror",
+  "hud": { "title": "NIGHT 1 - FRONT DESK", "counterLabel": "GUESTS" },
+  "cast": ["night-clerk", "old-manager", "raincoat-girl"],
+  "beats": [
+    {
+      "id": "hook",
+      "role": "hook",
+      "action": "Sam alone behind the desk at midnight.",
+      "cast": ["night-clerk"],
+      "lines": [{ "who": "narrator", "text": "This hotel has *no floor 13*. Tonight, someone asks for it." }],
+      "text": "THE BLANK BADGE",
+      "clock": "11:58 PM",
+      "counter": 0,
+      "tension": "uneasy"
+    },
+    {
+      "id": "manager",
+      "role": "setup",
+      "action": "Mr. Harlow walks in from the entrance and stops at the desk.",
+      "cast": ["night-clerk", "old-manager"],
+      "lines": [{ "who": "narrator", "text": "At midnight, the *old manager* walks in. He keeps his coat on." }],
+      "clock": "12:00 AM",
+      "tension": "calm"
+    },
+    {
+      "id": "rule",
+      "role": "setup",
+      "action": "Mr. Harlow points at Sam and gives the rule.",
+      "cast": ["night-clerk", "old-manager"],
+      "lines": [{ "who": "old-manager", "text": "One rule. *Never* say your name." }],
+      "text": "RULE 1: *Never* say your name",
+      "tension": "uneasy"
+    },
+    {
+      "id": "hallway",
+      "role": "build",
+      "action": "The empty hallway. Every door closed. A light flickers.",
+      "cast": [],
+      "lines": [{ "who": "narrator", "text": "Long halls. Dim lights. *Every door* closed." }],
+      "clock": "1:47 AM",
+      "tension": "uneasy"
+    },
+    {
+      "id": "girl",
+      "role": "twist",
+      "action": "A soaked little girl stands at the desk on a dry night.",
+      "cast": ["night-clerk", "raincoat-girl"],
+      "lines": [{ "who": "raincoat-girl", "text": "Room 1304, please. What is *your name*?" }],
+      "counter": 1,
+      "tension": "scary"
+    },
+    {
+      "id": "almost",
+      "role": "payoff",
+      "action": "Close on Sam's face. His mouth opens. The lights die.",
+      "cast": ["night-clerk", "raincoat-girl"],
+      "lines": [{ "who": "narrator", "text": "You open your mouth. And the *lights go out*." }],
+      "tension": "scary"
+    },
+    {
+      "id": "end",
+      "role": "cta",
+      "action": "Dark lobby. The choice card.",
+      "cast": [],
+      "lines": [],
+      "text": "COMMENT *1* OR *2*?",
+      "tension": "scary"
+    }
+  ],
+  "choice": { "option1": "Tell her your name", "option2": "Stay silent" },
+  "publish": {
+    "title": "The Blank Badge - a night shift story",
+    "description": "You are the new night clerk. One rule.",
+    "hashtags": ["#story", "#horror", "#decide"]
+  }
+}

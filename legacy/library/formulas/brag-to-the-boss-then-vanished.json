@@ -1,0 +1,89 @@
+{
+  "id": "brag-to-the-boss-then-vanished",
+  "source": "https://www.youtube.com/watch?v=cTLYqsNcOBg",
+  "lengthS": 23,
+  "language": "none",
+  "summary": "A powerful boss asks a group who is the strongest. One follower flatters the boss, one is confused, and one boldly says they could beat the boss. After a long silent stare-down, a hard cut shows the boss standing alone, which suggests the challenger was quietly gotten rid of.",
+  "beats": [
+    {
+      "t": "0-1s",
+      "role": "hook",
+      "pattern": "Wide shot of a group gathered around a table with a small box in the middle. The big boss character leans toward the others. A bold subtitle asks the question right away: 'who is the strongest one you know?'"
+    },
+    {
+      "t": "1-4s",
+      "role": "setup",
+      "pattern": "The question subtitle stays on screen while the boss looks across the group, waiting for an answer. Cut to a closer group shot of the three smaller characters."
+    },
+    {
+      "t": "4-6s",
+      "role": "build",
+      "pattern": "The flatterer opens its mouth wide and points eagerly. Subtitle: an obvious suck-up answer like 'You, of course.' The others stay still."
+    },
+    {
+      "t": "6-8s",
+      "role": "build",
+      "pattern": "Cutaway gag: the tiny confused character in the middle gets a subtitle like 'What am I even doing here?' while the flatterer turns toward it."
+    },
+    {
+      "t": "8-11s",
+      "role": "twist",
+      "pattern": "The overconfident character leans forward and says it is strong and fast and could beat the boss. The others freeze and turn to look at it. The subtitle stays for about 3 seconds, then a beat of silence with no text."
+    },
+    {
+      "t": "11-14s",
+      "role": "build",
+      "pattern": "Slow push-in to an extreme close-up of the boss's face. Its eyes narrow and its teeth show in a silent, menacing stare. No text, and the audio drops to near silence or a low tension sting."
+    },
+    {
+      "t": "15-19s",
+      "role": "build",
+      "pattern": "Cut to an extreme close-up of the boaster's face. It blinks, its eyes dart around, and it slowly realizes its mistake as the camera drifts slightly. No text."
+    },
+    {
+      "t": "20-23s",
+      "role": "payoff",
+      "pattern": "Hard cut to a totally different outdoor scene: the boss stands alone and proud on a cliff under a blue sky, looking satisfied. The boaster is gone and the elimination happens off screen. Upbeat or epic music sting to end."
+    }
+  ],
+  "whyViral": "The question in the first second invites viewers to answer it themselves in the comments. The three answers follow the familiar rule of three: a suck-up, a confused one and a reckless one, and the third answer breaks the pattern. Long silent close-up stare-downs build tension cheaply and are funny because they drag on. The ending is dark and left off screen: the hard cut to the boss standing alone makes viewers work out what happened, which feels like a clever reward and drives rewatches and comments like 'RIP'. There is no spoken dialogue, only short subtitles, so it works in any language and with the sound off. It is very short, and the punchline lands in the last 3 seconds, so viewers stay to the end.",
+  "cast": [
+    {
+      "role": "the boss",
+      "traits": "huge, intimidating, quiet, asks the question as a loyalty test, punishes disrespect without a word"
+    },
+    {
+      "role": "the flatterer",
+      "traits": "eager, loud, sucks up, answers instantly with praise for the boss"
+    },
+    {
+      "role": "the confused tiny one",
+      "traits": "very small, out of place, unsure why it is there, comic relief in the middle"
+    },
+    {
+      "role": "the boaster",
+      "traits": "overconfident, honest to the point of being stupid, challenges the boss, then realizes its mistake far too late"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "lean-in-ask",
+      "point-eager",
+      "shrug-confused",
+      "boast-chest-out",
+      "freeze-stare",
+      "menacing-glare",
+      "nervous-blink",
+      "eye-dart",
+      "stand-proud",
+      "look-around"
+    ],
+    "settings": [
+      "meeting-table",
+      "small-box-prop",
+      "studio-backdrop",
+      "cliff-top-sky"
+    ]
+  },
+  "score": null
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@vf/assets",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./render": "./src/render/index.ts"
+  },
+  "dependencies": {
+    "@vf/contracts": "workspace:*",
+    "@vf/core": "workspace:*",
+    "@vf/pipeline": "workspace:*",
+    "zod": "^4.6.7",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.187.0",
+    "@react-three/fiber": "^9.8.2",
+    "remotion": "^4.0.543"
+  }
+}

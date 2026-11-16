@@ -1,0 +1,6 @@
+{
+  "id": "thud",
+  "file": "thud.wav",
+  "seconds": 0.6,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

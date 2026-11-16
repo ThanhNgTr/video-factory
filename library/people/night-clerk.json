@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "night-clerk",
+  "name": "Sam",
+  "genre": "people",
+  "build": {
+    "height": 1,
+    "width": 1,
+    "head": 1
+  },
+  "skin": "#f1c3a0",
+  "hair": {
+    "style": "messy",
+    "color": "#3a2a22"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "uniform",
+    "topColor": "#7a1f2b",
+    "pants": "#22263a",
+    "accent": "#c9a227"
+  },
+  "wear": ["badge"],
+  "voice": {
+    "id": "en-US-AndrewNeural",
+    "pitch": "+0Hz",
+    "rate": "+0%"
+  },
+  "personality": "the new night clerk; nervous, polite, notices small details"
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "hotel-rules",
+  "title": "Floor Twelve",
+  "formula": "second-person-rules-horror-vote-cliffhanger",
+  "world": "You are a temp night housekeeper on your first shift, sent up the service elevator to an empty twelfth floor where every door says Do Not Disturb except Room 1207. The housekeeper (Rosa) gives you three rules: knock three times and walk away if something knocks back twice, never step out if the elevator stops on 13, and never hand a key to any guest, not even a child. She says \"same as last night,\" although it is your first night. Two knocks come from inside 1207, then the raincoat-girl (Lily) appears dripping water that falls upward and asks for your key. You escape into the elevator, but it ",
+  "narratorVoice": {
+    "id": "en-US-ChristopherNeural",
+    "pitch": "-2Hz",
+    "rate": "-4%"
+  },
+  "cast": [
+    "housekeeper",
+    "raincoat-girl",
+    "tall-guest"
+  ],
+  "rules": [
+    "RULE 1: Knock three. Never answer two.",
+    "RULE 2: Never step out on 13",
+    "RULE 3: Never give a guest a key"
+  ],
+  "parts": [
+    {
+      "part": 1,
+      "title": "Floor Twelve - Part 1",
+      "summary": "You are a temp night housekeeper on your first shift, sent up the service elevator to an empty twelfth floor where every door says Do Not Disturb except Room 1207. The housekeeper (Rosa) gives you three rules: knock three times and walk away if something knocks back twice, never step out if the elevator stops on 13, and never hand a key to any guest, not even a child. She says \"same as last night,\" although it is your first night. Two knocks come from inside 1207, then the raincoat-girl (Lily) appears dripping water that falls upward and asks for your key. You escape into the elevator, but it opens on a red-lit floor 13, where the tall-guest asks if his room is ready, Rosa appears on the elevator intercom screen telling you to step out, and a gloved hand lands on your shoulder from inside the elevator as the tall-guest asks for your key. Cliffhanger: 1 = throw your master key into the hall and slam the close button, 2 = step out onto floor 13 and run for the stairs.",
+      "runId": "hotel-rules-p1"
+    }
+  ]
+}

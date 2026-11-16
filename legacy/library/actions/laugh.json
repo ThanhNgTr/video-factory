@@ -1,0 +1,4 @@
+{ "id": "laugh", "dur": 0.5, "loop": true, "keys": [
+  { "t": 0, "sy": 1, "sx": 1, "rot": -4, "armL": 40, "armR": 40, "face": "happy" },
+  { "t": 0.5, "sy": 0.93, "sx": 1.05, "rot": 4, "y": 0.01 },
+  { "t": 1, "sy": 1, "sx": 1, "rot": -4, "y": 0 } ] }

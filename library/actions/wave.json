@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "wave",
+  "dur": 0.7,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "rot": -2,
+      "armL": 20,
+      "armR": 150,
+      "face": "happy"
+    },
+    {
+      "t": 0.5,
+      "rot": 2,
+      "armR": 115
+    },
+    {
+      "t": 1,
+      "rot": -2,
+      "armR": 150
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{ "id": "talk", "dur": 0.9, "loop": true, "keys": [
+  { "t": 0, "armR": 30, "armL": 20, "rot": 0, "y": 0 },
+  { "t": 0.5, "armR": 75, "armL": 28, "rot": 2, "y": -0.02 },
+  { "t": 1, "armR": 30, "armL": 20, "rot": 0, "y": 0 } ] }

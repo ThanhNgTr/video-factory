@@ -1,0 +1,6 @@
+{
+  "id": "stinger",
+  "file": "stinger.wav",
+  "seconds": 1.5,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

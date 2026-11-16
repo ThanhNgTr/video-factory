@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "housekeeper",
+  "name": "Rosa",
+  "genre": "people",
+  "build": {
+    "height": 1,
+    "width": 1,
+    "head": 1
+  },
+  "skin": "#c98e6b",
+  "hair": {
+    "style": "bun",
+    "color": "#1d1d1d"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "dress",
+    "topColor": "#2c6e6a",
+    "pants": "#2c6e6a",
+    "accent": "#f2f2f2"
+  },
+  "wear": ["apron"],
+  "voice": {
+    "id": "en-US-JennyNeural",
+    "pitch": "+0Hz",
+    "rate": "+5%"
+  },
+  "personality": "the night housekeeper; fast-talking, superstitious, warns you in whispers"
+}

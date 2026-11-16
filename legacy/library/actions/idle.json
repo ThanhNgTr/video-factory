@@ -1,0 +1,4 @@
+{ "id": "idle", "dur": 2, "loop": true, "keys": [
+  { "t": 0, "sy": 1, "sx": 1, "armL": 20, "armR": 20 },
+  { "t": 0.5, "sy": 1.03, "sx": 0.99, "armL": 25, "armR": 25 },
+  { "t": 1, "sy": 1, "sx": 1, "armL": 20, "armR": 20 } ] }

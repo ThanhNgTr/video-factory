@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "facepalm",
+  "dur": 0.9,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "sx": 1,
+      "sy": 1,
+      "armL": 20,
+      "armR": 20,
+      "face": "sad"
+    },
+    {
+      "t": 0.35,
+      "rot": -6,
+      "sx": 1.02,
+      "sy": 0.97,
+      "armL": 168,
+      "armR": 168
+    },
+    {
+      "t": 0.6,
+      "rot": -9,
+      "armL": 162,
+      "armR": 165
+    },
+    {
+      "t": 1,
+      "rot": -7,
+      "sx": 1.03,
+      "sy": 0.96,
+      "armL": 165,
+      "armR": 165
+    }
+  ]
+}

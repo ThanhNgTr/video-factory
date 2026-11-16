@@ -1,0 +1,6 @@
+{
+  "id": "flicker",
+  "file": "flicker.wav",
+  "seconds": 0.8,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

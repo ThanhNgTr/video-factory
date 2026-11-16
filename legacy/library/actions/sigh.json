@@ -1,0 +1,6 @@
+{ "id": "sigh", "dur": 1.2, "loop": false, "keys": [
+  { "t": 0, "sy": 1, "sx": 1, "rot": 0, "armL": 20, "armR": 20, "face": "sad" },
+  { "t": 0.35, "sy": 1.07, "sx": 0.96, "armL": 30, "armR": 30 },
+  { "t": 0.5, "face": "sleepy" },
+  { "t": 0.9, "sy": 0.9, "sx": 1.06, "rot": 3, "armL": 5, "armR": 5 },
+  { "t": 1, "face": "sad" } ] }

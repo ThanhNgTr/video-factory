@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "walk",
+  "dur": 0.6,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "y": 0,
+      "rot": -3,
+      "armL": 35,
+      "armR": 8,
+      "legL": 25,
+      "legR": -25
+    },
+    {
+      "t": 0.25,
+      "y": -0.04,
+      "rot": 0,
+      "legL": 0,
+      "legR": 0
+    },
+    {
+      "t": 0.5,
+      "y": 0,
+      "rot": 3,
+      "armL": 8,
+      "armR": 35,
+      "legL": -25,
+      "legR": 25
+    },
+    {
+      "t": 0.75,
+      "y": -0.04,
+      "rot": 0,
+      "legL": 0,
+      "legR": 0
+    },
+    {
+      "t": 1,
+      "y": 0,
+      "rot": -3,
+      "armL": 35,
+      "armR": 8,
+      "legL": 25,
+      "legR": -25
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@vf/pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@vf/contracts": "workspace:*",
+    "@vf/core": "workspace:*",
+    "zod": "^4.6.7"
+  }
+}

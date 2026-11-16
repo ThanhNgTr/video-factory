@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "talk",
+  "dur": 0.9,
+  "loop": true,
+  "keys": [
+    {
+      "t": 0,
+      "y": 0,
+      "rot": 0,
+      "armL": 20,
+      "armR": 30
+    },
+    {
+      "t": 0.5,
+      "y": -0.02,
+      "rot": 2,
+      "armL": 28,
+      "armR": 75
+    },
+    {
+      "t": 1,
+      "y": 0,
+      "rot": 0,
+      "armL": 20,
+      "armR": 30
+    }
+  ]
+}

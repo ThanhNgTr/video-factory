@@ -1,0 +1,8 @@
+{ "id": "raincoat-girl", "name": "Lily", "genre": "people",
+  "build": { "height": 0.72, "width": 0.85, "head": 1.2 },
+  "skin": "#f3d0b5", "hair": { "style": "long", "color": "#2b1d14" },
+  "face": { "eyes": "big", "brows": "thin" },
+  "outfit": { "top": "coat", "topColor": "#f2c230", "pants": "#3b3b4f", "accent": "#f2c230" },
+  "wear": ["raincoat-hood"],
+  "voice": { "id": "en-US-AnaNeural", "pitch": "+0Hz", "rate": "-5%" },
+  "personality": "a soaked little girl who asks for her room key; sweet, too calm, never blinks first" }

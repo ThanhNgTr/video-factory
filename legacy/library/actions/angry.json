@@ -1,0 +1,4 @@
+{ "id": "angry", "dur": 0.4, "loop": true, "keys": [
+  { "t": 0, "rot": -3, "sy": 1, "armL": 65, "armR": 65, "face": "angry" },
+  { "t": 0.5, "rot": 3, "sy": 0.96 },
+  { "t": 1, "rot": -3, "sy": 1 } ] }

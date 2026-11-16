@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "tall-guest",
+  "name": "The Tall Guest",
+  "genre": "monster",
+  "build": {
+    "height": 1.45,
+    "width": 0.9,
+    "head": 1
+  },
+  "skin": "#bfc3c7",
+  "hair": {
+    "style": "none",
+    "color": "#111111"
+  },
+  "face": {
+    "eyes": "none",
+    "brows": "none",
+    "mustache": false,
+    "glasses": false,
+    "grin": true
+  },
+  "outfit": {
+    "top": "suit",
+    "topColor": "#121318",
+    "pants": "#121318",
+    "accent": "#5a0f14"
+  },
+  "wear": ["top-hat", "tie"],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-25Hz",
+    "rate": "-12%"
+  },
+  "personality": "a very tall faceless guest with a too-wide grin; polite, patient, always asks for a room on floor 13"
+}

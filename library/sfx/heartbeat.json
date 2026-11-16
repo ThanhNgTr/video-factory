@@ -1,0 +1,6 @@
+{
+  "id": "heartbeat",
+  "file": "heartbeat.wav",
+  "seconds": 2.0,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

@@ -1,0 +1,6 @@
+{ "id": "walk", "dur": 0.6, "loop": true, "keys": [
+  { "t": 0, "legL": 25, "legR": -25, "y": 0, "armL": 35, "armR": 8, "rot": -3 },
+  { "t": 0.25, "legL": 0, "legR": 0, "y": -0.04, "rot": 0 },
+  { "t": 0.5, "legL": -25, "legR": 25, "y": 0, "armL": 8, "armR": 35, "rot": 3 },
+  { "t": 0.75, "legL": 0, "legR": 0, "y": -0.04, "rot": 0 },
+  { "t": 1, "legL": 25, "legR": -25, "y": 0, "armL": 35, "armR": 8, "rot": -3 } ] }

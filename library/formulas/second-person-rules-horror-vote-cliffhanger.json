@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "second-person-rules-horror-vote-cliffhanger",
+  "source": "https://www.instagram.com/reel/DfQGeq3CyPq/",
+  "lengthS": 120.4,
+  "language": "en",
+  "summary": "A second-person horror episode: \"you\" wake up trapped somewhere that has gone wrong, a cryptic stranger hands over three numbered survival rules, and the story then tests each rule as the danger closes in. It ends on a cliffhanger with two options, and viewers vote in the comments to decide what happens in the next part.",
+  "beats": [
+    {
+      "t": "0-8s",
+      "role": "hook",
+      "pattern": "Narration speaks to the viewer as 'you': the hero dozes off in a familiar place and wakes to find it eerily empty. A persistent HUD (episode/location label, a clock that ticks forward, a passenger counter) plus a big 'PART 1' title card frame it like a game. A punch-in on the hero's wide eyes as he wakes; captions appear word by word with key words highlighted."
+    },
+    {
+      "t": "8-16s",
+      "role": "setup",
+      "pattern": "Uncanny detail: identical objects (glowing, ringing phones) sit on every seat. Close-up of one phone UI showing a missed-call count from a familiar contact, with vibration arcs and ringing SFX. Narration adds 'every seat... except one' as a teaser."
+    },
+    {
+      "t": "16-28s",
+      "role": "setup",
+      "pattern": "Reveal a silhouetted stranger sitting directly opposite and much too close (over-the-shoulder shot, glowing eyes). The silhouette resolves into a stern old helper in close-up, and the passenger counter ticks up by 1. His first spoken line is a warning not to touch the objects."
+    },
+    {
+      "t": "28-36s",
+      "role": "build",
+      "pattern": "The hero checks his own phone and learns he is already far past his exit. An intercom/speaker graphic delivers the stakes: there is no way out. Clock HUD advances one minute."
+    },
+    {
+      "t": "36-52s",
+      "role": "setup",
+      "pattern": "The helper holds up a ticket/card. Handwritten list of 3 numbered rules fills the screen, then each rule pops up as a 'SURVIVAL RULE #N' card over reaction close-ups. Each rule is clearly set up to be tested later."
+    },
+    {
+      "t": "52-60s",
+      "role": "twist",
+      "pattern": "Two-shot of the pair facing each other, then the helper leans in. The hero snaps to a close-up as narration points out the helper knows something the hero never told him. The red caption word makes the helper's trustworthiness suddenly doubtful."
+    },
+    {
+      "t": "60-80s",
+      "role": "build",
+      "pattern": "Rule 1 gets tested: lights go out section by section toward the hero (wide exterior tracking shot down a dark tunnel), until only the hero's seat stays lit. The scene shifts to red light: a tall grinning monster in uniform stands at the far end under a scrolling sign, and the counter ticks up again. A slow push-in on its face."
+    },
+    {
+      "t": "80-92s",
+      "role": "build",
+      "pattern": "Rule 2 gets tested: the helper, dimmed and not turning around, whispers the rule in a red caption. The ringing stops, a phone picks up by itself (call timer UI with audio waveform), and a fake loved-one voice coaxes the hero to say his name. That tests rule 3."
+    },
+    {
+      "t": "92-104s",
+      "role": "payoff",
+      "pattern": "The helper grabs the hero's wrist (two-shot). The destination sign scrolls a garbled name behind the monster's silhouette. The doors slide open onto total darkness, and the helper starts a final warning that gets cut off."
+    },
+    {
+      "t": "104-116s",
+      "role": "twist",
+      "pattern": "Jump-scare stinger: a gloved hand rests on the hero's shoulder from off-frame, then the monster's huge grinning face looms right behind the hero's head in a tight close-up."
+    },
+    {
+      "t": "116-120s",
+      "role": "cta",
+      "pattern": "'PART 2' card asks the viewer to choose. Two numbered callout labels point to parts of the scene (1 = go through the door, 2 = stay put). On-screen text says to comment 1 or 2 and that the most votes decide the next episode."
+    }
+  ],
+  "whyViral": "The first line puts the viewer into the story as 'you' and opens on an instant mystery. A tense line or visual comes every 2-4 seconds. The game-like HUD (ticking clock, passenger counter that jumps when a new threat appears) works as a tension meter. The three numbered rules are a setup-and-payoff device: viewers memorize them, then watch each rule get tested, which makes them predict and pay attention. The helper's reliability gets flipped mid-story, which adds paranoia. The escalation is clear: empty → stranger → no exit → darkness closing in → monster → fake loved-one voice → the doors open. It ends on an unresolved jump scare and a binary vote (comment 1 or 2, most votes decide Part 2). That drives comments, gives viewers a say in the story, and brings them back for the next episode. Word-by-word captions with color-coded danger words keep the video watchable with the sound off. Rule cards and freeze-frame details give people a reason to rewatch.",
+  "cast": [
+    {
+      "role": "the second-person hero",
+      "traits": "ordinary young commuter in a hoodie, wide expressive eyes, silent, reacts in close-ups; stands in for the viewer"
+    },
+    {
+      "role": "the cryptic helper",
+      "traits": "old, stern, calm, wears hat and scarf, gives the numbered rules, knows more than he should, so his trustworthiness is ambiguous"
+    },
+    {
+      "role": "the lurking entity",
+      "traits": "tall silhouette in uniform, glowing eyes, wide jagged grin, shown in red light, gets closer each time it appears"
+    },
+    {
+      "role": "the disembodied voice",
+      "traits": "heard through a device, mimics a loved one, sweetly coaxes the hero to break a rule"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "sleep-slumped",
+      "wake-startled",
+      "stare-wide-eyed",
+      "sit-facing",
+      "check-phone",
+      "hold-up-card",
+      "lean-in-close",
+      "whisper",
+      "grab-wrist",
+      "stand-silhouetted",
+      "grin-loom",
+      "hand-on-shoulder",
+      "doors-slide-open",
+      "lights-out-sequence",
+      "phone-ring-vibrate",
+      "phone-auto-answer"
+    ],
+    "settings": [
+      "empty-night-train-car",
+      "facing-bench-seats",
+      "glowing-phones-on-seats",
+      "handwritten-rules-card",
+      "ticket-prop",
+      "overhead-hand-rings",
+      "led-destination-sign",
+      "dark-tunnel-exterior",
+      "red-lit-car-end",
+      "pitch-black-platform-doorway",
+      "game-hud-clock-and-counter",
+      "rule-popup-card",
+      "incoming-call-ui",
+      "intercom-speaker-graphic",
+      "vote-choice-callouts"
+    ]
+  },
+  "score": null
+}

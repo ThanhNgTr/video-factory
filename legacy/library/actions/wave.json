@@ -1,0 +1,4 @@
+{ "id": "wave", "dur": 0.7, "loop": true, "keys": [
+  { "t": 0, "armR": 150, "armL": 20, "rot": -2, "face": "happy" },
+  { "t": 0.5, "armR": 115, "rot": 2 },
+  { "t": 1, "armR": 150, "rot": -2 } ] }

@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "hotel-hallway",
+  "room": {
+    "w": 3.4,
+    "h": 3,
+    "front": 9,
+    "back": -20
+  },
+  "wall": "#5a4636",
+  "floor": "#2b221d",
+  "floorStyle": "planks",
+  "wallStyle": "stripes",
+  "wainscot": "#33231a",
+  "lamps": [[0, 2.95, 3], [0, 2.95, -1.5], [0, 2.95, -6], [0, 2.95, -10.5], [0, 2.95, -15]],
+  "props": [
+    {
+      "type": "rug",
+      "pos": [0, 0, -5],
+      "size": [1.6, 0, 28],
+      "rotY": 0,
+      "color": "#7a1f24"
+    },
+    {
+      "type": "door",
+      "pos": [-1.67, 0, 0],
+      "rotY": 90
+    },
+    {
+      "type": "door",
+      "pos": [1.67, 0, -2],
+      "rotY": -90
+    },
+    {
+      "type": "door",
+      "pos": [-1.67, 0, -4.5],
+      "rotY": 90
+    },
+    {
+      "type": "door",
+      "pos": [1.67, 0, -6.5],
+      "rotY": -90
+    },
+    {
+      "type": "door",
+      "pos": [-1.67, 0, -9],
+      "rotY": 90
+    },
+    {
+      "type": "door",
+      "pos": [1.67, 0, -11],
+      "rotY": -90
+    },
+    {
+      "type": "door",
+      "pos": [-1.67, 0, -13.5],
+      "rotY": 90
+    },
+    {
+      "type": "door",
+      "pos": [1.67, 0, -15.5],
+      "rotY": -90
+    },
+    {
+      "type": "door",
+      "pos": [0, 0, -19.9],
+      "rotY": 0,
+      "color": "#1a0f08"
+    },
+    {
+      "type": "painting",
+      "pos": [1.68, 1.7, 1.5],
+      "size": [0.7, 0.5, 0],
+      "rotY": -90,
+      "color": "#4b3b2a"
+    },
+    {
+      "type": "painting",
+      "pos": [-1.68, 1.7, -2.5],
+      "size": [0.7, 0.5, 0],
+      "rotY": 90,
+      "color": "#2f4858"
+    }
+  ],
+  "spots": [
+    {
+      "id": "near",
+      "pos": [0, 1],
+      "facing": "camera",
+      "note": "close to camera"
+    },
+    {
+      "id": "mid",
+      "pos": [0, -3.5],
+      "facing": "camera",
+      "note": "middle of the corridor"
+    },
+    {
+      "id": "far",
+      "pos": [0, -9],
+      "facing": "camera",
+      "note": "deep in the corridor, small and dim"
+    },
+    {
+      "id": "door-left",
+      "pos": [-1.1, -4.5],
+      "facing": "left",
+      "note": "at a room door on the left"
+    },
+    {
+      "id": "door-right",
+      "pos": [1.1, -6.5],
+      "facing": "right",
+      "note": "at a room door on the right"
+    },
+    {
+      "id": "end",
+      "pos": [0, -17],
+      "facing": "camera",
+      "note": "at the dark door at the very end"
+    }
+  ]
+}

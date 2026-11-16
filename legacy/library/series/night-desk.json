@@ -1,0 +1,11 @@
+{
+  "id": "night-desk",
+  "parts": [
+    {
+      "part": 1,
+      "title": "The Night Desk - Part 1",
+      "summary": "PART 1: You (night-clerk, Sam) start your first night shift at the front desk of an old hotel. The old manager (old-manager, Mr. Harlow) gives you three rules: RULE 1 there is no floor 13, never give a room on it; RULE 2 never tell a guest your name; RULE 3 after 3 AM never leave the desk. Then he says goodnight to 'Sam', a name you never told him, and your badge is blank. At 1:47 AM a soaked little girl (raincoat-girl, Lily) asks for the key to room 1304 on a dry night and asks your name. The housekeeper (housekeeper, Rosa) whispers from the hallway not to answer, and Lily vanishes, leaving wet footprints to the elevator. At 3:00 AM the lights go out and a faceless grinning guest (tall-guest, The Tall Guest) asks for a room on floor 13. Rosa calls you by name to leave the desk, which breaks Rule 3. A cold hand lands on your shoulder and the Tall Guest appears right behind you. CLIFFHANGER: Option 1 is to give the Tall Guest the floor 13 key, and Option 2 is to leave the desk and run to Rosa in the hallway. The most-voted option decides Part 2.",
+      "run": "night-desk-p1"
+    }
+  ]
+}

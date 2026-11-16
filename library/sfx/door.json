@@ -1,0 +1,6 @@
+{
+  "id": "door",
+  "file": "door.wav",
+  "seconds": 1.2,
+  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
+}

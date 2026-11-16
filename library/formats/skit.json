@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "skit",
+  "kind": "skit",
+  "lengthS": { "min": 15, "max": 40 },
+  "beats": { "min": 6, "max": 14 },
+  "maxSpokenChars": 500,
+  "defaultMood": "night",
+  "rules": [
+    "A short comedy or suspense sketch acted by the characters: natural spoken lines, max about 80 characters each, punchy.",
+    "Beat 1 is the hook: a big on-screen text (7 words or fewer) plus a line or strong reaction.",
+    "2-3 characters. One speaker per beat.",
+    "The twist lands in the last third; the last beat loops visually or verbally back to the first.",
+    "In every line wrap 1-3 key words in *asterisks*. No emoji."
+  ]
+}
