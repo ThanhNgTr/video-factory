@@ -3,7 +3,7 @@
 import { copyFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { parseArgs } from "node:util";
-import { Face, Formula, SeriesBible } from "@vf/contracts";
+import { CastMember, Face, Formula, SeriesBible } from "@vf/contracts";
 import { StageError } from "@vf/core";
 import { runStages } from "@vf/pipeline";
 import { nextPart } from "@vf/script";
@@ -25,6 +25,8 @@ const { values: a, positionals } = parseArgs({
     until: { type: "string" },
     action: { type: "string" },
     face: { type: "string", default: "neutral" },
+    holds: { type: "string" },
+    drip: { type: "string" },
   },
 });
 const [cmd = "help", arg] = positionals;
@@ -119,10 +121,11 @@ async function main() {
       const person = arg ? w.library.people[arg] : undefined;
       if (!person)
         throw new Error(
-          `usage: vf preview <personId> [--action <id>] [--face <face>] (people: ${Object.keys(w.library.people).join(", ")})`,
+          `usage: vf preview <personId> [--action <id>] [--face <face>] [--holds card|key|phone|towel] [--drip up|down] (people: ${Object.keys(w.library.people).join(", ")})`,
         );
       const action = a.action ? w.library.actions[a.action] : undefined;
-      const props: PreviewProps = { person, action, face: Face.parse(a.face) };
+      const cast = CastMember.pick({ holds: true, drip: true }).parse({ holds: a.holds, drip: a.drip });
+      const props: PreviewProps = { person, action, face: Face.parse(a.face), ...cast };
       const outFile = join(w.config.runsDir, "previews", `${person.id}${action ? `.${action.id}` : ""}.png`);
       mkdirSync(join(w.config.runsDir, "previews"), { recursive: true });
       await w.deps.renderer.still({

@@ -8,12 +8,18 @@ export const CAMERAS = ["wide", "medium", "closeup", "over-shoulder", "push", "p
 export const Camera = z.enum(CAMERAS);
 export const LIGHTING = ["normal", "dim", "flicker", "blackout"] as const;
 
+// Items a character can hold in the right hand, and water dripping off them (up = something is wrong).
+// Additive optional fields: every older scene.json still parses, so schemaVersion stays 1.
+export const HELD = ["card", "key", "phone", "towel"] as const;
+
 export const CastMember = z.object({
   id: Id,
   spot: Id, // a spot of the shot's set
   toSpot: Id.optional(), // walk/run from spot to toSpot during the shot
   action: Id,
   face: Face.optional(),
+  holds: z.enum(HELD).optional(),
+  drip: z.enum(["up", "down"]).optional(),
 });
 
 export const SfxCue = z.object({ id: Id, at: z.number().min(0).max(20) }); // seconds into the shot

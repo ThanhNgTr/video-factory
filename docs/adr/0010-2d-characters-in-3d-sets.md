@@ -12,6 +12,11 @@ The producer felt the procedural 3D characters still did not look as good as the
 - In `World.tsx` the card always turns to the camera; the character's own facing chooses a front or back view and mirroring. Arm raises rotate in the card plane; a leg swing reads as foreshortening.
 - `vf preview` shows front, mirrored and back views plus a head close-up.
 
+## Accessories (same day)
+- Scene contract: a cast member may hold an item in the right hand (`holds`: card, key, phone, towel) and drip water (`drip`: up or down). Additive optional fields, so older scene.json files still parse and `schemaVersion` stays 1. Person `wear` gains `gloves`. New library actions `hold` and `hold-up`. The director prompt (v2) assigns items and drips only when the script shows them.
+- 2D drawing: the item stays upright whatever the arm's angle and is scaled 1.5x to read at the characters' cartoon proportions; the card is a cream laminated rule card with a red header and handwritten lines; gloves are white with a cuff (also in 3D); drops travel from the hem as a function of the frame.
+- `vf preview <id> --action hold-up --holds card` and `--drip up` show them on the character sheet.
+
 ## Consequences
 - Render cost: an 8-second sample took 86 s including startup (about 0.3 s per frame, about 20 minutes per 2-minute episode), the same range as the 3D toon look.
 - No profile views yet: a character walking sideways is drawn mirrored front-on. Add profile drawings if the producer keeps this branch.

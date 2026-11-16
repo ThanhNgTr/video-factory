@@ -959,7 +959,12 @@ export const Character: React.FC<CharacterProps> = ({ p, pose, face, mouthOpen, 
                     c={shortSleeve ? p.skin : sleeve}
                     m={shortSleeve ? "skin" : "cloth"}
                   />
-                  <Ball p={[0, -fore - 0.045, 0.008]} s={[0.075, 0.08, 0.068]} c={p.skin} m="skin" />
+                  <Ball
+                    p={[0, -fore - 0.045, 0.008]}
+                    s={[0.075, 0.08, 0.068]}
+                    c={p.wear.includes("gloves") ? "#f1efe8" : p.skin}
+                    m="skin"
+                  />
                 </group>
               </group>
             ))}

@@ -9,7 +9,7 @@ cp .env.example .env            # VF_LLM=claude-cli needs the Claude Code CLI lo
 pnpm vf ingest --url <link>     # learn a formula into library/formulas
 pnpm vf make --series night-desk --idea "..."   # next part of a series → out/<run>.mp4
 pnpm vf make --format skit
-pnpm vf preview old-manager --face shock   # character sheet png
+pnpm vf preview old-manager --face shock   # character sheet png (--action hold-up --holds card, --drip up)
 pnpm vf runs · pnpm vf show <run> · pnpm vf resume <run> · pnpm vf run <stage> --run <run>
 VF_LLM=fake pnpm vf make --format skit           # render the fixture without paying
 pnpm check                       # typecheck, biome, dependency-cruiser, vitest

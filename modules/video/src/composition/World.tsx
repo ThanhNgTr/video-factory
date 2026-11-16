@@ -213,6 +213,8 @@ export const World: React.FC<{ p: RenderProps }> = ({ p }) => {
               frame={lf}
               back={Math.abs(turn) > 2.0}
               mirror={turn < -0.25}
+              holds={a.m.holds}
+              drip={a.m.drip}
               tint={`#${new THREE.Color(CARD_TINT[p.scene.mood]).multiplyScalar(Math.max(0.12, flick)).getHexString()}`}
             />
           </group>

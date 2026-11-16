@@ -67,7 +67,7 @@ export const Person = z.object({
     accent: Color.default("#c9a227"),
   }),
   wear: z
-    .array(z.enum(["top-hat", "cap", "scarf", "tie", "apron", "badge", "raincoat-hood"]))
+    .array(z.enum(["top-hat", "cap", "scarf", "tie", "apron", "badge", "raincoat-hood", "gloves"]))
     .max(4)
     .default([]),
   voice: Voice,

@@ -9,6 +9,7 @@ Owns the look: block characters, sets with named spots, the action engine, and t
 - `src/render/` is the only part another module may import (`@vf/assets/render`, used by `@vf/video`): `Character`, `SetView`, `blocks`, `samplePose`.
 - Render code is a pure function of props; randomness comes from the caller (seeded).
 - Library data: `library/people`, `library/actions`, `library/sets` (each set has `spots`). Migrated from the demo by `tools/migrate-legacy.ts`.
+- 2D variant (branch `feat/2d-characters`, ADR 0010): `Character2D.tsx` draws the same people as vector cards; it also draws held items (`holds`), drips (`drip`) and gloves.
 - Add a character/set/action = add a JSON file; the schema in `@vf/contracts` validates it on load.
 - Look at a character: `pnpm vf preview <personId> [--face shock] [--action talk]` writes `runs/previews/<id>.png` (three angles + head close-up). Iterate on `src/render/Character.tsx` with it.
 - Look: soft toon, no outline (ADR 0006, back by ADR 0008 for render speed). `blocks.tsx` holds the primitives (rounded box, sphere, capsule, lathe, tube, torus arc, plate, dome) and the toon `Paint`; parts still carry a surface kind (`m="skin" | "cloth" | "eye" | "matte"`) so the physical look of ADR 0007 can return by changing `Paint` alone. Geometry is cached by parameters; mesh density is tuned for CPU render time.

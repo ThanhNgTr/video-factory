@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "hold-up",
+  "dur": 0.7,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "armR": 25,
+      "rot": 0
+    },
+    {
+      "t": 0.5,
+      "armR": 82,
+      "rot": -2
+    },
+    {
+      "t": 1,
+      "armR": 76,
+      "rot": -1
+    }
+  ]
+}

@@ -3,7 +3,7 @@
 // plus how the card is shown (back view, mirrored, light tint). Every shape carries a soft top-left to bottom-right
 // gradient baked into vertex colours (exact for a linear ramp), so flat fills read like the reference's soft shading.
 // Pure function of props; geometries are cached by their parameters.
-import type { Face, Person } from "@vf/contracts";
+import type { CastMember, Face, Person } from "@vf/contracts";
 import type React from "react";
 import * as THREE from "three";
 import type { Pose } from "../domain/pose.ts";
@@ -963,6 +963,124 @@ function Clothes({ p, back, tint }: { p: Person; back: boolean; tint: string }) 
   return <>{out}</>;
 }
 
+type Held = NonNullable<CastMember["holds"]>;
+const GLOVE = "#f1efe8";
+
+// An item in the hand, drawn upright whatever the arm's angle (the caller cancels the arm rotation).
+// Its origin is the centre of the hand; the hand is drawn on top so the fingers close over it.
+const ITEM_SCALE = 1.5; // props read at the characters' cartoon scale (big heads), not at real-world size
+function HeldItem({ item, tint }: { item: Held; tint: string }) {
+  return (
+    <group scale={[ITEM_SCALE, ITEM_SCALE, 1]}>
+      <HeldShape item={item} tint={tint} />
+    </group>
+  );
+}
+function HeldShape({ item, tint }: { item: Held; tint: string }) {
+  switch (item) {
+    case "card":
+      // laminated rule card: cream, a red header strip and handwritten lines
+      return (
+        <group position={[-0.05, 0.07, 0]} rotation={[0, 0, 0.06]}>
+          <Flat id="card" make={rrect(0.22, 0.15, 0.012)} c="#f3ecd7" z={10.8} shade={0.12} tint={tint} />
+          <Flat
+            id="cardHead"
+            make={rrect(0.22, 0.034, 0.01)}
+            c="#c0392b"
+            z={10.85}
+            shade={0}
+            p={[0, 0.058]}
+            tint={tint}
+          />
+          {[0.012, -0.014, -0.04].map((y, i) => (
+            <Flat
+              key={y}
+              id={`cardLine${i}`}
+              make={rrect(0.17 - i * 0.03, 0.009, 0.004)}
+              c="#4a4038"
+              z={10.86}
+              shade={0}
+              p={[-0.012 - i * 0.015, y]}
+              tint={tint}
+            />
+          ))}
+        </group>
+      );
+    case "key":
+      // brass master key: a ring, a shaft and two teeth
+      return (
+        <group position={[0.01, 0.07, 0]} rotation={[0, 0, -0.25]}>
+          <Flat id="keyRing" make={ring(0.026, 0.013)} c="#c9a227" z={11.3} tint={tint} />
+          <Flat id="keyShaft" make={rrect(0.014, 0.1, 0.006)} c="#c9a227" z={11.3} p={[0, -0.075]} tint={tint} />
+          <Flat
+            id="keyTooth1"
+            make={rrect(0.022, 0.012, 0.004)}
+            c="#b08d1f"
+            z={11.31}
+            p={[0.014, -0.105]}
+            tint={tint}
+          />
+          <Flat
+            id="keyTooth2"
+            make={rrect(0.018, 0.012, 0.004)}
+            c="#b08d1f"
+            z={11.31}
+            p={[0.012, -0.082]}
+            tint={tint}
+          />
+        </group>
+      );
+    case "phone":
+      // a phone with a lit screen (the screen ignores the scene light)
+      return (
+        <group position={[0, 0.06, 0]}>
+          <Flat id="phone" make={rrect(0.08, 0.15, 0.014)} c="#15161a" z={10.8} shade={0.1} tint={tint} />
+          <Flat id="phoneScreen" make={rrect(0.066, 0.122, 0.008)} c="#9fd3ff" z={10.85} shade={0.15} tint="#ffffff" />
+        </group>
+      );
+    case "towel":
+      // two folded towels
+      return (
+        <group position={[0, 0.07, 0]}>
+          <Flat id="towelA" make={rrect(0.2, 0.06, 0.02)} c="#f5f3ee" z={10.8} tint={tint} />
+          <Flat id="towelB" make={rrect(0.19, 0.055, 0.02)} c="#e7e3da" z={10.81} p={[0.005, 0.055]} tint={tint} />
+        </group>
+      );
+  }
+}
+
+// Water drops travelling from the hem: down like rain, or up (the uncanny version). Position is a function of the frame.
+const DROPS = 10;
+function Drips({
+  dir,
+  hemY,
+  halfWidth,
+  frame,
+  tint,
+}: {
+  dir: "up" | "down";
+  hemY: number;
+  halfWidth: number;
+  frame: number;
+  tint: string;
+}) {
+  return (
+    <>
+      {Array.from({ length: DROPS }, (_, i) => {
+        const t = (frame * 0.018 + i * 0.37) % 1;
+        const x = halfWidth * (((i * 0.61) % 1) * 2 - 1) * 0.85;
+        const y = dir === "up" ? hemY + t * 0.9 : hemY - t * 0.55;
+        const size = 1 - 0.5 * t; // drops shrink as they travel
+        return (
+          <group key={`drop${x}`} position={[x, y, 0]} scale={[size, size, 1]}>
+            <Flat id="drop" make={ellipse(0.018, 0.03)} c="#9fd8f2" z={11.9} shade={0.3} tint={tint} />
+          </group>
+        );
+      })}
+    </>
+  );
+}
+
 export type Character2DProps = {
   p: Person;
   pose: Pose;
@@ -973,6 +1091,8 @@ export type Character2DProps = {
   back?: boolean; // seen from behind: no face, hair over the head
   mirror?: boolean; // flipped left-right (asymmetric details swap sides)
   tint?: string; // scene light on the card: mood colour times the light level
+  holds?: Held; // item in the right hand
+  drip?: "up" | "down"; // water dripping off the character
 };
 
 export const Character2D: React.FC<Character2DProps> = ({
@@ -985,8 +1105,11 @@ export const Character2D: React.FC<Character2DProps> = ({
   back = false,
   mirror = false,
   tint = "#ffffff",
+  holds,
+  drip,
 }) => {
   const g = characterGeometry(p);
+  const gloves = p.wear.includes("gloves");
   const o = p.outfit;
   const r = g.head.w / 2;
   const dress = o.top === "dress";
@@ -1057,6 +1180,11 @@ export const Character2D: React.FC<Character2DProps> = ({
                   position={[sd * (g.torsoW / 2 - 0.01), g.shoulderY - 0.07, 0]}
                   rotation={[0, 0, sd * Math.max(0, angle - 12) * deg]}
                 >
+                  {sd === 1 && holds && !back && (
+                    <group position={[0, -g.armLen * 0.9 - 0.04, 0]} rotation={[0, 0, -Math.max(0, angle - 12) * deg]}>
+                      <HeldItem item={holds} tint={tint} />
+                    </group>
+                  )}
                   <Flat id="shoulder" make={ellipse(0.06)} c={o.topColor} z={back ? 4.5 : 10} tint={tint} />
                   <Flat
                     id={`sleeve:${g.armLen}:${shortSleeve}`}
@@ -1076,16 +1204,35 @@ export const Character2D: React.FC<Character2DProps> = ({
                       tint={tint}
                     />
                   )}
+                  {gloves && (
+                    <Flat
+                      id="cuff"
+                      make={rrect(0.13, 0.045, 0.02)}
+                      c={GLOVE}
+                      z={back ? 4.55 : 10.9}
+                      p={[0, -g.armLen * 0.9 + 0.025]}
+                      tint={tint}
+                    />
+                  )}
                   <Flat
                     id="hand"
                     make={ellipse(0.075, 0.08)}
-                    c={p.skin}
+                    c={gloves ? GLOVE : p.skin}
                     z={back ? 4.6 : 11}
                     p={[0, -g.armLen * 0.9 - 0.04]}
                     tint={tint}
                   />
                 </group>
               ))}
+              {drip && (
+                <Drips
+                  dir={drip}
+                  hemY={dress ? g.hipY + 0.12 - 0.34 * g.h : g.hipY - coatExt}
+                  halfWidth={dress ? 0.62 * g.torsoW : g.torsoW / 2}
+                  frame={frame}
+                  tint={tint}
+                />
+              )}
               <group position={[0, g.headY, 0]}>
                 {!(p.hair.style === "long" || p.hair.style === "bald-sides" || p.wear.includes("raincoat-hood")) &&
                   SIDES.map((sd) => (

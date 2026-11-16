@@ -26,7 +26,11 @@
     "pants": "#121318",
     "accent": "#5a0f14"
   },
-  "wear": ["top-hat", "tie"],
+  "wear": [
+    "top-hat",
+    "tie",
+    "gloves"
+  ],
   "voice": {
     "id": "en-US-GuyNeural",
     "pitch": "-25Hz",
