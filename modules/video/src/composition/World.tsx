@@ -1,7 +1,7 @@
 // The 3D stage for the current frame: set, actors on spots, lights, camera. Pure function of (props, frame).
 
 import { useThree } from "@react-three/fiber";
-import { Character, characterGeometry, SetView, samplePose } from "@vf/assets/render";
+import { Character2D, characterGeometry, SetView, samplePose } from "@vf/assets/render";
 import type { Face, Shot, Spot } from "@vf/contracts";
 import type React from "react";
 import { interpolate, random, spring, useCurrentFrame, useVideoConfig } from "remotion";
@@ -49,6 +49,8 @@ const LIGHT = {
     rimI: 0.6,
   },
 };
+// 2D cards are unlit: they take the scene's mood colour times its light level (flicker, dim, blackout)
+const CARD_TINT = { bright: "#ffffff", night: "#c3cbe6", horror: "#aab3cd" } as const;
 const FACING: Record<Spot["facing"], number> = { camera: 0, right: Math.PI / 2, left: -Math.PI / 2, away: Math.PI };
 // one target object per module instance (= per render tab); its position is reset every frame
 const KEY_TARGET = new THREE.Object3D();
@@ -192,15 +194,30 @@ export const World: React.FC<{ p: RenderProps }> = ({ p }) => {
         <pointLight key={l.join()} position={l} intensity={L.lampI * flick} distance={7} decay={1} color={L.lamp} />
       ))}
       <SetView set={set} dim={flick} haze={p.scene.mood !== "bright"} />
-      {actors.map((a) => (
-        <group key={a.m.id} position={[a.x, 0, a.z]} rotation={[0, a.facing, 0]}>
-          <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.015, 0]}>
-            <circleGeometry args={[0.42 * a.person.build.width, 24]} />
-            <meshBasicMaterial color="#000000" transparent opacity={0.35} depthWrite={false} />
-          </mesh>
-          <Character p={a.person} pose={a.pose} face={a.face} mouthOpen={a.mouthOpen} blink={a.blink} frame={lf} />
-        </group>
-      ))}
+      {actors.map((a) => {
+        // the card always turns to the camera; the character's own facing decides front/back view and mirroring
+        const toCamera = Math.atan2(pos.x - a.x, pos.z - a.z);
+        const turn = Math.atan2(Math.sin(a.facing - toCamera), Math.cos(a.facing - toCamera));
+        return (
+          <group key={a.m.id} position={[a.x, 0, a.z]} rotation={[0, toCamera, 0]}>
+            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.015, 0]}>
+              <circleGeometry args={[0.42 * a.person.build.width, 24]} />
+              <meshBasicMaterial color="#000000" transparent opacity={0.35} depthWrite={false} />
+            </mesh>
+            <Character2D
+              p={a.person}
+              pose={a.pose}
+              face={a.face}
+              mouthOpen={a.mouthOpen}
+              blink={a.blink}
+              frame={lf}
+              back={Math.abs(turn) > 2.0}
+              mirror={turn < -0.25}
+              tint={`#${new THREE.Color(CARD_TINT[p.scene.mood]).multiplyScalar(Math.max(0.12, flick)).getHexString()}`}
+            />
+          </group>
+        );
+      })}
     </>
   );
 };

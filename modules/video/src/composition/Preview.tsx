@@ -1,24 +1,34 @@
 // Character sheet: one person from three angles plus a head close-up, under neutral light. Used by `vf preview`.
 import { ThreeCanvas } from "@remotion/three";
-import { Character, type Pose, REST, samplePose } from "@vf/assets/render";
+import { Character2D, type Pose, REST, samplePose } from "@vf/assets/render";
 import type { Action, Face, Person } from "@vf/contracts";
 import type React from "react";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 
 export type PreviewProps = { person: Person; action?: Action; face: Face };
 
+// 2D cards always face the camera; the three views are front, mirrored and back
 const Figure: React.FC<{
   p: Person;
   pose: Pose;
   face: Face;
   x: number;
   y: number;
-  rotY: number;
+  view: "front" | "mirror" | "back";
   scale?: number;
   frame: number;
-}> = ({ p, pose, face, x, y, rotY, scale = 1, frame }) => (
-  <group position={[x, y, 0]} rotation={[0, rotY, 0]} scale={scale}>
-    <Character p={p} pose={pose} face={face} mouthOpen={null} blink={false} frame={frame} />
+}> = ({ p, pose, face, x, y, view, scale = 1, frame }) => (
+  <group position={[x, y, 0]} scale={scale}>
+    <Character2D
+      p={p}
+      pose={pose}
+      face={face}
+      mouthOpen={null}
+      blink={false}
+      frame={frame}
+      back={view === "back"}
+      mirror={view === "mirror"}
+    />
   </group>
 );
 
@@ -51,9 +61,9 @@ export const Preview: React.FC<PreviewProps> = ({ person, action, face }) => {
           <planeGeometry args={[8, 2.4]} />
           <meshStandardMaterial color="#3a3f4d" />
         </mesh>
-        <Figure p={person} pose={pose} face={face} x={-1.05} y={0.6} rotY={0} frame={frame} />
-        <Figure p={person} pose={pose} face={face} x={0} y={0.6} rotY={0.75} frame={frame} />
-        <Figure p={person} pose={pose} face={face} x={1.05} y={0.6} rotY={Math.PI / 2} frame={frame} />
+        <Figure p={person} pose={pose} face={face} x={-1.05} y={0.6} view="front" frame={frame} />
+        <Figure p={person} pose={pose} face={face} x={0} y={0.6} view="mirror" frame={frame} />
+        <Figure p={person} pose={pose} face={face} x={1.05} y={0.6} view="back" frame={frame} />
         {/* head close-up: a 2.6x copy whose body sits below the frame */}
         <Figure
           p={person}
@@ -61,7 +71,7 @@ export const Preview: React.FC<PreviewProps> = ({ person, action, face }) => {
           face={face}
           x={0}
           y={-0.7 - 2.6 * (1.29 * person.build.height + 0.06 + 0.3 * person.build.head)}
-          rotY={0.15}
+          view="front"
           scale={2.6}
           frame={frame}
         />
