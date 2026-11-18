@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "sit-talk",
+  "dur": 1.6,
+  "loop": true,
+  "posture": "sit",
+  "keys": [
+    { "t": 0, "legL": -88, "legR": -88, "kneeL": 88, "kneeR": 88, "armL": 14, "armR": 30, "rot": 0 },
+    { "t": 0.3, "armR": 62, "rot": -2 },
+    { "t": 0.6, "armR": 42, "armL": 24, "rot": 1 },
+    { "t": 1, "armL": 14, "armR": 30, "rot": 0 }
+  ]
+}

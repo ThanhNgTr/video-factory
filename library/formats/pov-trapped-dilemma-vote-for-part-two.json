@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "pov-trapped-dilemma-vote-for-part-two",
+  "kind": "skit",
+  "lengthS": {
+    "min": 60,
+    "max": 90
+  },
+  "beats": {
+    "min": 9,
+    "max": 11
+  },
+  "maxSpokenChars": 800,
+  "rules": [
+    "Hook in the first 3 seconds: the narrator speaks in second person ('Imagine you're...'), names one sealed place, and gives the time of night and an exact headcount of the strangers with you. Start on a lonely exterior of that place, not on a title card.",
+    "Roll call: give each companion one short line with one visible trait and one signature prop (a bag, a hat, a toy). Keep the cast to 2-4 people plus 'you', so a viewer can track them with the sound off. Give the quiet, vulnerable one the last and closest introduction.",
+    "Escalate with one new threat per line, each worse than the last: something stops or locks, the lights fail, an unseen authority voice gives ONE absolute rule (said twice), then something outside breaks the silence. Open each step with a trigger word such as 'Suddenly' or 'Then'.",
+    "Turn the threat into a choice. One companion vanishes and leaves only their prop behind. Then two companions each offer a way out in a short whispered line, and each one is undermined: the first by a graphic that shows a fact that can't be true (a map, a log, a list with them missing from it), the second by a creepy physical detail (cold skin, wrong eyes, no reflection).",
+    "The narrator carries the story and voices the companions' short quoted lines. Lines are plain, present tense and at most about 15 words. Every clue is said outright in its own line (what the viewer sees and what it means: 'Wren isn't human'), so a first-time viewer never has to decode a symbol. Allow one one-word line such as 'Silence.' as a held beat.",
+    "End with a ticking deadline ('You have ten seconds.'), then 'Option A: ...' and 'Option B: ...', each one sentence that names a companion and an action. Then 'Comment A or B.' and a promise that the most-voted option decides part two. Never resolve the story.",
+    "Change the picture at least every 3-4 seconds through a cut, an insert, a graphic or a big change of light. Put a graphic card at the twist (a map or timeline that scrolls to the damning detail), and show a HUD countdown and A/B badges from the deadline to the end.",
+    "Tone: quiet dread, not gore. Imply the threat with silhouettes, sounds, knocks, handprints and missing people. Never show the monster clearly.",
+    "In every line wrap 1-3 key words in *asterisks* (they render highlighted). No emoji."
+  ],
+  "staging": [
+    "Move the camera in about half of the shots: slow push in on the hook exterior, the authority voice and each whispered threat; slow pan or dolly from one seated companion to the next during the roll call and across the warning-labeled doors when the rule is given. Use a short shake on the inciting stop.",
+    "In the other shots, hold the camera and let the scene move: lights flicker and drop to red, rings pulse from a speaker insert, frost spreads over a held hand, handprints pop onto windows one by one, a map scrolls past stops. Hold one near-still frame for 1-2 s on the 'Silence' beat.",
+    "Characters mostly sit with idle motion and act only at key moments: one stands up, one shows shock (eyes widen) in a closeup push, one grabs your hand in an insert. A missing character is shown by an empty seat with their prop left on it. Use a first-person phone or flashlight held at the bottom of the frame as the viewer's 'you' from the threat onward.",
+    "Shots run about 3-7 s and change with hard cuts, with quick 1-2 s inserts (speaker, hand, door sign, exit sign) around each new threat. Use a split screen (A on top, B below) only for the vote.",
+    "Plant two images early and bring them back changed: a clock or sign from the first interior wide returns as the countdown, and the opening exterior shot returns at the end with one eerie change (a lone figure in the window), so the last frame loops to the first."
+  ],
+  "defaultMood": "horror",
+  "rubric": [
+    {
+      "id": "second-person-pov",
+      "check": "The viewer is 'you' from the first line to the last. The script never names or shows the protagonist's face, and it gives a first-person prop (phone, flashlight, hand) once the threat appears.",
+      "must": true
+    },
+    {
+      "id": "fair-dilemma",
+      "check": "Both options offer escape and both are undermined by a concrete clue shown on screen, so neither A nor B is obviously right; the script does not hint at the answer.",
+      "must": true
+    },
+    {
+      "id": "single-rule",
+      "check": "An authority gives exactly one clear rule early, and later events put pressure on that rule.",
+      "must": true
+    },
+    {
+      "id": "plant-payoff",
+      "check": "At least two props or images planted in the first 15 seconds return later with a changed meaning (a left-behind item, a clock that turns into the countdown, the opening shot changed).",
+      "must": true
+    },
+    {
+      "id": "vote-cta",
+      "check": "The ending gives a countdown, two labeled options of one sentence each, 'Comment A or B', and a part-two promise, all inside the last 15 seconds.",
+      "must": true
+    },
+    {
+      "id": "small-cast",
+      "check": "No more than four companions, each with one visual trait and a signature prop that a viewer can tell apart with the sound off.",
+      "must": false
+    }
+  ],
+  "motion": {
+    "moving": 0.47,
+    "secondsPerCut": 7.2
+  }
+}

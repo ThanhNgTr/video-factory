@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "explainer",
+  "kind": "explainer",
+  "lengthS": { "min": 35, "max": 75 },
+  "beats": { "min": 6, "max": 14 },
+  "maxSpokenChars": 550,
+  "defaultMood": "night",
+  "rules": [
+    "A knowledge short told by a narrator over motion graphics: one surprising idea, explained so a 12-year-old gets it on first watch, ending in a payoff the viewer wants to repeat to a friend.",
+    "Beat 1 is the hook: the most surprising claim or number, spoken in under 3 seconds, with an on-screen text card of 7 words or fewer.",
+    "Every beat shows something: beats[].action names the number, comparison, scale, chart, steps or picture the graphic shows, with real values and units.",
+    "Every fact and number is true and the arithmetic checks out; round honestly and say 'about' when you round. When the premise is a thought experiment, say what really happens (the real-world limit or record).",
+    "Escalate: each beat makes the idea bigger or turns it; the last third lands the payoff, then one line loops back to the hook or asks the viewer a question.",
+    "The narrator carries it. Library characters may appear in a beat or two as an example or a reaction, never required; cast may be empty.",
+    "About 10 spoken characters per second: 550 characters is about a minute. Short sentences, one idea each.",
+    "In every line wrap 1-3 key words in *asterisks* (they render highlighted). No emoji."
+  ],
+  "rubric": [
+    {
+      "id": "accurate",
+      "check": "Every number, unit and fact is correct, the arithmetic checks out, rounding is honest, and a thought experiment says what really happens.",
+      "must": true
+    },
+    {
+      "id": "shown",
+      "check": "Every beat names a concrete visual (a number, comparison, scale, chart, list or picture) that carries its point with the sound off.",
+      "must": true
+    },
+    {
+      "id": "simple",
+      "check": "A 12-year-old follows it on first watch: one idea, no unexplained jargon, comparisons to familiar things.",
+      "must": true
+    },
+    {
+      "id": "shareable",
+      "check": "The payoff is a fact the viewer would repeat to a friend.",
+      "must": false
+    }
+  ]
+}

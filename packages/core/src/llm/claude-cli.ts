@@ -1,34 +1,9 @@
 // Headless Claude Code CLI with --json-schema: structured output billed to the logged-in account.
 // shortcut: no API key is provisioned yet; set VF_LLM=anthropic once one exists (batch, caching, rate limits).
-import { spawn } from "node:child_process";
 import { z } from "zod";
 import { StageError } from "../errors.ts";
 import type { Llm, LlmRequest, LlmResult } from "./port.ts";
-
-// spawn with stdin closed: the CLI waits 3 s for piped stdin otherwise
-function run(bin: string, args: string[], timeoutMs: number): Promise<{ stdout: string; stderr: string }> {
-  return new Promise((resolve, reject) => {
-    const child = spawn(bin, args, { stdio: ["ignore", "pipe", "pipe"] });
-    let stdout = "";
-    let stderr = "";
-    child.stdout.setEncoding("utf8").on("data", (d: string) => {
-      stdout += d;
-    });
-    child.stderr.setEncoding("utf8").on("data", (d: string) => {
-      stderr += d;
-    });
-    const timer = setTimeout(() => child.kill(), timeoutMs);
-    child.on("error", (e) => {
-      clearTimeout(timer);
-      reject(e);
-    });
-    child.on("close", (code) => {
-      clearTimeout(timer);
-      if (code === 0) resolve({ stdout, stderr });
-      else reject(Object.assign(new Error(`exit ${code}`), { stderr, stdout }));
-    });
-  });
-}
+import { run } from "./run.ts";
 
 const Out = z.object({
   is_error: z.boolean().optional(),
@@ -40,15 +15,14 @@ const Out = z.object({
 
 export class ClaudeCliLlm implements Llm {
   private readonly bin: string;
-  private readonly maxBudgetUsd: number;
-  constructor(bin: string, maxBudgetUsd: number) {
+  private readonly maxBudgetUsd: number | undefined;
+  constructor(bin: string, maxBudgetUsd?: number) {
     this.bin = bin;
     this.maxBudgetUsd = maxBudgetUsd;
   }
 
   async json(req: LlmRequest): Promise<LlmResult> {
-    // the CLI validator rejects the draft-2020-12 `$schema` marker zod emits
-    const { $schema: _draft, ...schema } = z.toJSONSchema(req.schema, { io: "input" });
+    const schema = cliSchema(req.schema);
     const images = req.images ?? [];
     const prompt = images.length
       ? `${req.user}\n\nImage files (open EVERY one with the Read tool before answering):\n${images.map((i) => i.path).join("\n")}`
@@ -76,16 +50,15 @@ export class ClaudeCliLlm implements Llm {
           ...(tools ? ["--allowedTools", tools] : []),
           "--system-prompt",
           req.system,
-          "--max-budget-usd",
-          String(this.maxBudgetUsd),
+          ...(this.maxBudgetUsd !== undefined ? ["--max-budget-usd", String(this.maxBudgetUsd)] : []),
         ],
         20 * 60_000,
       ));
     } catch (e) {
-      const err = e as Error & { stderr?: string };
-      throw new StageError("provider-failed", `claude cli failed: ${err.stderr?.slice(0, 2000) || err.message}`, {
-        cause: e,
-      });
+      // the CLI often exits 1 with an empty stderr and its reason in the JSON on stdout
+      const err = e as Error & { stderr?: string; stdout?: string };
+      const why = err.stderr?.trim() || err.stdout?.trim() || err.message;
+      throw new StageError("provider-failed", `claude cli failed: ${why.slice(0, 2000)}`, { cause: e });
     }
     const r = Out.parse(JSON.parse(stdout));
     if (r.is_error)
@@ -114,4 +87,27 @@ function extractJson(text: string): unknown {
   } catch {
     return { _raw: text };
   }
+}
+
+// Two validators read the schema: the CLI's own (draft-07, strict: `prefixItems` is an unknown keyword) and the API
+// (draft 2020-12: an `items` array is invalid). A tuple of one type (a position, a spot) is written as a fixed-length
+// array, which both accept; zod still checks the tuple when the answer comes back.
+export function cliSchema(schema: z.ZodType): Record<string, unknown> {
+  const { $schema: _draft, ...rest } = z.toJSONSchema(schema, { io: "input" });
+  return flatTuples(rest) as Record<string, unknown>;
+}
+
+function flatTuples(node: unknown): unknown {
+  if (Array.isArray(node)) return node.map(flatTuples);
+  if (!node || typeof node !== "object") return node;
+  const o = Object.fromEntries(Object.entries(node).map(([k, v]) => [k, flatTuples(v)])) as Record<string, unknown>;
+  const items = o.prefixItems;
+  if (Array.isArray(items) && items.length) {
+    const kinds = [...new Set(items.map((i) => JSON.stringify(i)))];
+    delete o.prefixItems;
+    o.items = kinds.length === 1 ? items[0] : { anyOf: kinds.map((k) => JSON.parse(k)) };
+    o.minItems = items.length;
+    o.maxItems = items.length;
+  }
+  return o;
 }

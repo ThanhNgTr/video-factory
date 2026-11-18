@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "id": "diner-kitchen",
+  "room": {
+    "w": 6,
+    "h": 3,
+    "front": 6,
+    "back": -4
+  },
+  "wall": "#c9d2cf",
+  "floor": "#6f7672",
+  "floorStyle": "tiles",
+  "wallStyle": "plain",
+  "lamps": [
+    [
+      -1,
+      2.95,
+      -1.5
+    ],
+    [
+      1.2,
+      2.95,
+      0.5
+    ]
+  ],
+  "props": [
+    {
+      "type": "counter",
+      "pos": [
+        0,
+        0,
+        -1.4
+      ],
+      "size": [
+        3,
+        0.95,
+        0.9
+      ],
+      "color": "#8d9aa0"
+    },
+    {
+      "type": "shelf",
+      "pos": [
+        -1.6,
+        0,
+        -3.7
+      ],
+      "size": [
+        2.4,
+        2,
+        0.5
+      ],
+      "color": "#7d878c"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.9,
+        0,
+        -3.5
+      ],
+      "size": [
+        1.2,
+        0.9,
+        0.7
+      ],
+      "color": "#3d4146"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        0.6,
+        0.9,
+        -3.5
+      ],
+      "size": [
+        0.16,
+        0.25,
+        0
+      ],
+      "color": "#9aa1a9"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        1.2,
+        0.9,
+        -3.5
+      ],
+      "size": [
+        0.14,
+        0.2,
+        0
+      ],
+      "color": "#9aa1a9"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.3,
+        0,
+        -3.3
+      ],
+      "size": [
+        1.1,
+        2.1,
+        0.8
+      ],
+      "color": "#dfe4e6"
+    },
+    {
+      "type": "door",
+      "pos": [
+        -2.95,
+        0,
+        -1
+      ],
+      "rotY": 90,
+      "color": "#9aa7ad"
+    },
+    {
+      "type": "door",
+      "pos": [
+        2.95,
+        0,
+        0.8
+      ],
+      "rotY": -90,
+      "color": "#5a4a3a"
+    }
+  ],
+  "spots": [
+    {
+      "id": "at-stove",
+      "pos": [
+        0.9,
+        -2.6
+      ],
+      "facing": "away",
+      "note": "cooking at the stove, back to camera"
+    },
+    {
+      "id": "prep-table",
+      "pos": [
+        0,
+        -0.5
+      ],
+      "facing": "camera",
+      "note": "in front of the prep table"
+    },
+    {
+      "id": "freezer-door",
+      "pos": [
+        -2.2,
+        -1
+      ],
+      "facing": "left",
+      "note": "by the walk-in freezer door"
+    },
+    {
+      "id": "back-door",
+      "pos": [
+        2.2,
+        0.8
+      ],
+      "facing": "right",
+      "note": "by the back door to the lot"
+    },
+    {
+      "id": "kitchen-center",
+      "pos": [
+        0,
+        1.4
+      ],
+      "facing": "camera",
+      "note": "middle of the kitchen, near camera"
+    }
+  ]
+}

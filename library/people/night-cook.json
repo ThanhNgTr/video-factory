@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "night-cook",
+  "name": "Dot",
+  "genre": "people",
+  "build": {
+    "height": 0.95,
+    "width": 1.08,
+    "head": 1.0,
+    "shape": "round"
+  },
+  "skin": "#f0bf98",
+  "hair": {
+    "style": "bun",
+    "color": "#e6e6e6"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": true,
+    "grin": false
+  },
+  "outfit": {
+    "top": "tshirt",
+    "topColor": "#79c7ba",
+    "pants": "#2d3540",
+    "accent": "#c0392b"
+  },
+  "wear": [
+    "apron",
+    "name-tag"
+  ],
+  "voice": {
+    "id": "en-US-AriaNeural",
+    "pitch": "-8Hz",
+    "rate": "-6%"
+  },
+  "personality": "the night cook; forty years at this diner, calls everyone hon, knows the rules by heart and never says why"
+}

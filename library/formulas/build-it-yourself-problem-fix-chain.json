@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "build-it-yourself-problem-fix-chain",
+  "source": "https://www.youtube.com/shorts/59_aYZr6Uo4",
+  "lengthS": 66.6,
+  "language": "en",
+  "summary": "A second-person \"you build it\" explainer: start from the crudest version of an everyday object, then loop \"a failure hits → you add a fix → the fix gets its real name\" until the modern version stands. A fixed cutaway camera shows the layers stacking up, and each fix is shown with a cross-section.",
+  "topic": "how an everyday piece of infrastructure evolves layer by layer",
+  "beats": [
+    {
+      "t": "0-4s",
+      "role": "hook",
+      "pattern": "Narrator speaks in second person ('if you do X, you have a Y'). The camera is locked straight down the empty strip, and a half-frame ground cross-section fills the bottom. A test vehicle drives on immediately. Captions show one bold word at a time in the center."
+    },
+    {
+      "t": "4-9s",
+      "role": "setup",
+      "pattern": "First failure: the weather turns (rain particles, the scene darkens), the vehicle sinks into the cross-section, and the camera cuts to a close low angle on the stuck wheel. Then the first fix: a layer of material drops onto the strip."
+    },
+    {
+      "t": "9-19s",
+      "role": "build",
+      "pattern": "Fix 1 brings its own flaw: the loose layer shifts under the wheel and the cross-section deforms. Fix 2 is a better material that falls from the sky in sorted sizes, big pieces at the bottom and small ones on top. A heavy machine rolls toward the camera to pack it, and the cross-section shows the pieces locking together."
+    },
+    {
+      "t": "19-31s",
+      "role": "build",
+      "pattern": "The caption names the technique. Then a new failure: rain returns, and a blue water band seeps into the cross-section under the layers. Fix 3 is a shape change: the cross-section bends into a raised middle, ditches cut in at the edges, and the camera pushes in on the cross-section to show water draining away. A naming line follows."
+    },
+    {
+      "t": "31-41s",
+      "role": "build",
+      "pattern": "Failure 4: a low ground-level shot shows a passing wheel flinging loose bits and dust off the surface. Fix 4: a black binding layer is spread with steam and smoke, and the roller returns to flatten it. A callback to the earlier compaction shot shows visible progress."
+    },
+    {
+      "t": "41-50s",
+      "role": "twist",
+      "pattern": "The hidden enemy appears: the season changes (snow particles), and the cross-section zooms to fill the frame. A tiny crack lets water in, the water swells into a bulging pocket that lifts the surface, then melts and leaves a dark void. The vehicle breaks through it."
+    },
+    {
+      "t": "50-56s",
+      "role": "payoff",
+      "pattern": "The damage gets named. The camera goes top-down onto the cracked surface with the hole, and the narrator gives the maintenance fix in one sentence."
+    },
+    {
+      "t": "56-62s",
+      "role": "twist",
+      "pattern": "Counterintuitive stat: the narrator says the obvious culprit isn't the real one. A heavy vehicle replaces the light one, orange force arrows push down into the layers, and a big yellow stat card shows one heavy vehicle = several thousand light ones."
+    },
+    {
+      "t": "62-66s",
+      "role": "payoff",
+      "pattern": "Finishing touches pop in (painted lines, curbs), and a cheeky named sign appears. The narrator closes with a congratulation in second person. The wide shot now matches the opening frame, so the before/after reads at a glance."
+    }
+  ],
+  "whyViral": "The first sentence uses second person and gives an absurdly easy recipe that viewers want to argue with, so they keep watching to see it break. The whole video runs on a tight problem → fix → new problem chain, giving a mini cliffhanger every 4-6 seconds. Each fix gets its real technical name, so viewers feel they learned jargon for free. The same locked camera and cross-section make every added layer visible progress, like a satisfying build or idle game. Weather and season changes act as escalating enemies. Near the end, a counterintuitive stat on a big number card ('it's not the cars, it's the trucks') gives a shareable fact. The 'congratulations, you built it' ending returns to the opening frame for closure and a rewatch loop. One-word captions keep attention locked in the center.",
+  "cast": [
+    {
+      "role": "the narrator-builder",
+      "traits": "off-screen, calm and matter-of-fact, speaks to the viewer as 'you'. Names each fix right after showing it."
+    },
+    {
+      "role": "the test vehicle",
+      "traits": "a small boxy car with a face-like front. It suffers every failure: it sinks, slips, and breaks through the surface."
+    },
+    {
+      "role": "the heavy machine",
+      "traits": "a slow yellow roller that comes back each time a layer needs packing."
+    },
+    {
+      "role": "the heavy villain vehicle",
+      "traits": "a big truck brought in for the reveal, shown crushing the layers with force arrows."
+    },
+    {
+      "role": "the elements",
+      "traits": "rain, then frost and snow. An escalating unseen antagonist that attacks each new version."
+    }
+  ],
+  "needs": {
+    "actions": [
+      "drive-forward",
+      "sink-into-ground",
+      "wheel-slip",
+      "drop-layer-from-sky",
+      "roll-compact",
+      "spread-hot-layer",
+      "water-seep",
+      "crack-and-swell",
+      "collapse-into-void",
+      "force-arrows-push",
+      "pop-in-markings",
+      "sign-pop-up"
+    ],
+    "settings": [
+      "straight-strip-between-lawns",
+      "cutaway-ground-cross-section",
+      "rain-particles",
+      "snow-particles",
+      "day-to-storm-lighting",
+      "low-ground-camera",
+      "top-down-surface-shot",
+      "stat-card-equals",
+      "one-word-captions",
+      "layer-stack-diagram",
+      "before-after-wide-shot"
+    ]
+  },
+  "score": null
+}

@@ -9,7 +9,7 @@ export const COMPOSITION_ENTRY = new URL("../composition/entry.ts", import.meta.
 // Renders the muted picture with Remotion, then muxes mix.wav in with ffmpeg.
 export const videoRender = stage<VideoDeps>({
   name: "video.render",
-  version: 1,
+  version: 20, // 18: room shots frame props; 19: camera angle, lens, move, transitions, captions per kind (ADR 0025); 20: pan, tilt, crane, zooms, dolly zoom, whip (ADR 0026)
   inputs: ["timeline.json", "scene.json", "assets.json", "script.json", "mix.wav"],
   outputs: ["video.mp4", "props.json"],
   run: async (ctx) => {
@@ -20,6 +20,7 @@ export const videoRender = stage<VideoDeps>({
       assets: ctx.store.readJson("assets.json", Assets),
       seed: ctx.seed,
       choice: script.choice,
+      kind: ctx.library.formats[script.format]?.kind,
     };
     ctx.store.writeJson("props.json", props);
     const silent = ctx.store.path("video-silent.mp4");

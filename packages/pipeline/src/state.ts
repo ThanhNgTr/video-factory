@@ -89,11 +89,15 @@ export class RunState {
         new Date().toISOString(),
       );
   }
-  runCost(runId: string): number {
-    const r = this.db.prepare("SELECT COALESCE(SUM(cost_usd), 0) AS c FROM costs WHERE run_id = ?").get(runId) as {
-      c: number;
-    };
+  // total spend of a run, or only of the cost rows after a mark (one invocation; rowids never tie like times can)
+  runCost(runId: string, afterMark = 0): number {
+    const r = this.db
+      .prepare("SELECT COALESCE(SUM(cost_usd), 0) AS c FROM costs WHERE run_id = ? AND rowid > ?")
+      .get(runId, afterMark) as { c: number };
     return r.c;
+  }
+  costMark(): number {
+    return (this.db.prepare("SELECT COALESCE(MAX(rowid), 0) AS m FROM costs").get() as { m: number }).m;
   }
   listCosts(runId: string): { stage: string; provider: string; model: string; cost_usd: number; ms: number }[] {
     return this.db

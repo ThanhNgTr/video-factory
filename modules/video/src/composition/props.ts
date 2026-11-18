@@ -7,4 +7,5 @@ export type RenderProps = {
   assets: Assets;
   seed: string;
   choice?: { option1: string; option2: string };
+  kind?: "series" | "skit" | "explainer"; // the format's kind: captions take their style from it (ADR 0025)
 };

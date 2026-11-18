@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "paper-sheet",
+  "brief": "a single white sheet of paper, slightly curled, front view",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"470\" rx=\"150\" ry=\"16\" fill=\"#1d1b22\" opacity=\"0.15\"/><path d=\"M110 50 L330 50 L402 122 L402 440 Q330 462 256 448 Q182 434 110 450 Z\" fill=\"#ffffff\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/><path d=\"M110 420 Q182 404 256 418 Q330 432 402 410 L402 440 Q330 462 256 448 Q182 434 110 450 Z\" fill=\"#d6dbe8\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linejoin=\"round\"/><path d=\"M330 50 L402 122 L342 122 Q330 122 330 110 Z\" fill=\"#c9d0e0\" stroke=\"#1d1b22\" stroke-width=\"10\" stroke-linejoin=\"round\"/><path d=\"M128 70 L132 410\" stroke=\"#ffffff\" stroke-width=\"0\"/><rect x=\"138\" y=\"76\" width=\"12\" height=\"320\" rx=\"6\" fill=\"#eef3ff\"/><g stroke=\"#8fa3c7\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M170 170 H360\"/><path d=\"M170 220 H360\"/><path d=\"M170 270 H360\"/><path d=\"M170 320 H300\"/></g></svg>",
+  "score": 9
+}

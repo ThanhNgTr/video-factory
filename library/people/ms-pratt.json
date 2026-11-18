@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ms-pratt",
+  "name": "Ms. Pratt",
+  "genre": "people",
+  "build": {
+    "height": 1.25,
+    "width": 0.8,
+    "head": 0.9,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#e8c9b0",
+  "hair": {
+    "style": "bun",
+    "color": "#a7abb3"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": true,
+    "grin": false
+  },
+  "outfit": {
+    "top": "dress",
+    "topColor": "#1f2a5a",
+    "pants": "#1f2a5a",
+    "accent": "#d02a2a",
+    "pattern": "none"
+  },
+  "wear": [
+    "badge",
+    "gloves"
+  ],
+  "voice": {
+    "id": "en-US-MichelleNeural",
+    "pitch": "-4Hz",
+    "rate": "-5%"
+  },
+  "personality": "A strict, precise veteran teacher with crisp, dry, measured sentences. Judges everyone over her red glasses and never needs to raise her voice. Clutches her stack of quiz papers."
+}

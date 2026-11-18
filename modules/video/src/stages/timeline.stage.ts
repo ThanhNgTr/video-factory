@@ -5,7 +5,7 @@ import type { VideoDeps } from "../ports.ts";
 
 export const videoTimeline = stage<VideoDeps>({
   name: "video.timeline",
-  version: 1,
+  version: 5, // 4: thuds as props drop in (ADR 0022); 5: J-cuts and weather beds (ADR 0025)
   inputs: ["scene.json", "audio.json"],
   outputs: ["timeline.json"],
   run: async (ctx) => {

@@ -16,6 +16,9 @@ export async function runStages<Deps>(
   o: RunOptions = {},
 ): Promise<void> {
   state.upsertRun(ctx.runId, ctx.params, ctx.seed, "running");
+  // the budget caps one invocation (a runaway repair loop), not a run's lifetime: a run revised five times
+  // must not lock itself out
+  const since = state.costMark();
   try {
     for (const s of stages) {
       if (o.only && s.name !== o.only) continue;
@@ -27,7 +30,7 @@ export async function runStages<Deps>(
         if (o.until === s.name) return;
         continue;
       }
-      await runOne(ctx, state, s, key);
+      await runOne(ctx, state, s, key, since);
       if (o.until === s.name) {
         state.upsertRun(ctx.runId, ctx.params, ctx.seed, "paused");
         return;
@@ -42,19 +45,31 @@ export async function runStages<Deps>(
 
 function cacheKey<Deps>(ctx: StageContext<Deps>, s: StageDef<Deps>): string {
   const inputs = Object.fromEntries(s.inputs.map((n) => [n, ctx.store.exists(n) ? ctx.store.hash(n) : null]));
-  return hashJson({ stage: s.name, version: s.version, inputs, params: ctx.params, seed: ctx.seed });
+  const key = { stage: s.name, version: s.version, inputs, params: ctx.params, seed: ctx.seed };
+  // only a stage with a fingerprint gets the extra field: every other stage keeps its key, and its cache
+  return hashJson(s.fingerprint ? { ...key, extra: s.fingerprint(ctx) } : key);
 }
 
-async function runOne<Deps>(ctx: StageContext<Deps>, state: RunState, s: StageDef<Deps>, key: string): Promise<void> {
+async function runOne<Deps>(
+  ctx: StageContext<Deps>,
+  state: RunState,
+  s: StageDef<Deps>,
+  key: string,
+  since: number,
+): Promise<void> {
   const log = ctx.log.child({ runId: ctx.runId, stage: s.name });
   const stageCtx: StageContext<Deps> = {
     ...ctx,
     log,
     recordUsage: (u) => {
       state.addCost({ runId: ctx.runId, stage: s.name, ...u });
-      const spent = state.runCost(ctx.runId);
-      if (spent > ctx.config.budgetUsd)
-        throw new StageError("budget-exceeded", `run spent $${spent.toFixed(2)} > budget $${ctx.config.budgetUsd}`);
+      const spent = state.runCost(ctx.runId, since);
+      const budget = ctx.config.budgetUsd;
+      if (budget !== undefined && spent > budget)
+        throw new StageError(
+          "budget-exceeded",
+          `this run of ${ctx.runId} spent $${spent.toFixed(2)} > budget $${budget} (VF_BUDGET_USD)`,
+        );
     },
   };
   for (const n of s.inputs) {

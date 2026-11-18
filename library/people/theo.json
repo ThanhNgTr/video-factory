@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "theo",
+  "name": "Theo",
+  "genre": "people",
+  "build": {
+    "height": 0.95,
+    "width": 0.9,
+    "head": 1.2,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#9b6340",
+  "hair": {
+    "style": "curly",
+    "color": "#1b1414"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "iris": "#4a2a16",
+    "blush": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#e63946",
+    "pants": "#1d3557",
+    "accent": "#ffd166",
+    "inner": "#f1faee"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-BrianNeural",
+    "pitch": "+2Hz",
+    "rate": "+6%"
+  },
+  "personality": "Mia's best friend: a fast-talking fifteen-year-old who jokes when he is scared and always has a plan that almost works."
+}

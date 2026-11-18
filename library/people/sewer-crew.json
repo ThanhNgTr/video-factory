@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "sewer-crew",
+  "name": "Gus",
+  "genre": "people",
+  "build": {
+    "height": 0.97,
+    "width": 1.5,
+    "head": 1,
+    "shape": "round",
+    "headShape": "square"
+  },
+  "skin": "#d19a6a",
+  "hair": {
+    "style": "bald-sides",
+    "color": "#8c8c8c"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "tshirt",
+    "topColor": "#ff6a00",
+    "pants": "#2f5d3a",
+    "accent": "#ffd400",
+    "pattern": "stripes"
+  },
+  "wear": [
+    "cap",
+    "gloves"
+  ],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-8Hz",
+    "rate": "-3%"
+  },
+  "personality": "Gruff, stocky sewer worker in his 40s with a long-handled shovel, yellow hard hat and headlamp, working in the tunnels. Dry, deadpan, matter-of-fact, with the occasional grumble."
+}

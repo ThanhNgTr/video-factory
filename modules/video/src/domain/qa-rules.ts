@@ -23,6 +23,8 @@ export function parseSilencedetect(log: string, minSeconds = 6): Issue[] {
   return out;
 }
 
+export const SHORT_OK = 0.9; // a video may run this share of the format's minimum length
+
 export function judge(o: {
   seconds: number;
   expectedSeconds: number;
@@ -35,7 +37,8 @@ export function judge(o: {
       code: "length-mismatch",
       detail: `video is ${o.seconds.toFixed(2)}s, timeline says ${o.expectedSeconds.toFixed(2)}s`,
     });
-  if (o.seconds < o.lengthRange.min || o.seconds > o.lengthRange.max)
+  // a little short is fine (shorter holds viewers better); past the maximum is not (platform limits)
+  if (o.seconds < o.lengthRange.min * SHORT_OK || o.seconds > o.lengthRange.max)
     issues.push({
       code: "length-out-of-range",
       detail: `${o.seconds.toFixed(1)}s not in ${o.lengthRange.min}-${o.lengthRange.max}s`,

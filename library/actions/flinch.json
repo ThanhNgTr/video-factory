@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "flinch",
+  "dur": 0.4,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "armL": 20,
+      "armR": 20
+    },
+    {
+      "t": 0.3,
+      "y": -0.05,
+      "rot": -3,
+      "armL": 110,
+      "armR": 120,
+      "sy": 0.94,
+      "sx": 1.04,
+      "face": "shock"
+    },
+    {
+      "t": 1,
+      "y": 0,
+      "rot": 0,
+      "armL": 60,
+      "armR": 70,
+      "sx": 1,
+      "sy": 1
+    }
+  ]
+}

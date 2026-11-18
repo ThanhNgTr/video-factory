@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "ava",
+  "name": "Ava",
+  "genre": "people",
+  "build": {
+    "height": 0.85,
+    "width": 0.85,
+    "head": 1.25,
+    "shape": "soft",
+    "headShape": "round"
+  },
+  "skin": "#e0ac8a",
+  "hair": {
+    "style": "long",
+    "color": "#111111"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": true,
+    "grin": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#7b4fc4",
+    "pants": "#2e2e4a",
+    "accent": "#e8d9ff",
+    "pattern": "none"
+  },
+  "wear": [
+    "name-tag"
+  ],
+  "voice": {
+    "id": "en-US-AnaNeural",
+    "pitch": "+2Hz",
+    "rate": "+3%"
+  },
+  "personality": "Neat, precise and a little anxious. Speaks quickly and politely, corrects details, and always has the right supplies ready."
+}

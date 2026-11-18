@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "mia",
+  "name": "Mia",
+  "genre": "people",
+  "build": {
+    "height": 0.9,
+    "width": 0.85,
+    "head": 1.3,
+    "shape": "soft",
+    "headShape": "round"
+  },
+  "skin": "#f1c6a6",
+  "hair": {
+    "style": "ponytail",
+    "color": "#6b3a1f"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "iris": "#b8722c",
+    "lashes": true,
+    "blush": true
+  },
+  "outfit": {
+    "top": "hoodie",
+    "topColor": "#ffb703",
+    "pants": "#2d4b7a",
+    "accent": "#fb5607",
+    "inner": "#fdf6e3"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-AvaNeural",
+    "pitch": "+2Hz",
+    "rate": "+4%"
+  },
+  "personality": "A curious fourteen-year-old who notices what everyone else misses, asks one question too many, and never backs down once she is sure."
+}

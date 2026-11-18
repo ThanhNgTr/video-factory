@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "id": "ferry-car-deck",
+  "room": {
+    "w": 10,
+    "h": 3,
+    "front": 6,
+    "back": -6
+  },
+  "wall": "#3b4a47",
+  "floor": "#2a3331",
+  "floorStyle": "plain",
+  "wallStyle": "plain",
+  "wainscot": "#2c3836",
+  "outdoor": false,
+  "sky": "#9fd3f2",
+  "lamps": [
+    [
+      -2.5,
+      2.95,
+      -3
+    ],
+    [
+      1,
+      2.95,
+      -3.2
+    ],
+    [
+      -2.5,
+      2.95,
+      1
+    ],
+    [
+      2,
+      2.95,
+      0.5
+    ]
+  ],
+  "props": [
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -5.9
+      ],
+      "size": [
+        5,
+        2.7,
+        0.15
+      ],
+      "rotY": 0,
+      "color": "#2f3d3a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -5.7
+      ],
+      "size": [
+        5.2,
+        0.08,
+        0.4
+      ],
+      "rotY": 0,
+      "color": "#8a7b2e"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -2.7,
+        0,
+        -5.8
+      ],
+      "size": [
+        0.3,
+        2.8,
+        0.3
+      ],
+      "rotY": 0,
+      "color": "#4b5a56"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.7,
+        0,
+        -5.8
+      ],
+      "size": [
+        0.3,
+        2.8,
+        0.3
+      ],
+      "rotY": 0,
+      "color": "#4b5a56"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4,
+        0,
+        -1.6
+      ],
+      "size": [
+        1.6,
+        0.3,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#56655f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4,
+        0,
+        -2.2
+      ],
+      "size": [
+        1.6,
+        0.6,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#56655f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4,
+        0,
+        -2.8
+      ],
+      "size": [
+        1.6,
+        0.9,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#56655f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4,
+        0,
+        -3.4
+      ],
+      "size": [
+        1.6,
+        1.2,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#56655f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4,
+        0,
+        -4.2
+      ],
+      "size": [
+        1.6,
+        1.5,
+        1
+      ],
+      "rotY": 0,
+      "color": "#56655f"
+    },
+    {
+      "type": "door",
+      "pos": [
+        4.95,
+        1.5,
+        -4.4
+      ],
+      "rotY": -90,
+      "color": "#6b7a73"
+    },
+    {
+      "type": "painting",
+      "pos": [
+        4.95,
+        2.3,
+        -2.6
+      ],
+      "size": [
+        1.4,
+        0.45,
+        0
+      ],
+      "rotY": -90,
+      "color": "#2f8a5a"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -1.2,
+        0,
+        -1.5
+      ],
+      "size": [
+        0.22,
+        3,
+        0
+      ],
+      "rotY": 0,
+      "color": "#55645f"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -1.2,
+        0,
+        -1.5
+      ],
+      "size": [
+        0.24,
+        0.5,
+        0
+      ],
+      "rotY": 0,
+      "color": "#b8a23a"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -0.95,
+        0.9,
+        -1.5
+      ],
+      "size": [
+        0.08,
+        0.4,
+        0
+      ],
+      "rotY": 0,
+      "color": "#b02a2a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.4,
+        0.25,
+        -3.2
+      ],
+      "size": [
+        1.8,
+        0.7,
+        4
+      ],
+      "rotY": 0,
+      "color": "#6e3a3a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.4,
+        0.95,
+        -3
+      ],
+      "size": [
+        1.6,
+        0.55,
+        2
+      ],
+      "rotY": 0,
+      "color": "#4a5a66"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.9,
+        0.25,
+        -3.6
+      ],
+      "size": [
+        1.8,
+        0.7,
+        3.8
+      ],
+      "rotY": 0,
+      "color": "#aab3b0"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.9,
+        0.95,
+        -3.4
+      ],
+      "size": [
+        1.6,
+        0.55,
+        2
+      ],
+      "rotY": 0,
+      "color": "#3d4a52"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.4,
+        0.25,
+        1.2
+      ],
+      "size": [
+        1.8,
+        0.75,
+        3.6
+      ],
+      "rotY": 0,
+      "color": "#2f4a6a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.4,
+        1,
+        1.4
+      ],
+      "size": [
+        1.6,
+        0.55,
+        2
+      ],
+      "rotY": 0,
+      "color": "#26343f"
+    },
+    {
+      "type": "rug",
+      "pos": [
+        0,
+        0.01,
+        0.6
+      ],
+      "size": [
+        2.4,
+        0,
+        1.4
+      ],
+      "rotY": 0,
+      "color": "#1f2c33"
+    },
+    {
+      "type": "painting",
+      "pos": [
+        -4.95,
+        1.7,
+        -3.5
+      ],
+      "size": [
+        0.8,
+        0.8,
+        0
+      ],
+      "rotY": 90,
+      "color": "#b5472f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.7,
+        0,
+        -5.2
+      ],
+      "size": [
+        0.5,
+        1.6,
+        1
+      ],
+      "rotY": 0,
+      "color": "#8a5a2a"
+    }
+  ],
+  "spots": [
+    {
+      "id": "stair-foot",
+      "pos": [
+        3.4,
+        -0.4
+      ],
+      "facing": "right",
+      "note": "entrance at the foot of the stairs"
+    },
+    {
+      "id": "by-the-pillar",
+      "pos": [
+        -1.2,
+        -0.5
+      ],
+      "facing": "camera",
+      "note": "beside the steel pillar"
+    },
+    {
+      "id": "at-the-ramp",
+      "pos": [
+        -1.2,
+        -4.6
+      ],
+      "facing": "away",
+      "note": "facing the bow ramp"
+    },
+    {
+      "id": "between-cars",
+      "pos": [
+        2.5,
+        -3
+      ],
+      "facing": "camera",
+      "note": "squeezed between a car and the stairs"
+    },
+    {
+      "id": "deck-left",
+      "pos": [
+        -0.8,
+        1.4
+      ],
+      "facing": "camera",
+      "note": "open deck near camera, left"
+    },
+    {
+      "id": "deck-right",
+      "pos": [
+        1.4,
+        1.8
+      ],
+      "facing": "camera",
+      "note": "open deck near camera, right"
+    }
+  ]
+}

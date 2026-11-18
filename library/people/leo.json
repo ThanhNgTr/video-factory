@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "leo",
+  "name": "Leo",
+  "genre": "people",
+  "build": {
+    "height": 0.88,
+    "width": 0.8,
+    "head": 1.2,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#e0ac82",
+  "hair": {
+    "style": "messy",
+    "color": "#6b4226"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "hoodie",
+    "topColor": "#3fae4f",
+    "pants": "#2f3f5c",
+    "accent": "#f2d03b",
+    "pattern": "none"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-AndrewNeural",
+    "pitch": "+6Hz",
+    "rate": "+8%"
+  },
+  "personality": "Overconfident 14-year-old who answers fast and loudly, bluffs with total certainty, and is wrong more often than he admits. Speaks in a cocky, breezy tone."
+}

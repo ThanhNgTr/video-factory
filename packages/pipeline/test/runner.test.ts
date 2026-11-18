@@ -20,6 +20,8 @@ const emptyLib: Library = {
   series: {},
   music: {},
   sfx: {},
+  icons: {},
+  premises: {},
 };
 const ctxFor = (runId: string, params: Record<string, string> = {}): StageContext<undefined> => ({
   runId,
@@ -76,6 +78,29 @@ describe("runStages", () => {
     state.close();
   });
 
+  it("re-runs a stage when the library data it reads changes, and only that stage", async () => {
+    const state = new RunState(join(tmp, "s.sqlite"));
+    let runs = 0;
+    const inline = stage<undefined>({
+      name: "inline",
+      version: 1,
+      inputs: [],
+      outputs: ["inline.json"],
+      fingerprint: (c) => c.library.sets,
+      run: async (c) => {
+        runs++;
+        c.store.writeJson("inline.json", {});
+      },
+    });
+    const ctx = ctxFor("r-lib");
+    await runStages(ctx, state, [inline]);
+    await runStages(ctx, state, [inline]);
+    expect(runs).toBe(1);
+    const edited = { ...ctx, library: { ...emptyLib, sets: { s: {} } } as unknown as Library };
+    await runStages(edited, state, [inline]);
+    expect(runs).toBe(2);
+    state.close();
+  });
   it("retries transient errors with backoff and records cost", async () => {
     const state = new RunState(join(tmp, "s2.sqlite"));
     let tries = 0;
@@ -109,7 +134,32 @@ describe("runStages", () => {
         c.store.writeJson("y.json", {});
       },
     });
-    await expect(runStages(ctxFor("r3"), state, [spender])).rejects.toMatchObject({ code: "budget-exceeded" });
+    const capped = { ...ctxFor("r3"), config: { ...loadConfig(tmp), budgetUsd: 2 } };
+    await expect(runStages(capped, state, [spender])).rejects.toMatchObject({ code: "budget-exceeded" });
+    // no VF_BUDGET_USD, no cap: the same spend goes through
+    await runStages({ ...ctxFor("r3b"), config: { ...loadConfig(tmp), budgetUsd: undefined } }, state, [spender]);
+    expect(state.runCost("r3b")).toBe(99);
+    state.close();
+  });
+  it("caps each invocation at the budget, not the run's lifetime spend", async () => {
+    const state = new RunState(join(tmp, "budget.sqlite"));
+    const spend = (usd: number, name: string) =>
+      stage<undefined>({
+        name,
+        version: 1,
+        inputs: [],
+        outputs: [`${name}.json`],
+        run: async (c) => {
+          c.recordUsage({ inputTokens: 0, outputTokens: 0, costUsd: usd, ms: 0, provider: "t", model: "t" });
+          c.store.writeJson(`${name}.json`, {});
+        },
+      });
+    const budget = 2;
+    const ctx = { ...ctxFor("budget"), config: { ...loadConfig(tmp), budgetUsd: budget } };
+    await runStages(ctx, state, [spend(budget * 0.8, "one")]);
+    await runStages(ctx, state, [spend(budget * 0.8, "two")]); // lifetime 1.6x, this invocation 0.8x
+    expect(state.runCost("budget")).toBeCloseTo(budget * 1.6);
+    await expect(runStages(ctx, state, [spend(budget * 1.2, "three")])).rejects.toThrow(/budget/);
     state.close();
   });
 });

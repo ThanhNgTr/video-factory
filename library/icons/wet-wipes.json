@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "wet-wipes",
+  "brief": "a pack of white wet wipes with a few wipes sticking out",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"458\" rx=\"150\" ry=\"16\" fill=\"#1d1b22\" opacity=\"0.15\"/><g stroke=\"#1d1b22\" stroke-linejoin=\"round\" stroke-width=\"10\"><path d=\"M214 270 L206 86 Q244 60 282 90 L286 270 Z\" fill=\"#ffffff\"/><path d=\"M262 270 L276 100 Q318 70 350 104 L322 270 Z\" fill=\"#eef3f8\"/><path d=\"M286 98 Q300 90 312 96\" fill=\"none\" stroke-width=\"5\"/><path d=\"M206 86 Q222 150 214 270\" fill=\"none\" stroke-width=\"5\"/><path d=\"M96 280 Q96 250 126 250 L386 250 Q416 250 416 280 L416 410 Q416 440 386 440 L126 440 Q96 440 96 410 Z\" fill=\"#35b6e8\"/></g><path d=\"M112 282 Q112 266 128 266 L384 266 Q400 266 400 282 L400 300 L112 300 Z\" fill=\"#7fd6f5\"/><path d=\"M104 395 L408 395 L408 410 Q408 428 388 428 L124 428 Q104 428 104 410 Z\" fill=\"#1f86b8\"/><g stroke=\"#1d1b22\" stroke-linejoin=\"round\"><rect x=\"96\" y=\"238\" width=\"320\" height=\"34\" rx=\"14\" fill=\"#ffffff\" stroke-width=\"10\"/><rect x=\"170\" y=\"310\" width=\"172\" height=\"70\" rx=\"16\" fill=\"#ffffff\" stroke-width=\"6\"/></g><circle cx=\"256\" cy=\"345\" r=\"20\" fill=\"#ff7aa8\" stroke=\"#1d1b22\" stroke-width=\"6\"/><path d=\"M256 333 Q246 345 256 356 Q266 345 256 333 Z\" fill=\"#fff\" stroke=\"#1d1b22\" stroke-width=\"3\" stroke-linejoin=\"round\"/></svg>",
+  "score": 8
+}

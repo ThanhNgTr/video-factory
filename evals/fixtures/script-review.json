@@ -1,0 +1,107 @@
+{
+  "criteria": [
+    {
+      "id": "hook",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "one-idea",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "open-loop",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "no-dead-air",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "visual",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "escalation",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "payoff",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "speakable",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "muted-clarity",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "original",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "fresh",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "rules",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "wrongness",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "viewer-role",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "vote",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "hud",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "continuity",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "punchline",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "natural-lines",
+      "pass": true,
+      "note": "Fixture: fine."
+    },
+    {
+      "id": "loop",
+      "pass": true,
+      "note": "Fixture: fine."
+    }
+  ],
+  "score": 8,
+  "summary": "Fixture review: the script holds together.",
+  "fixes": ""
+}

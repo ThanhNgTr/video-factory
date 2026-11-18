@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "mailbox",
+  "brief": "a red mailbox on a wooden post",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"472\" rx=\"130\" ry=\"16\" fill=\"#000\" opacity=\"0.15\"/><g stroke=\"#1d1b22\" stroke-linejoin=\"round\" stroke-width=\"11\"><path d=\"M232 270H288V464H232Z\" fill=\"#b9793f\"/><path d=\"M262 270H288V464H262Z\" fill=\"#9a602e\" stroke=\"none\"/><path d=\"M232 270H288V464H232Z\" fill=\"none\"/><path d=\"M96 190C96 120 150 84 224 84H300C390 84 430 130 430 200V270H96Z\" fill=\"#e53935\"/><path d=\"M96 230H430V270H96Z\" fill=\"#b71c1c\" stroke=\"none\"/><path d=\"M96 190C96 120 150 84 224 84H300C390 84 430 130 430 200V270H96Z\" fill=\"none\"/><path d=\"M130 160C140 125 170 108 215 106\" fill=\"none\" stroke=\"#ff8a80\" stroke-width=\"12\" stroke-linecap=\"round\"/><ellipse cx=\"108\" cy=\"190\" rx=\"22\" ry=\"84\" fill=\"#c62828\"/><ellipse cx=\"108\" cy=\"190\" rx=\"10\" ry=\"58\" fill=\"#5a1313\" stroke-width=\"6\"/><path d=\"M380 150H470V176H380Z\" fill=\"#fdd835\" stroke-width=\"8\"/><path d=\"M440 150V84H470V150Z\" fill=\"#fdd835\" stroke-width=\"8\"/><path d=\"M376 270V300\" stroke-width=\"6\"/><rect x=\"330\" y=\"200\" width=\"56\" height=\"12\" rx=\"6\" fill=\"#fff\" stroke-width=\"6\"/></g><path d=\"M246 300L246 440\" stroke=\"#d9a066\" stroke-width=\"8\" stroke-linecap=\"round\"/></svg>",
+  "score": 9
+}

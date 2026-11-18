@@ -48,6 +48,7 @@ export function normalizeSpeech(text: string): string {
     )
     .replace(/#\s*(\d+)/g, (_, n: string) => `number ${numberWords(Number(n))}`)
     .replace(/\bRm\.?\b/g, "room")
+    .replace(/\bhon\b/gi, "hun") // "hon" (honey) is read as "Han"
     .replace(/\s+/g, " ")
     .trim();
 }

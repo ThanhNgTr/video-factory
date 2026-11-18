@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "wren",
+  "name": "Wren",
+  "genre": "people",
+  "build": {
+    "height": 0.82,
+    "width": 0.72,
+    "head": 1.25,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#efd8c6",
+  "hair": {
+    "style": "long",
+    "color": "#0b0b12"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false,
+    "iris": "#aab4bf",
+    "lashes": true,
+    "blush": false
+  },
+  "outfit": {
+    "top": "hoodie",
+    "topColor": "#ffe14d",
+    "pants": "#2b2d42",
+    "accent": "#2b2d42",
+    "pattern": "none",
+    "inner": "#2b2d42"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-AnaNeural",
+    "pitch": "-4Hz",
+    "rate": "-10%"
+  },
+  "personality": "A quiet thirteen-year-old who never looks up. Speaks in two or three flat words at a time and whispers to the goldfish she carries."
+}

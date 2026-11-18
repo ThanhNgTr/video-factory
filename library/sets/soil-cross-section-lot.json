@@ -1,0 +1,490 @@
+{
+  "schemaVersion": 1,
+  "id": "soil-cross-section-lot",
+  "room": {
+    "w": 12,
+    "h": 4,
+    "front": 6,
+    "back": -6
+  },
+  "wall": "#bfe3f7",
+  "floor": "#e6d9b8",
+  "floorStyle": "plain",
+  "wallStyle": "plain",
+  "lamps": [
+    [
+      -3,
+      3.95,
+      -2
+    ],
+    [
+      3,
+      3.95,
+      -2
+    ],
+    [
+      0,
+      3.95,
+      1.2
+    ]
+  ],
+  "props": [
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -4.6
+      ],
+      "size": [
+        5.6,
+        0.3,
+        2
+      ],
+      "rotY": 0,
+      "color": "#4a4e57"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0.3,
+        -4.6
+      ],
+      "size": [
+        5.6,
+        0.5,
+        2
+      ],
+      "rotY": 0,
+      "color": "#a3a7ad"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0.8,
+        -4.6
+      ],
+      "size": [
+        5.6,
+        0.45,
+        2
+      ],
+      "rotY": 0,
+      "color": "#e08a3a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        1.25,
+        -4.6
+      ],
+      "size": [
+        5.6,
+        0.35,
+        2
+      ],
+      "rotY": 0,
+      "color": "#7a4a28"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.4,
+        0,
+        -4.6
+      ],
+      "size": [
+        3.2,
+        1.35,
+        2
+      ],
+      "rotY": 0,
+      "color": "#7a4a28"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.4,
+        1.35,
+        -4.6
+      ],
+      "size": [
+        3.2,
+        0.25,
+        2
+      ],
+      "rotY": 0,
+      "color": "#5cc43f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.4,
+        0,
+        -4.6
+      ],
+      "size": [
+        3.2,
+        1.35,
+        2
+      ],
+      "rotY": 0,
+      "color": "#7a4a28"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.4,
+        1.35,
+        -4.6
+      ],
+      "size": [
+        3.2,
+        0.25,
+        2
+      ],
+      "rotY": 0,
+      "color": "#5cc43f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        1.6,
+        -4.6
+      ],
+      "size": [
+        3.4,
+        0.06,
+        1.6
+      ],
+      "rotY": 0,
+      "color": "#c8955a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.6,
+        1.66,
+        -4.7
+      ],
+      "size": [
+        1,
+        0.7,
+        0.9
+      ],
+      "rotY": 10,
+      "color": "#c9a063"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -1.5,
+        0.45,
+        -3.58
+      ],
+      "size": [
+        0.3,
+        0.2,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#7d8188"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.4,
+        0.6,
+        -3.58
+      ],
+      "size": [
+        0.22,
+        0.18,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#cfd2d6"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.7,
+        0.45,
+        -3.58
+      ],
+      "size": [
+        0.35,
+        0.22,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#8a8e95"
+    },
+    {
+      "type": "box",
+      "pos": [
+        1.8,
+        0.62,
+        -3.58
+      ],
+      "size": [
+        0.25,
+        0.16,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#c4c7cc"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -2.2,
+        0.55,
+        -3.58
+      ],
+      "size": [
+        0.2,
+        0.2,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#6f737a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.35,
+        0.4,
+        -3.58
+      ],
+      "size": [
+        0.28,
+        0.18,
+        0.08
+      ],
+      "rotY": 0,
+      "color": "#b5b8bd"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -4.6,
+        1.6,
+        -4.8
+      ],
+      "size": [
+        0.18,
+        1.2,
+        0
+      ],
+      "rotY": 0,
+      "color": "#7a4a2a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.6,
+        2.8,
+        -4.8
+      ],
+      "size": [
+        1.4,
+        1.1,
+        1.4
+      ],
+      "rotY": 0,
+      "color": "#3fa84a"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        4.6,
+        1.6,
+        -4.8
+      ],
+      "size": [
+        0.18,
+        1.2,
+        0
+      ],
+      "rotY": 0,
+      "color": "#7a4a2a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.6,
+        2.8,
+        -4.8
+      ],
+      "size": [
+        1.4,
+        1.1,
+        1.4
+      ],
+      "rotY": 0,
+      "color": "#3fa84a"
+    },
+    {
+      "type": "rug",
+      "pos": [
+        0,
+        0,
+        -1.5
+      ],
+      "size": [
+        4,
+        0,
+        2.6
+      ],
+      "rotY": 0,
+      "color": "#c8955a"
+    },
+    {
+      "type": "rug",
+      "pos": [
+        -4.3,
+        0,
+        0.2
+      ],
+      "size": [
+        2.8,
+        0,
+        2.2
+      ],
+      "rotY": 0,
+      "color": "#5cc43f"
+    },
+    {
+      "type": "rug",
+      "pos": [
+        4.3,
+        0,
+        -0.6
+      ],
+      "size": [
+        2.8,
+        0,
+        2.2
+      ],
+      "rotY": 0,
+      "color": "#5cc43f"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -5.6,
+        0,
+        -1.8
+      ],
+      "size": [
+        0.08,
+        1.4,
+        0
+      ],
+      "rotY": 0,
+      "color": "#c9863f"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        -5.6,
+        0,
+        -0.2
+      ],
+      "size": [
+        0.08,
+        1.4,
+        0
+      ],
+      "rotY": 0,
+      "color": "#c9863f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -5.6,
+        1.1,
+        -1
+      ],
+      "size": [
+        0.08,
+        0.12,
+        1.6
+      ],
+      "rotY": 0,
+      "color": "#c9863f"
+    }
+  ],
+  "spots": [
+    {
+      "id": "entrance",
+      "pos": [
+        -4.8,
+        -1
+      ],
+      "facing": "right",
+      "note": "by the site gate on the left"
+    },
+    {
+      "id": "on-the-plot",
+      "pos": [
+        0,
+        -1.5
+      ],
+      "facing": "camera",
+      "note": "center of the bare dirt plot"
+    },
+    {
+      "id": "by-the-cutaway",
+      "pos": [
+        2,
+        -2.6
+      ],
+      "facing": "away",
+      "note": "studying the soil layers in the cut face"
+    },
+    {
+      "id": "left-lawn",
+      "pos": [
+        -4,
+        0.7
+      ],
+      "facing": "right",
+      "note": "on the left grass lawn"
+    },
+    {
+      "id": "right-lawn",
+      "pos": [
+        4.2,
+        -0.6
+      ],
+      "facing": "left",
+      "note": "on the right grass lawn"
+    },
+    {
+      "id": "dialogue-left",
+      "pos": [
+        -1.4,
+        1.3
+      ],
+      "facing": "camera",
+      "note": "near camera, left"
+    },
+    {
+      "id": "dialogue-right",
+      "pos": [
+        1.4,
+        1.3
+      ],
+      "facing": "camera",
+      "note": "near camera, right"
+    }
+  ],
+  "outdoor": true,
+  "sky": "#a9d6f5"
+}

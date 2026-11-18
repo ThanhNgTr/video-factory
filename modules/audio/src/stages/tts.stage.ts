@@ -1,4 +1,4 @@
-import { type Audio, NARRATOR, Scene, Script, type SpeechClip, type Voice } from "@vf/contracts";
+import { Assets, type Audio, NARRATOR, Scene, Script, type SpeechClip, type Voice } from "@vf/contracts";
 import { StageError } from "@vf/core";
 import { stage } from "@vf/pipeline";
 import { displayWords, normalizeSpeech } from "../domain/normalize.ts";
@@ -9,17 +9,18 @@ const DEFAULT_NARRATOR: Voice = { id: "en-US-GuyNeural", pitch: "-4Hz", rate: "-
 // One clip per spoken line. Word timings from the provider are mapped back onto the display words (markup kept).
 export const audioTts = stage<AudioDeps>({
   name: "audio.tts",
-  version: 1,
-  inputs: ["scene.json", "script.json"],
+  version: 3, // + voices from assets.json, so designed characters speak too
+  inputs: ["scene.json", "script.json", "assets.json"],
   outputs: ["audio.json"],
   run: async (ctx) => {
     const scene = ctx.store.readJson("scene.json", Scene);
     const script = ctx.store.readJson("script.json", Script);
     const narrator = script.narratorVoice ?? DEFAULT_NARRATOR;
+    const people = ctx.store.readJson("assets.json", Assets).people;
     const clips: SpeechClip[] = [];
     for (const shot of scene.shots) {
       if (!shot.line) continue;
-      const voice = shot.line.who === NARRATOR ? narrator : ctx.library.people[shot.line.who]?.voice;
+      const voice = shot.line.who === NARRATOR ? narrator : people[shot.line.who]?.voice;
       if (!voice) throw new StageError("missing-reference", `no voice for speaker ${shot.line.who}`);
       const name = `audio/${shot.id}.mp3`;
       const r = await ctx.deps.tts.speak(normalizeSpeech(shot.line.text), voice, ctx.store.path(name));

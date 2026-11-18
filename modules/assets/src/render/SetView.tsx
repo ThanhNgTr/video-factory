@@ -1,30 +1,16 @@
 // A room and its props, all from blocks. Prop pos = base centre on the floor (or on a wall for paintings/windows).
 
-import type { Set3D } from "@vf/contracts";
+import { PROP_SIZE, type Set3D } from "@vf/contracts";
 import type React from "react";
 import { random } from "remotion";
 import * as THREE from "three";
-import { Ball, Block, Cylinder, deg, shade, type V3 } from "./blocks.tsx";
+import { Ball, Block, Cylinder, deg, shade } from "./blocks.tsx";
 
 type Prop = Set3D["props"][number];
 const PRODUCTS = ["#e76f51", "#2a9d8f", "#e9c46a", "#457b9d", "#f4a261", "#8ab17d"];
-const DEFAULT_SIZE: Record<Prop["type"], V3> = {
-  box: [1, 1, 1],
-  cylinder: [0.2, 2.6, 0],
-  shelf: [3, 2.2, 0.5],
-  counter: [2.4, 1.05, 0.7],
-  door: [1, 2.1, 0],
-  window: [1.4, 1.2, 0],
-  sofa: [2, 0.9, 0.9],
-  plant: [0.5, 1.3, 0.5],
-  elevator: [1.6, 2.4, 0],
-  painting: [1, 0.8, 0],
-  rug: [3, 0, 2],
-  chair: [0.5, 0.95, 0.5],
-};
 
 function PropView({ t }: { t: Prop }) {
-  const [w, h, d] = t.size ?? DEFAULT_SIZE[t.type];
+  const [w, h, d] = t.size ?? PROP_SIZE[t.type];
   const c = t.color;
   const body = (() => {
     switch (t.type) {
@@ -236,11 +222,33 @@ const Trim: React.FC<{ set: Set3D; y: number; h: number; depth: number; c: strin
 };
 
 // dim: 0..1 light level (flicker/blackout). haze = visible light shafts under the lamps (night/horror)
-export const SetView: React.FC<{ set: Set3D; dim: number; haze: boolean }> = ({ set, dim, haze }) => {
+// hide: indices of set.props a close shot leaves out of frame (foreground clutter)
+export const SetView: React.FC<{ set: Set3D; dim: number; haze: boolean; hide?: number[] }> = ({
+  set,
+  dim,
+  haze,
+  hide = [],
+}) => {
   const { w, h, front, back } = set.room;
   const d = front - back;
   const zc = (front + back) / 2;
   const lamp = dim < 0.5 ? "#1c2230" : "#f4fbff";
+  if (set.outdoor)
+    // ground running past the frame, a sky backdrop far behind, the props; no ceiling, side walls or lamps
+    return (
+      <group>
+        <Block
+          s={[w * 6, 0.1, d * 3]}
+          p={[0, -0.05, zc]}
+          c={set.floor}
+          r={0}
+          bare
+          map={pattern(set.floorStyle, w * 6, d * 3)}
+        />
+        <Block s={[w * 8, h * 6, 0.1]} p={[0, h * 2, back - 6]} c={set.sky} r={0} bare glow />
+        {set.props.map((t, i) => (hide.includes(i) ? null : <PropView key={`${t.type}@${t.pos.join(",")}`} t={t} />))}
+      </group>
+    );
   return (
     <group>
       <Block s={[w, 0.1, d]} p={[0, -0.05, zc]} c={set.floor} r={0} bare map={pattern(set.floorStyle, w, d)} />
@@ -257,6 +265,8 @@ export const SetView: React.FC<{ set: Set3D; dim: number; haze: boolean }> = ({ 
           map={pattern(set.wallStyle, d, h)}
         />
       ))}
+      {/* the front wall sits behind the usual cameras; a reverse angle (ADR 0025) sees it */}
+      <Block s={[w, h, 0.1]} p={[0, h / 2, front + 0.05]} c={set.wall} r={0} bare map={pattern(set.wallStyle, w, h)} />
       <Trim set={set} y={0} h={0.14} depth={0.04} c={shade(set.wall, 0.45)} />
       <Trim set={set} y={h - 0.14} h={0.14} depth={0.06} c={shade(set.wall, 1.35)} />
       {set.wainscot && (
@@ -282,9 +292,7 @@ export const SetView: React.FC<{ set: Set3D; dim: number; haze: boolean }> = ({ 
             />
           </mesh>
         ))}
-      {set.props.map((t) => (
-        <PropView key={`${t.type}@${t.pos.join(",")}`} t={t} />
-      ))}
+      {set.props.map((t, i) => (hide.includes(i) ? null : <PropView key={`${t.type}@${t.pos.join(",")}`} t={t} />))}
     </group>
   );
 };

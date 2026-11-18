@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "scratch-head",
+  "dur": 1.2,
+  "loop": true,
+  "keys": [
+    { "t": 0, "armR": 148, "armL": 16, "rot": 4, "face": "sad" },
+    { "t": 0.25, "armR": 158, "rot": 5 },
+    { "t": 0.5, "armR": 146, "rot": 4 },
+    { "t": 0.75, "armR": 157, "rot": 5 },
+    { "t": 1, "armR": 148, "rot": 4 }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "doubling-ladder-to-absurd-landmark",
+  "source": "https://www.youtube.com/shorts/6UcRNnJwqr4",
+  "lengthS": 59.4,
+  "language": "en",
+  "summary": "The video opens on an everyday action repeated N times, asks \"how big?\", and gives the absurd answer right away. Then it proves the answer with a hand-drawn numbered list: it writes out the first ten doublings, reveals the shortcut that 10 doublings ≈ 1000×, and jumps a decade at a time. Each jump cuts to a short shot of the object next to a real landmark (tree, edge of space, Moon).",
+  "topic": "exponential growth: repeated doubling of a tiny everyday object reaching a cosmic distance",
+  "beats": [
+    {
+      "t": "0-4s",
+      "role": "hook",
+      "pattern": "Close top-down shot of a hand doing a mundane action (one fold) with a huge counter number overlaid. The counter jumps fast (1, 2, 3 … N), then a quick blur cut to a giant bold kinetic-type card: 'N times'."
+    },
+    {
+      "t": "4-7s",
+      "role": "hook",
+      "pattern": "The card adds a stacked question in giant caps ('HOW BIG?'). It hard-cuts to the answer visual: a wide space shot of Earth at the bottom and the Moon at the top. The narrator states the absurd answer right away, before giving any proof."
+    },
+    {
+      "t": "7-11s",
+      "role": "setup",
+      "pattern": "The host faces the camera with an exaggerated 'that's insane' face and promises to prove it 'without any equations', which lowers the barrier for the viewer."
+    },
+    {
+      "t": "11-21s",
+      "role": "build",
+      "pattern": "A dark board shows a starting-object illustration labeled with its tiny base size, then a pre-numbered column of steps 1–20. The values are handwritten in a contrast color in sync with the narration, one per step. The rapid doubling (0.2, 0.4, 0.8 …) builds rhythm, and the list reaches step 10 at a modest value."
+    },
+    {
+      "t": "21-24s",
+      "role": "build",
+      "pattern": "Cut back to the host holding the real folded object up to the lens and showing its size with finger spacing. The voiceover undersells it ('not so much'). This sets a low expectation on purpose."
+    },
+    {
+      "t": "24-31s",
+      "role": "twist",
+      "pattern": "'Ready to get your mind blown.' The camera pans the board to step 11, and a hand-drawn arc arrow from step 1 to step 11 is labeled first '10', then '1000×'. This reveals the shortcut: every 10 steps multiplies the value by about 1000."
+    },
+    {
+      "t": "31-41s",
+      "role": "build",
+      "pattern": "The same arc arrow repeats from step 10 to step 20 with '1000×' and the new value (converted to a bigger unit). Cut-away: the object composited next to a familiar landmark of that height (the tallest tree)."
+    },
+    {
+      "t": "41-48s",
+      "role": "build",
+      "pattern": "The camera pans further and the arrow repeats from 20 to 30 with '1000×', reaching ~100 km. Cut-away: the object sticking up from the curved Earth into the edge of space."
+    },
+    {
+      "t": "48-58s",
+      "role": "build",
+      "pattern": "The board pans to steps 31–42. One more 1000× arrow lands at step 40, then two final single doublings are written in, landing exactly on the promised target number."
+    },
+    {
+      "t": "58-59.4s",
+      "role": "payoff",
+      "pattern": "Final cut: the space shot from the hook, now with the stretched object spanning from Earth to the Moon. One short line confirms the target. The ending matches the opening answer, so the video loops cleanly."
+    }
+  ],
+  "whyViral": "The absurd answer arrives in the first 7 seconds, so the rest of the video is proof. It works as a curiosity gap that the viewer already half-believes but can't explain. 'Without any equations' promises an easy payoff. The fast doubling list builds a rhythm, and the deliberate 'not so much' at step 10 makes the 1000× reveal hit harder. The shortcut (10 doublings ≈ 1000×) is a reusable mental trick that viewers want to share. Each decade jump comes with a real landmark (tree, edge of space, Moon), so the abstract numbers become visual escalation. The last two doublings land exactly on the promised number, which feels satisfying. Because the final shot echoes the opening one, the loop invites a rewatch, and the clear true-or-false claim drives comments.",
+  "cast": [
+    {
+      "role": "the enthusiastic explainer",
+      "traits": "talks to the camera, over-the-top amazed face, handles the real object, informal and hype-y ('freaking', 'mind blown')"
+    },
+    {
+      "role": "the everyday object",
+      "traits": "tiny, familiar starting size; grows absurdly through repetition and is placed next to landmarks"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "fold-object",
+      "rapid-count-up",
+      "gasp-reaction",
+      "hold-object-to-camera",
+      "finger-size-gesture",
+      "point-at-board",
+      "handwrite-values",
+      "draw-arc-arrow"
+    ],
+    "settings": [
+      "desk-closeup",
+      "host-room-with-mic",
+      "dark-chalkboard-numbered-list",
+      "giant-kinetic-text-card",
+      "space-earth-moon",
+      "landmark-comparison-tree",
+      "edge-of-space-horizon",
+      "camera-pan-across-list",
+      "unit-conversion-labels",
+      "multiplier-arrow-1000x",
+      "object-stretched-to-target"
+    ]
+  },
+  "score": null
+}

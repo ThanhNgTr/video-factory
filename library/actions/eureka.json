@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "eureka",
+  "dur": 0.9,
+  "loop": false,
+  "keys": [
+    { "t": 0, "armR": 20, "armL": 18, "y": 0, "face": "happy" },
+    { "t": 0.18, "armR": 10, "y": 0.02, "rot": 2 },
+    { "t": 0.45, "armR": 172, "y": -0.04, "rot": -3 },
+    { "t": 0.7, "armR": 165, "y": 0, "rot": -1 },
+    { "t": 1, "armR": 168, "y": 0, "rot": 0 }
+  ]
+}

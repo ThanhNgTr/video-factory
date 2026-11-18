@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "little-house",
+  "name": "Little House",
+  "genre": "object",
+  "build": {
+    "height": 0.6,
+    "width": 1.4,
+    "head": 1.4,
+    "shape": "square",
+    "headShape": "square"
+  },
+  "skin": "#f5e6c8",
+  "hair": {
+    "style": "none",
+    "color": "#b3261e"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "none",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#f5e6c8",
+    "pants": "#8a5a3c",
+    "accent": "#b3261e",
+    "pattern": "none"
+  },
+  "wear": [
+    "cap"
+  ],
+  "voice": {
+    "id": "en-US-AnaNeural",
+    "pitch": "+4Hz",
+    "rate": "+0%"
+  },
+  "personality": "Cheerful, curious and a little dramatic. Speaks in short, bright, wide-eyed sentences, and gets embarrassed whenever the toilet flushes."
+}

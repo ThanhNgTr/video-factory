@@ -6,9 +6,18 @@ import { Video } from "./Video.tsx";
 
 // Real props always come from video.render. These defaults only let Remotion Studio open.
 const empty: RenderProps = {
-  timeline: { schemaVersion: 1, fps: 30, width: 1080, height: 1920, totalFrames: 30, shots: [], captions: [] },
-  scene: { schemaVersion: 1, title: "empty", mood: "night", shots: [] as never },
-  assets: { schemaVersion: 1, people: {}, actions: {}, sets: {} },
+  timeline: {
+    schemaVersion: 1,
+    fps: 30,
+    width: 1080,
+    height: 1920,
+    totalFrames: 30,
+    shots: [],
+    captions: [],
+    cues: [],
+  },
+  scene: { schemaVersion: 1, title: "empty", mood: "night", shots: [] as never, icons: [] },
+  assets: { schemaVersion: 1, people: {}, actions: {}, sets: {}, icons: {} },
   seed: "studio",
 };
 
@@ -18,11 +27,11 @@ const previewDefaults: PreviewProps = {
     id: "preview",
     name: "Preview",
     genre: "people",
-    build: { height: 1, width: 1, head: 1 },
+    build: { height: 1, width: 1, head: 1, shape: "soft", headShape: "round" },
     skin: "#f1c3a0",
     hair: { style: "short", color: "#3a2a22" },
-    face: { eyes: "dot", brows: "thin", mustache: false, glasses: false, grin: false },
-    outfit: { top: "tshirt", topColor: "#2c6e6a", pants: "#22263a", accent: "#c9a227" },
+    face: { eyes: "dot", brows: "thin", mustache: false, glasses: false, grin: false, lashes: false, blush: false },
+    outfit: { top: "tshirt", topColor: "#2c6e6a", pants: "#22263a", accent: "#c9a227", pattern: "none" },
     wear: [],
     voice: { id: "en-US-GuyNeural", pitch: "+0Hz", rate: "+0%" },
     personality: "preview",

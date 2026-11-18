@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "crouch",
+  "dur": 1.2,
+  "loop": true,
+  "keys": [
+    { "t": 0, "legL": -50, "legR": -40, "kneeL": 105, "kneeR": 95, "armL": 40, "armR": 55, "rot": 8, "face": "shock" },
+    { "t": 0.5, "rot": 10, "armR": 60 },
+    { "t": 1, "rot": 8, "armR": 55 }
+  ]
+}

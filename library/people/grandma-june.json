@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "grandma-june",
+  "name": "Grandma June",
+  "genre": "people",
+  "build": {
+    "height": 0.82,
+    "width": 1.1,
+    "head": 1.15,
+    "shape": "round",
+    "headShape": "round"
+  },
+  "skin": "#f0c8a8",
+  "hair": {
+    "style": "curly",
+    "color": "#e6e1ee"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "glasses": true,
+    "iris": "#7a5c9e",
+    "blush": true
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#b5838d",
+    "pants": "#5c4d7d",
+    "accent": "#ffb4a2",
+    "inner": "#fff3e0"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-JennyNeural",
+    "pitch": "-10Hz",
+    "rate": "-6%"
+  },
+  "personality": "A tiny, sharp-witted grandmother who has an old story for every situation, bakes when nervous, and is never as fragile as she looks."
+}

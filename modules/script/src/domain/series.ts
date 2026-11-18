@@ -1,7 +1,19 @@
 // Series continuity helpers. Pure.
-import type { Script, SeriesBible } from "@vf/contracts";
+import type { Library, Script, SeriesBible } from "@vf/contracts";
 
 export const nextPart = (bible: SeriesBible | undefined): number => (bible?.parts.length ?? 0) + 1;
+
+// a series may limit its sets (a diner story must not be staged in the hotel hallway)
+export function stagingLibrary(library: Library, series?: string): Library {
+  const allowed = series ? library.series[series]?.sets : undefined;
+  if (!allowed) return library;
+  return { ...library, sets: Object.fromEntries(Object.entries(library.sets).filter(([id]) => allowed.includes(id))) };
+}
+
+// The bible as the writer of `part` must see it: only the parts before it (a rewrite of part 1 after part 1 was
+// recorded must not read itself as history).
+export const bibleBefore = (bible: SeriesBible | undefined, part: number | undefined): SeriesBible | undefined =>
+  bible && part ? { ...bible, parts: bible.parts.filter((p) => p.part < part) } : bible;
 
 export function bibleContext(bible: SeriesBible | undefined, audienceChoice?: string): string {
   if (!bible) return "This is a new series: establish the world, the viewer's role and the rules.";

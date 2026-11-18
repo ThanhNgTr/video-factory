@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "recoil",
+  "dur": 0.5,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "armL": 20,
+      "armR": 20,
+      "face": "shock"
+    },
+    {
+      "t": 0.4,
+      "x": -0.14,
+      "rot": 10,
+      "armL": 70,
+      "armR": 70,
+      "sx": 0.96,
+      "sy": 1.04
+    },
+    {
+      "t": 1,
+      "x": -0.1,
+      "rot": 8,
+      "armL": 60,
+      "armR": 60,
+      "sx": 1,
+      "sy": 1
+    }
+  ]
+}

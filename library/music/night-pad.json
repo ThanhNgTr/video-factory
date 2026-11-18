@@ -1,7 +1,1 @@
-{
-  "id": "night-pad",
-  "file": "night-pad.wav",
-  "mood": ["night", "bright"],
-  "seconds": 120,
-  "license": "generated in-repo by tools/make-audio-library.sh (CC0)"
-}
+{"id": "night-pad", "file": "night-pad.wav", "mood": ["night"], "seconds": 120, "license": "generated in-repo by tools/make-audio-library.sh (CC0)"}

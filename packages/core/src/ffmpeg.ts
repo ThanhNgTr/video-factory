@@ -14,6 +14,20 @@ export async function ffmpeg(args: string[], timeoutMs = 10 * 60_000): Promise<s
   }
 }
 
+// ffmpeg writing to stdout ("-f rawvideo -"): the bytes, for callers that measure frames themselves.
+export async function ffmpegStdout(args: string[], timeoutMs = 10 * 60_000): Promise<Buffer> {
+  try {
+    const { stdout } = await run("ffmpeg", ["-v", "error", ...args], {
+      timeout: timeoutMs,
+      maxBuffer: 256 << 20,
+      encoding: "buffer",
+    });
+    return stdout;
+  } catch (e) {
+    throw new StageError("io", `ffmpeg failed: ${(e as Error).message}`, { cause: e, details: { args } });
+  }
+}
+
 // ffmpeg filters report through stderr at info level; this variant keeps that output.
 export async function ffmpegInfo(args: string[]): Promise<string> {
   try {

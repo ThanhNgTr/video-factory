@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "fake-skit",
+  "title": "The Blank Badge",
+  "premise": "Sam, the new night clerk, is given one rule by Mr. Harlow: never say your name. A soaked girl asks for his name anyway. Sam almost answers, and the lights go out. Cliffhanger: 1 answer her, 2 stay silent.",
+  "cast": [
+    "night-clerk",
+    "old-manager",
+    "raincoat-girl"
+  ]
+}

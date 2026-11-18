@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "pov-trapped-dilemma-vote-for-part-two",
+  "source": "https://www.instagram.com/reel/Dfn6jwjznfz/",
+  "lengthS": 78.5,
+  "language": "en",
+  "summary": "A second-person 'imagine you're...' horror story puts the viewer in a sealed place at night with a few strangers. An authority voice gives one rule, a threat appears outside, and two companions each offer a way out while discrediting the other. The story ends on a countdown A/B choice that viewers vote on in the comments to decide part two.",
+  "topic": "second-person horror dilemma: trapped at night with strangers, choose whom to trust",
+  "beats": [
+    {
+      "t": "0-6s",
+      "role": "hook",
+      "pattern": "Narrator opens in second person ('imagine you're...'). Exterior establishing shot: the back of the last vehicle in a dark tunnel, red tail lights glowing. The camera pushes in slowly toward a small rear window where tiny passengers are visible. Hard cut to a symmetrical wide shot down the interior aisle, where a digital sign above reads midnight (a planted prop). The narrator gives an exact headcount. Captions are centered in the upper third and highlight one word at a time."
+    },
+    {
+      "t": "6-14s",
+      "role": "setup",
+      "pattern": "Roll call of the cast. The camera dollies and pans from one seated passenger to the next and settles into a frontal medium shot of each as the narrator gives that character a one-line trait (asleep, long coat, alone clutching a bag). The characters hold almost still, with only small idle motion. The quiet, vulnerable one gets the last and closest shot. Note one prop per character, such as a handbag or a backpack, so it can pay off later."
+    },
+    {
+      "t": "14-18s",
+      "role": "build",
+      "pattern": "Inciting event with 'Suddenly'. A low side angle tracks along the vehicle in the tunnel, then a hard cut back to the opening rear shot, now with brake sparks spraying, a slight camera shake and a screech sound effect. Repeating the opening image tells the viewer that something has changed."
+    },
+    {
+      "t": "18-25s",
+      "role": "build",
+      "pattern": "Escalation through the environment. The same interior wide shot is held while the lights flicker and drop to red emergency light, leaving the passengers as silhouettes. Hard cut to an extreme close-up of an intercom speaker grille with pulsing rings, while the narrator describes a frightened voice."
+    },
+    {
+      "t": "25-33s",
+      "role": "build",
+      "pattern": "A single rule is planted. The authority voice says it twice. The visual is a slow lateral drift across closed doors with glowing red warning labels, which slide through the frame as the camera moves. The shot ends in a blurred push on one door while the narrator says one word: silence. A beat of stillness follows."
+    },
+    {
+      "t": "33-41s",
+      "role": "twist",
+      "pattern": "The threat arrives from outside. A dark silhouette appears behind a frosted window, with animated knock marks and a knocking sound. Cut to a long exterior angle along the vehicle where a tiny figure is visible at one window. Then a first-person shot: the viewer's own hand raises a phone with its flashlight on, and the beam sweeps the darkened interior."
+    },
+    {
+      "t": "41-53s",
+      "role": "build",
+      "pattern": "Flashlight reveal and the first offer. The beam pans to the elder's seat, now empty except for the handbag planted earlier. The stranger stands, and the camera pushes in to an extreme close-up of his face as his eyes widen while he whispers a warning. Then an offer to escape: a cut to the tunnel with a light far off, and a push toward a glowing green exit door. The phone stays in the bottom of the frame the whole time as a first-person HUD."
+    },
+    {
+      "t": "53-62s",
+      "role": "twist",
+      "pattern": "The counter-offer and the reveal. An insert of a small hand gripping the viewer's hand, with frost cracks spreading across the skin to show it is ice cold. Hard cut to a motion graphic: a vertical route line scrolls past station dots, with an avatar of each passenger at the stop where they boarded. It ends on the stranger's avatar circled in red beside a 'you are here, in the tunnel' marker, which shows visually that he never got on. Both allies are now suspect."
+    },
+    {
+      "t": "62-72s",
+      "role": "build",
+      "pattern": "Time pressure. Handprints pop onto the windows, one after another, in a dim interior. The midnight sign planted at the start returns as a 10-second countdown in a push-in. Option cards follow: a full shot of the stranger in the tunnel with a green 'A' badge, then the child in her seat with a yellow 'B' badge and handprints behind her. A countdown timer stays in the top-right corner and keeps ticking down."
+    },
+    {
+      "t": "72-75s",
+      "role": "cta",
+      "pattern": "Split screen with option A on top and option B below, with the timer near zero. The narrator asks viewers to comment A or B, and the caption box highlights the letter."
+    },
+    {
+      "t": "75-78.5s",
+      "role": "loop",
+      "pattern": "Hard cut back to the opening exterior rear shot, with the camera pushing in toward the rear window. This time the window shows the child standing alone and staring out, a final eerie image that loops back to the first frame. The narrator says the most-voted option decides part two."
+    }
+  ],
+  "whyViral": "The hook lands in the first second: the narrator speaks in second person and the opening image is a lonely vehicle at midnight, so the viewer is the protagonist. The first-person phone-flashlight shot keeps that point of view on screen. An exact headcount and one-line traits make the cast easy to track. The authority voice plants a clear rule (do not open), and the threat outside then pressures it. Planted images pay off later: the elder's handbag is left on an empty seat to show she has vanished, the midnight clock sign returns as the 10-second countdown, and the opening rear-window shot returns at the end with an unsettling change, which rewards a rewatch. The story escalates step by step: brake stop, blackout, intercom, knocking, a missing passenger, then handprints. The twist structure makes the choice hard: each ally offers safety and the other is discredited, the stranger by the boarding-map graphic and the child by her ice-cold hand. The ending is a binary choice with a ticking timer and a split screen. 'Comment A or B' turns viewers into co-authors. The promise that votes decide part two drives comments, shares and follows.",
+  "cast": [
+    {
+      "role": "the viewer-protagonist",
+      "traits": "addressed as 'you'; seen only as a hand holding a phone with its flashlight on; must make the final choice"
+    },
+    {
+      "role": "the sleeping elder",
+      "traits": "old, harmless, dozing, has a signature handbag; vanishes and leaves only the bag behind"
+    },
+    {
+      "role": "the persuasive stranger",
+      "traits": "long coat and wide-brimmed hat, blank calm face, stands up and offers an escape route; secretly cannot be trusted"
+    },
+    {
+      "role": "the eerie child",
+      "traits": "small, alone, hugs a backpack, quiet; grabs your hand with ice-cold skin and discredits the stranger"
+    },
+    {
+      "role": "the unseen authority voice",
+      "traits": "heard only through a speaker, shaking voice, gives one absolute rule"
+    },
+    {
+      "role": "the thing outside",
+      "traits": "faceless silhouette, knocks on the windows, leaves multiplying handprints"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "sit-idle",
+      "sleep-seated",
+      "hug-bag",
+      "stand-up",
+      "whisper-close-up",
+      "eyes-widen",
+      "raise-phone-flashlight",
+      "flashlight-sweep",
+      "grab-hand",
+      "frost-spread",
+      "silhouette-knock",
+      "handprints-appear",
+      "lights-flicker-out",
+      "brake-sparks",
+      "camera-shake",
+      "push-in",
+      "lateral-pan",
+      "split-screen"
+    ],
+    "settings": [
+      "night-tunnel-exterior-rear-of-vehicle",
+      "vehicle-interior-aisle-wide",
+      "seat-row-closeup",
+      "intercom-speaker-closeup",
+      "doors-with-warning-labels",
+      "tunnel-walkway-with-exit-sign",
+      "digital-clock-sign",
+      "empty-seat-with-left-bag",
+      "route-map-scrolling-stations-with-avatars",
+      "option-badges-a-b",
+      "countdown-timer-hud",
+      "word-highlight-captions",
+      "red-emergency-lighting"
+    ]
+  },
+  "score": null
+}

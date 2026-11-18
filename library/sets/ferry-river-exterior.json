@@ -1,0 +1,536 @@
+{
+  "schemaVersion": 1,
+  "id": "ferry-river-exterior",
+  "room": {
+    "w": 12,
+    "h": 5,
+    "front": 8,
+    "back": -8
+  },
+  "wall": "#0b1a1f",
+  "floor": "#050d11",
+  "floorStyle": "plain",
+  "wallStyle": "plain",
+  "outdoor": true,
+  "sky": "#07131a",
+  "lamps": [
+    [
+      -2,
+      4.95,
+      -1
+    ],
+    [
+      2,
+      4.95,
+      -1
+    ]
+  ],
+  "props": [
+    {
+      "type": "box",
+      "pos": [
+        -0.3,
+        0,
+        -4.5
+      ],
+      "size": [
+        7.2,
+        1.1,
+        2.4
+      ],
+      "rotY": 0,
+      "color": "#1d3d46"
+    },
+    {
+      "type": "box",
+      "pos": [
+        3.6,
+        0,
+        -4.5
+      ],
+      "size": [
+        1.2,
+        1.1,
+        1.9
+      ],
+      "rotY": 0,
+      "color": "#1d3d46"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.4,
+        0,
+        -4.5
+      ],
+      "size": [
+        0.7,
+        1.15,
+        1.1
+      ],
+      "rotY": 0,
+      "color": "#234750"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.9,
+        0,
+        -4.5
+      ],
+      "size": [
+        0.4,
+        1.25,
+        0.45
+      ],
+      "rotY": 0,
+      "color": "#2a525c"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.3,
+        1.1,
+        -4.5
+      ],
+      "size": [
+        7.2,
+        0.1,
+        2.3
+      ],
+      "rotY": 0,
+      "color": "#0a171b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.4,
+        0.95,
+        -4.5
+      ],
+      "size": [
+        1,
+        0.1,
+        1.6
+      ],
+      "rotY": 0,
+      "color": "#2a4a52"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -1.9,
+        1.2,
+        -4.3
+      ],
+      "size": [
+        1.1,
+        0.55,
+        0.8
+      ],
+      "rotY": 0,
+      "color": "#6a3a3a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.7,
+        1.2,
+        -4.3
+      ],
+      "size": [
+        1.1,
+        0.5,
+        0.8
+      ],
+      "rotY": 0,
+      "color": "#3f6a78"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.55,
+        1.2,
+        -4.4
+      ],
+      "size": [
+        1.5,
+        1,
+        1
+      ],
+      "rotY": 0,
+      "color": "#4a5f66"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.1,
+        1.2,
+        -4.4
+      ],
+      "size": [
+        0.3,
+        0.7,
+        0.95
+      ],
+      "rotY": 0,
+      "color": "#7a8a60"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.3,
+        1.2,
+        -4.5
+      ],
+      "size": [
+        1.8,
+        0.9,
+        1.7
+      ],
+      "rotY": 0,
+      "color": "#2b5560"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.4,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        1.3,
+        0.7,
+        1.3
+      ],
+      "rotY": 0,
+      "color": "#356570"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.4,
+        2.3,
+        -3.83
+      ],
+      "size": [
+        0.95,
+        0.3,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffd27a"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        1.6,
+        2.1,
+        -4.5
+      ],
+      "size": [
+        0.35,
+        1.1,
+        0
+      ],
+      "rotY": 0,
+      "color": "#10242a"
+    },
+    {
+      "type": "cylinder",
+      "pos": [
+        1.6,
+        2.85,
+        -4.5
+      ],
+      "size": [
+        0.37,
+        0.2,
+        0
+      ],
+      "rotY": 0,
+      "color": "#5a8a90"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.3,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -2.65,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -2,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -1.35,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.7,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.05,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.6,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        1.25,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        1.9,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        2.55,
+        0.5,
+        -3.28
+      ],
+      "size": [
+        0.34,
+        0.34,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#ffc46b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.3,
+        0,
+        -2.7
+      ],
+      "size": [
+        8,
+        0.02,
+        1.2
+      ],
+      "rotY": 0,
+      "color": "#244850"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -5,
+        0,
+        -2.9
+      ],
+      "size": [
+        2.8,
+        0.3,
+        1.2
+      ],
+      "rotY": 0,
+      "color": "#5f8088"
+    },
+    {
+      "type": "box",
+      "pos": [
+        5,
+        0,
+        -2.9
+      ],
+      "size": [
+        2.6,
+        0.3,
+        1.2
+      ],
+      "rotY": 0,
+      "color": "#5f8088"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -2.1
+      ],
+      "size": [
+        4,
+        0.2,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#4d6e76"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -7.5
+      ],
+      "size": [
+        12,
+        0.8,
+        0.6
+      ],
+      "rotY": 0,
+      "color": "#0e2229"
+    }
+  ],
+  "spots": [
+    {
+      "id": "ramp-foot",
+      "pos": [
+        -5,
+        -1.4
+      ],
+      "facing": "right",
+      "note": "entrance: at the foot of the stern ramp, in the mist"
+    },
+    {
+      "id": "under-portholes",
+      "pos": [
+        0,
+        -1.1
+      ],
+      "facing": "camera",
+      "note": "in front of the lit portholes, looking at the camera"
+    },
+    {
+      "id": "bow-side",
+      "pos": [
+        5,
+        -1.4
+      ],
+      "facing": "left",
+      "note": "near the pointed bow, facing the ferry"
+    },
+    {
+      "id": "river-near-left",
+      "pos": [
+        -1.5,
+        1
+      ],
+      "facing": "camera",
+      "note": "open ground near camera, left"
+    },
+    {
+      "id": "river-near-right",
+      "pos": [
+        1.5,
+        1.4
+      ],
+      "facing": "camera",
+      "note": "open ground near camera, right"
+    },
+    {
+      "id": "midway",
+      "pos": [
+        0,
+        -0.2
+      ],
+      "facing": "camera",
+      "note": "middle of the frame, ferry behind"
+    }
+  ]
+}

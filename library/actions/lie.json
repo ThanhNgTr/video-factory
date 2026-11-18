@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lie",
+  "dur": 3,
+  "loop": true,
+  "posture": "lie",
+  "keys": [
+    {
+      "t": 0,
+      "rot": 90,
+      "y": 0,
+      "armL": 12,
+      "armR": 30,
+      "legL": 0,
+      "legR": -8,
+      "kneeL": 12,
+      "kneeR": 28
+    },
+    {
+      "t": 0.5,
+      "sx": 1.015
+    },
+    {
+      "t": 1,
+      "sx": 1
+    }
+  ]
+}

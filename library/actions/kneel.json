@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "kneel",
+  "dur": 2.4,
+  "loop": true,
+  "keys": [
+    { "t": 0, "legL": 4, "legR": 4, "kneeL": 92, "kneeR": 92, "armL": 24, "armR": 24, "rot": 0 },
+    { "t": 0.5, "rot": 2, "sy": 0.99 },
+    { "t": 1, "rot": 0, "sy": 1 }
+  ]
+}

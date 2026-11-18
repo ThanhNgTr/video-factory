@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "madame-noor",
+  "name": "Madame Noor",
+  "genre": "people",
+  "build": {
+    "height": 1.2,
+    "width": 0.8,
+    "head": 0.95,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#c68b62",
+  "hair": {
+    "style": "long",
+    "color": "#2b1a3d"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "dress",
+    "topColor": "#c2185b",
+    "pants": "#3a0d2a",
+    "accent": "#ffd166",
+    "pattern": "stars"
+  },
+  "wear": [
+    "scarf",
+    "gloves"
+  ],
+  "voice": {
+    "id": "en-US-MichelleNeural",
+    "pitch": "-4Hz",
+    "rate": "-10%"
+  },
+  "personality": "A fortune teller who speaks in calm, dramatic whispers, pauses before every name, and always knows one thing she should not."
+}

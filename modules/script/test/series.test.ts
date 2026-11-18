@@ -1,6 +1,6 @@
-import type { Script, SeriesBible } from "@vf/contracts";
+import type { Library, Script, SeriesBible } from "@vf/contracts";
 import { describe, expect, it } from "vitest";
-import { bibleContext, nextPart, updateBible } from "../src/domain/series.ts";
+import { bibleContext, nextPart, stagingLibrary, updateBible } from "../src/domain/series.ts";
 
 const script: Script = {
   schemaVersion: 1,
@@ -10,6 +10,7 @@ const script: Script = {
   summary: "Sam opens the door. The Tall Guest is gone. Cliffhanger: 1 follow the footprints, 2 lock the desk.",
   mood: "horror",
   cast: ["night-clerk", "tall-guest"],
+  newCast: [],
   beats: [
     { id: "b1", role: "hook", action: "x", cast: [], lines: [], tension: "calm", text: "RULE 4: *Never* look up" },
     { id: "b2", role: "cta", action: "y", cast: [], lines: [], tension: "scary" },
@@ -35,5 +36,15 @@ describe("series bible", () => {
     expect(b1.parts).toHaveLength(1);
     expect(bibleContext(b2, "1")).toMatch(/Part 2 "The Night Desk - Part 2"/);
     expect(bibleContext(b2, "1")).toMatch(/voted option 1/);
+  });
+  it("stages a series only in its own sets", () => {
+    const bible = updateBible(undefined, "night-desk", "f", { ...script, part: 1 }, "run-1");
+    const lib = {
+      sets: { lobby: {}, diner: {} },
+      series: { a: { ...bible, sets: ["diner"] }, b: bible },
+    } as unknown as Library;
+    expect(Object.keys(stagingLibrary(lib, "a").sets)).toEqual(["diner"]);
+    expect(stagingLibrary(lib, "b")).toBe(lib);
+    expect(stagingLibrary(lib)).toBe(lib);
   });
 });

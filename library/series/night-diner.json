@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "night-diner",
+  "title": "The Halfway Diner",
+  "formula": "second-person-rules-horror-vote-cliffhanger",
+  "world": "You are the new night-shift server at the Halfway Diner, a 24-hour diner on an empty desert highway. Dot, the night cook, has rules for the hours between 2 and 4 AM. Customers who walk in after 2 AM are not always customers.",
+  "narratorVoice": {
+    "id": "en-US-EricNeural",
+    "pitch": "-4Hz",
+    "rate": "-5%"
+  },
+  "cast": [
+    "night-cook",
+    "trucker",
+    "pajama-kid",
+    "the-driver"
+  ],
+  "rules": [],
+  "sets": [
+    "roadside-diner",
+    "diner-kitchen"
+  ],
+  "parts": [
+    {
+      "part": 1,
+      "title": "The Halfway Diner - Part 1",
+      "summary": "You start your first night shift at the Halfway Diner. night-cook (Dot) gives you three rules: cook every order and never ask who placed it, never tell a customer your name, and at 3:33 stay behind the counter. Then she says 'same as last night, hon', though it is your first shift. trucker (Hank) sits at his stool without touching his food. pajama-kid (Theo) walks in barefoot at 2 AM and calls you by name. An order prints for empty booth four, the coffee you pour vanishes, and the customer counter reads four when you can only count three. At 3:33 the-driver arrives with a delivery for 'the server', asks your name while Theo urges you to tell him, the lights die, and the Driver ends up behind the counter with you. He hands you a receipt that already has your signature on it from last night. Cliffhanger: 1 = sign the receipt, 2 = tear open the bag.",
+      "runId": "night-diner-p1"
+    }
+  ]
+}

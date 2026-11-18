@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "busker",
+  "name": "Jay",
+  "genre": "people",
+  "build": {
+    "height": 0.95,
+    "width": 0.8,
+    "head": 1.15,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#e8c9b0",
+  "hair": {
+    "style": "messy",
+    "color": "#6b4a2f"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#6f7a45",
+    "pants": "#3b3f4a",
+    "accent": "#c9a227",
+    "pattern": "none"
+  },
+  "wear": [
+    "cap",
+    "badge"
+  ],
+  "voice": {
+    "id": "en-US-AndrewNeural",
+    "pitch": "-2Hz",
+    "rate": "-8%"
+  },
+  "personality": "Quiet, tired young busker who speaks softly and hesitantly, trailing off mid-sentence. Hugs his worn ukulele close and rarely meets anyone's eye."
+}

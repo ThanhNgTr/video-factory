@@ -1,4 +1,5 @@
 // Remotion: bundle the composition once per process, render frames with CPU WebGL (swangle), mute (audio is muxed after).
+import { rmSync } from "node:fs";
 import { bundle } from "@remotion/bundler";
 import { renderMedia, renderStill, selectComposition } from "@remotion/renderer";
 import { StageError } from "@vf/core";
@@ -11,6 +12,9 @@ export class RemotionRenderer implements Renderer {
     let p = this.bundled.get(entry);
     if (!p) {
       p = bundle({ entryPoint: entry, ignoreRegisterRootWarning: true });
+      // the bundle (about 50 MB) lands in /tmp, a RAM disk here: a hundred runs that never removed theirs filled it
+      // and every write failed. It goes when this process does
+      p.then((dir) => process.once("exit", () => rmSync(dir, { recursive: true, force: true })));
       this.bundled.set(entry, p);
     }
     return p;

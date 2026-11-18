@@ -1,0 +1,550 @@
+{
+  "schemaVersion": 1,
+  "id": "subway-tunnel",
+  "room": {
+    "w": 10,
+    "h": 4,
+    "front": 6,
+    "back": -8
+  },
+  "wall": "#1a1b1e",
+  "floor": "#0f1013",
+  "floorStyle": "plain",
+  "wallStyle": "plain",
+  "outdoor": true,
+  "sky": "#020204",
+  "lamps": [
+    [
+      -3,
+      3.95,
+      -3
+    ],
+    [
+      3,
+      3.95,
+      -3
+    ],
+    [
+      0,
+      3.95,
+      0
+    ]
+  ],
+  "props": [
+    {
+      "type": "box",
+      "pos": [
+        -4.5,
+        0,
+        -2.3
+      ],
+      "size": [
+        0.4,
+        3.6,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#2a323b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.5,
+        0,
+        -2.3
+      ],
+      "size": [
+        0.4,
+        3.6,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#2a323b"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.1,
+        3.6,
+        -2.3
+      ],
+      "size": [
+        0.8,
+        0.4,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#222a33"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.1,
+        3.6,
+        -2.3
+      ],
+      "size": [
+        0.8,
+        0.4,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#222a33"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        3.6,
+        -6.6
+      ],
+      "size": [
+        7.4,
+        0.4,
+        2.8
+      ],
+      "rotY": 0,
+      "color": "#222a33"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        3.5,
+        -3
+      ],
+      "size": [
+        9.4,
+        0.3,
+        0.3
+      ],
+      "rotY": 0,
+      "color": "#2b343e"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        3.5,
+        2.3
+      ],
+      "size": [
+        9.4,
+        0.3,
+        0.3
+      ],
+      "rotY": 0,
+      "color": "#2b343e"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -3.3,
+        0,
+        -2.3
+      ],
+      "size": [
+        1.9,
+        0.5,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#2f3640"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -2.5,
+        0.5,
+        -2.3
+      ],
+      "size": [
+        0.12,
+        0.02,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#c9a227"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.72,
+        0,
+        -2.3
+      ],
+      "size": [
+        0.1,
+        0.14,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#4a4e57"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.72,
+        0,
+        -2.3
+      ],
+      "size": [
+        0.1,
+        0.14,
+        11.4
+      ],
+      "rotY": 0,
+      "color": "#4a4e57"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        0.5
+      ],
+      "size": [
+        2.2,
+        0.07,
+        0.25
+      ],
+      "rotY": 0,
+      "color": "#242327"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -2
+      ],
+      "size": [
+        2,
+        0.07,
+        0.2
+      ],
+      "rotY": 0,
+      "color": "#242327"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -6.7
+      ],
+      "size": [
+        2.6,
+        2.8,
+        2.2
+      ],
+      "rotY": 0,
+      "color": "#3c444f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        2.8,
+        -6.7
+      ],
+      "size": [
+        2.7,
+        0.14,
+        2.3
+      ],
+      "rotY": 0,
+      "color": "#78828f"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        1.4,
+        -5.58
+      ],
+      "size": [
+        0.9,
+        0.8,
+        0.05
+      ],
+      "rotY": 0,
+      "color": "#2f5058"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -1.31,
+        1.4,
+        -6.2
+      ],
+      "size": [
+        0.7,
+        0.6,
+        0.05
+      ],
+      "rotY": 90,
+      "color": "#2f5058"
+    },
+    {
+      "type": "box",
+      "pos": [
+        1.31,
+        1.4,
+        -6.2
+      ],
+      "size": [
+        0.7,
+        0.6,
+        0.05
+      ],
+      "rotY": -90,
+      "color": "#2f5058"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0.2,
+        -5.5
+      ],
+      "size": [
+        2.6,
+        0.3,
+        0.2
+      ],
+      "rotY": 0,
+      "color": "#59606a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0.35,
+        -5.35
+      ],
+      "size": [
+        0.25,
+        0.2,
+        0.3
+      ],
+      "rotY": 0,
+      "color": "#6a6e75"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -0.95,
+        0.9,
+        -5.58
+      ],
+      "size": [
+        0.28,
+        0.28,
+        0.06
+      ],
+      "rotY": 0,
+      "color": "#ff2a1a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0.95,
+        0.9,
+        -5.58
+      ],
+      "size": [
+        0.28,
+        0.28,
+        0.06
+      ],
+      "rotY": 0,
+      "color": "#ff2a1a"
+    },
+    {
+      "type": "box",
+      "pos": [
+        0,
+        0,
+        -5.3
+      ],
+      "size": [
+        1.2,
+        0.01,
+        1
+      ],
+      "rotY": 0,
+      "color": "#3f0c0c"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.2,
+        2.4,
+        3
+      ],
+      "size": [
+        0.15,
+        0.3,
+        0.35
+      ],
+      "rotY": 0,
+      "color": "#ffc277"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.2,
+        2.4,
+        -0.2
+      ],
+      "size": [
+        0.12,
+        0.24,
+        0.28
+      ],
+      "rotY": 0,
+      "color": "#ffc277"
+    },
+    {
+      "type": "box",
+      "pos": [
+        -4.2,
+        2.4,
+        -3.2
+      ],
+      "size": [
+        0.09,
+        0.18,
+        0.2
+      ],
+      "rotY": 0,
+      "color": "#ffc277"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.2,
+        2.4,
+        3
+      ],
+      "size": [
+        0.15,
+        0.3,
+        0.35
+      ],
+      "rotY": 0,
+      "color": "#8fb8ff"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.2,
+        2.4,
+        -0.2
+      ],
+      "size": [
+        0.12,
+        0.24,
+        0.28
+      ],
+      "rotY": 0,
+      "color": "#8fb8ff"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.2,
+        2.4,
+        -3.2
+      ],
+      "size": [
+        0.09,
+        0.18,
+        0.2
+      ],
+      "rotY": 0,
+      "color": "#8fb8ff"
+    },
+    {
+      "type": "box",
+      "pos": [
+        4.25,
+        0,
+        -4.4
+      ],
+      "size": [
+        0.1,
+        2,
+        0.9
+      ],
+      "rotY": 0,
+      "color": "#3a2c26"
+    }
+  ],
+  "spots": [
+    {
+      "id": "maintenance-door",
+      "pos": [
+        3,
+        -4.4
+      ],
+      "facing": "right",
+      "note": "entrance from the maintenance door in the tunnel wall"
+    },
+    {
+      "id": "behind-train",
+      "pos": [
+        0,
+        -4
+      ],
+      "facing": "away",
+      "note": "on the track facing the glowing tail lights"
+    },
+    {
+      "id": "left-of-track",
+      "pos": [
+        -1.6,
+        -2
+      ],
+      "facing": "right",
+      "note": "beside the rails under a dim wall lamp"
+    },
+    {
+      "id": "right-of-track",
+      "pos": [
+        2.4,
+        -2
+      ],
+      "facing": "left",
+      "note": "opposite side of the rails"
+    },
+    {
+      "id": "near-left",
+      "pos": [
+        -1.6,
+        1
+      ],
+      "facing": "camera",
+      "note": "open ground near camera, left"
+    },
+    {
+      "id": "near-right",
+      "pos": [
+        1.8,
+        1.3
+      ],
+      "facing": "camera",
+      "note": "open ground near camera, right"
+    },
+    {
+      "id": "on-the-rails",
+      "pos": [
+        0,
+        -1.2
+      ],
+      "facing": "camera",
+      "note": "standing between the rails, red glow behind"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "build-it-yourself-problem-fix-chain",
+  "kind": "explainer",
+  "lengthS": {
+    "min": 50,
+    "max": 68
+  },
+  "beats": {
+    "min": 7,
+    "max": 10
+  },
+  "maxSpokenChars": 610,
+  "rules": [
+    "Hook in the first 3 seconds: the narrator says to the viewer, in second person, that one absurdly simple step already makes the everyday thing ('If you do X, you have a Y'). In the same shot a test character or object uses that crude version right away, so viewers wait for it to fail.",
+    "Build the whole video as a chain: failure, then 'so you' plus a fix, then the fix's real name. Each fix must cause or reveal the next failure. Use 4-6 links, and start each new failure with 'But'. Keep each link to 4-7 seconds so a small cliffhanger lands at least every 6 seconds.",
+    "Keep one locked wide set with a cutaway cross-section diagram in the lower half of the frame. Each fix adds, changes or reshapes a visible layer in that diagram, so progress stacks up like a build game. Cut away to a close or low shot only to show a failure, then return to the same wide framing.",
+    "Change the picture every 2-4 seconds: a new layer drops in, the weather or season turns, a machine rolls in, the camera cuts to a close-up, or a name card pops up. Each named technique gets a big text card the moment the narrator says it.",
+    "Escalate the enemies: start with an obvious everyday problem, then move to hidden ones (wear, time, season, scale). The last failure should be invisible from the surface and shown by zooming the cross-section to fill the frame.",
+    "Near the end, add one counterintuitive twist: the obvious culprit is not the real one. Back it with a single verifiable number on a big stat card in the form 'one X = N of Y'.",
+    "The narrator is the only voice: calm, matter-of-fact and a little dry, always talking to 'you'. Characters and machines act out the story without speaking. Use short, plain sentences with no hedging and no history lecture.",
+    "Payoff: finishing touches pop in, a cheeky named sign appears, and the narrator closes with 'Congratulations, you have built a ___.' The final wide shot matches the opening frame so the before and after reads at a glance and invites a rewatch.",
+    "In every line wrap 1-3 key words in *asterisks* (they render highlighted). No emoji."
+  ],
+  "defaultMood": "bright",
+  "rubric": [
+    {
+      "id": "accurate",
+      "check": "Every number, unit and fact is correct and the arithmetic checks out; rounding is honest.",
+      "must": true
+    },
+    {
+      "id": "causal-chain",
+      "check": "Every fix is triggered by a specific failure shown just before it, and every failure after the first comes from a real limit of the previous version. No step is just 'next you add'.",
+      "must": true
+    },
+    {
+      "id": "named-fixes",
+      "check": "At least three fixes get their real technical name, said by the narrator right after the fix is shown and backed by a text card.",
+      "must": true
+    },
+    {
+      "id": "visible-stack",
+      "check": "Each fix maps to a concrete visual change in the same cross-section or set, so a muted viewer can watch the object get better step by step.",
+      "must": true
+    },
+    {
+      "id": "second-person-frame",
+      "check": "The script opens and closes in second person ('you'), and the closing line congratulates the viewer on building the thing, matching the opening frame.",
+      "must": true
+    },
+    {
+      "id": "surprise-stat",
+      "check": "One late counterintuitive fact flips an obvious assumption and is shown as a single 'one X = N Y' stat card.",
+      "must": false
+    }
+  ]
+}

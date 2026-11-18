@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "otis",
+  "name": "Otis",
+  "genre": "people",
+  "build": {
+    "height": 1.42,
+    "width": 0.78,
+    "head": 0.95,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#e0b390",
+  "hair": {
+    "style": "short",
+    "color": "#a7a9ac"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false,
+    "iris": "#5b7fa3",
+    "lashes": false,
+    "blush": false
+  },
+  "outfit": {
+    "top": "uniform",
+    "topColor": "#1f4fd1",
+    "pants": "#5d6673",
+    "accent": "#f2b632",
+    "pattern": "none",
+    "inner": "#dfe8f5"
+  },
+  "wear": [
+    "cap",
+    "badge",
+    "name-tag"
+  ],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-6Hz",
+    "rate": "-6%"
+  },
+  "personality": "Polite, too-calm night mail carrier with a slow drawl. Taps the brim of his cap before every sentence and always sounds sure of the way out."
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "gus",
+  "name": "Gus",
+  "genre": "monster",
+  "build": {
+    "height": 0.82,
+    "width": 1.25,
+    "head": 1.35,
+    "shape": "round",
+    "headShape": "round"
+  },
+  "skin": "#7cb342",
+  "hair": {
+    "style": "none",
+    "color": "#33691e"
+  },
+  "face": {
+    "eyes": "glow",
+    "brows": "bushy",
+    "mustache": false,
+    "glasses": false,
+    "grin": true
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#5e35b1",
+    "pants": "#2a1b4a",
+    "accent": "#ffb300",
+    "pattern": "stripes"
+  },
+  "wear": [
+    "top-hat",
+    "long-fingers"
+  ],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-6Hz",
+    "rate": "+6%"
+  },
+  "personality": "A small goblin salesman with a too-wide grin who offers a deal for everything and never says what it costs."
+}

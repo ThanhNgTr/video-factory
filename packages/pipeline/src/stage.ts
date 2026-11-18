@@ -20,6 +20,8 @@ export type StageDef<Deps> = {
   version: number;
   inputs: readonly string[]; // artifact names this stage reads
   outputs: readonly string[]; // artifact names this stage writes (all must exist afterwards)
+  // data the stage reads besides its input artifacts (library entries); part of the cache key, so an edit re-runs it
+  fingerprint?: (ctx: StageContext<Deps>) => unknown;
   run: (ctx: StageContext<Deps>) => Promise<void>;
 };
 

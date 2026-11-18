@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "manhole-cover",
+  "brief": "a round iron manhole cover with a pattern",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"440\" rx=\"190\" ry=\"26\" fill=\"#1d1b22\" opacity=\"0.18\"/><ellipse cx=\"256\" cy=\"282\" rx=\"205\" ry=\"150\" fill=\"#3b3a46\" stroke=\"#1d1b22\" stroke-width=\"11\" stroke-linejoin=\"round\"/><ellipse cx=\"256\" cy=\"262\" rx=\"205\" ry=\"150\" fill=\"#6b6a78\" stroke=\"#1d1b22\" stroke-width=\"11\" stroke-linejoin=\"round\"/><ellipse cx=\"256\" cy=\"262\" rx=\"172\" ry=\"122\" fill=\"#858495\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linejoin=\"round\"/><path d=\"M96 300Q256 400 416 300Q400 370 256 384Q112 370 96 300Z\" fill=\"#555463\"/><ellipse cx=\"256\" cy=\"262\" rx=\"120\" ry=\"84\" fill=\"#777686\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linejoin=\"round\"/><ellipse cx=\"256\" cy=\"262\" rx=\"26\" ry=\"18\" fill=\"#555463\" stroke=\"#1d1b22\" stroke-width=\"6\"/><g stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"><path d=\"M256 190V334\"/><path d=\"M160 226L352 298\"/><path d=\"M160 298L352 226\"/></g><g fill=\"#a4a3b3\" stroke=\"#1d1b22\" stroke-width=\"5\"><circle cx=\"256\" cy=\"172\" r=\"9\"/><circle cx=\"256\" cy=\"352\" r=\"9\"/><circle cx=\"134\" cy=\"262\" r=\"9\"/><circle cx=\"378\" cy=\"262\" r=\"9\"/></g><path d=\"M110 210Q150 140 250 128\" fill=\"none\" stroke=\"#c4c3d1\" stroke-width=\"10\" stroke-linecap=\"round\"/></svg>",
+  "score": 7
+}

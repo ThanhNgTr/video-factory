@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "bea",
+  "name": "Bea",
+  "genre": "people",
+  "build": {
+    "height": 0.8,
+    "width": 1.4,
+    "head": 1.15,
+    "shape": "round",
+    "headShape": "round"
+  },
+  "skin": "#f1c9a8",
+  "hair": {
+    "style": "curly",
+    "color": "#f4f1ea"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": true,
+    "grin": false,
+    "iris": "#6a9a5b",
+    "lashes": true,
+    "blush": true
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#e0218a",
+    "pants": "#4a1d3f",
+    "accent": "#ffc93c",
+    "pattern": "none",
+    "inner": "#ffc93c"
+  },
+  "wear": [
+    "scarf"
+  ],
+  "voice": {
+    "id": "en-US-AriaNeural",
+    "pitch": "-8Hz",
+    "rate": "-8%"
+  },
+  "personality": "Warm, dreamy florist in her sixties who hums with her eyes half closed, calls everyone 'petal' and drifts off mid-sentence."
+}

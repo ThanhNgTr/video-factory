@@ -2,8 +2,14 @@
   "schemaVersion": 1,
   "id": "skit",
   "kind": "skit",
-  "lengthS": { "min": 15, "max": 40 },
-  "beats": { "min": 6, "max": 14 },
+  "lengthS": {
+    "min": 15,
+    "max": 40
+  },
+  "beats": {
+    "min": 6,
+    "max": 14
+  },
   "maxSpokenChars": 500,
   "defaultMood": "night",
   "rules": [
@@ -12,5 +18,22 @@
     "2-3 characters. One speaker per beat.",
     "The twist lands in the last third; the last beat loops visually or verbally back to the first.",
     "In every line wrap 1-3 key words in *asterisks*. No emoji."
+  ],
+  "rubric": [
+    {
+      "id": "punchline",
+      "check": "The twist or punchline lands in the last third and is set up earlier, so it surprises but makes sense.",
+      "must": true
+    },
+    {
+      "id": "natural-lines",
+      "check": "Lines sound like real people talking: short, punchy, one speaker per beat, under about 80 characters.",
+      "must": true
+    },
+    {
+      "id": "loop",
+      "check": "The last beat loops back visually or verbally to the first, so the clip invites a rewatch.",
+      "must": false
+    }
   ]
 }

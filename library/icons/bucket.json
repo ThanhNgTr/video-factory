@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "bucket",
+  "brief": "a blue plastic bucket with a handle",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"450\" rx=\"150\" ry=\"20\" fill=\"#000\" opacity=\"0.15\"/><path d=\"M122 150 C122 20 390 20 390 150\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"22\" stroke-linejoin=\"round\" stroke-linecap=\"round\"/><path d=\"M122 150 C122 20 390 20 390 150\" fill=\"none\" stroke=\"#9aa3ad\" stroke-width=\"8\" stroke-linecap=\"round\"/><path d=\"M60 140 L452 140 L400 440 Q396 456 378 456 L134 456 Q116 456 112 440 Z\" fill=\"#2f8fe8\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/><path d=\"M60 140 L452 140 L446 172 L66 172 Z\" fill=\"#1f6fc4\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/><path d=\"M370 180 L440 180 L394 436 Q392 446 380 446 L330 446 Z\" fill=\"#1f6fc4\"/><path d=\"M92 190 L128 190 L156 410 L136 410 Z\" fill=\"#7cc4ff\"/><path d=\"M114 296 L398 296\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linecap=\"round\"/><path d=\"M104 360 L408 360\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linecap=\"round\" opacity=\"0\"/><circle cx=\"122\" cy=\"150\" r=\"12\" fill=\"#c9d0d8\" stroke=\"#1d1b22\" stroke-width=\"6\"/><circle cx=\"390\" cy=\"150\" r=\"12\" fill=\"#c9d0d8\" stroke=\"#1d1b22\" stroke-width=\"6\"/><path d=\"M60 140 L452 140 L400 440 Q396 456 378 456 L134 456 Q116 456 112 440 Z\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/></svg>",
+  "score": 9
+}

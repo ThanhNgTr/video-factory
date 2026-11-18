@@ -1,0 +1,19 @@
+{
+  "premises": [
+    {
+      "angle": "character comedy",
+      "title": "Fixture premise",
+      "hookLine": "Fixture: the first line.",
+      "premise": "Fixture: a character's flaw gets them into trouble in one place, and it ends badly for them.",
+      "protagonist": "leo",
+      "place": "a diner",
+      "visualSpine": "a plate that empties",
+      "twist": "the plate was never theirs",
+      "scrollStop": 8,
+      "visual": 8,
+      "fresh": 8
+    }
+  ],
+  "pick": 0,
+  "why": "Fixture: the only one."
+}

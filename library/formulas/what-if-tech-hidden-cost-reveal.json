@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "what-if-tech-hidden-cost-reveal",
+  "source": "https://www.youtube.com/shorts/WbRdDyaPuAU",
+  "lengthS": 54.1,
+  "language": "en",
+  "summary": "A second-person 'what if' thought experiment: a shocking claim up front, then a cozy montage of a future technology changing daily life, then a malfunction that exposes how it really works, ending on a grim reframe and a direct 'would you still do it?' question. One recurring prop (the machine/pod) anchors every act and comes back in the last shot as the open choice.",
+  "topic": "a dark thought experiment: a convenient future technology with a hidden lethal cost",
+  "beats": [
+    {
+      "t": "0-4s",
+      "role": "hook",
+      "pattern": "Cold open on the recurring prop (a glowing machine with a location sign) with a smiling everyman inside; slow push-in. Hard cut to a dark, epic wide shot: rows of identical machines, a giant red counter ticking up a huge daily number, a queue of figures walking in while pale ghost faces float above. The narrator says out loud a shocking claim about mass death that nobody notices. Word-by-word bold captions at center."
+    },
+    {
+      "t": "4-10s",
+      "role": "setup",
+      "pattern": "Second-person 'imagine…': the hero walks in from the left and steps into the machine while a bystander watches; the camera drifts. Hard cut to a macro graphic of glowing atoms with a scan beam sweeping across. Hard cut to a new location with its own landmark: the same machine, the hero steps out smiling. Each claim gets its own illustration."
+    },
+    {
+      "t": "10-18s",
+      "role": "build",
+      "pattern": "A fast world-change montage of short gag vignettes, each its own set with slow pans: an empty airport with a jobless pilot holding a cardboard sign, the hero stepping out of a machine straight into an office, the hero eating at a counter on the far side of the world. Every 2-3s a hard cut to a new room shows a society-wide consequence."
+    },
+    {
+      "t": "18-23s",
+      "role": "build",
+      "pattern": "Mood shift: the same machine alone at night in the rain, slow push-in until it fills the frame, and a ghostly handprint appears on the glass (a planted image of something trapped). Hard cut back to daylight: the machine sparks, electric cracks flicker, the hero inside jitters and an error code shows on the base. Sound cue: glitch/zap."
+    },
+    {
+      "t": "23-30s",
+      "role": "twist",
+      "pattern": "Dissolve into a stacked split screen, top = destination, bottom = origin, each labelled with a corner tag. The camera holds while both copies of the hero move independently; the origin copy looks confused and checks a phone. Hard cut to a vertical split: the two copies point at each other, each standing behind an identical 'I am the original' ID sign."
+    },
+    {
+      "t": "30-38s",
+      "role": "build",
+      "pattern": "Night rain, the origin copy alone on a bench under a streetlamp with a translucent ghost of the split scene fading out; push-in on a worried face. Hard cut to a dark room: the hero in front of an investigation board pinned with dated snapshots joined by string; the camera pushes into the board, then photos marked with question marks pile up and fill the frame. The narrator asks the existential question in second person."
+    },
+    {
+      "t": "38-46s",
+      "role": "payoff",
+      "pattern": "The reveal as a blueprint motion graphic: a 'classified' schematic of the machine with dimension arrows, a 'scanner' label, a binary-data arc travelling to the second machine with an ink-level gauge, the original path crossed out with a big red X; the camera pans along the arc. A label pops up over the rebuilt copy's face. Hard cut to the destination: the copy steps out smiling as if nothing happened."
+    },
+    {
+      "t": "46-51s",
+      "role": "payoff",
+      "pattern": "Grim callback: a moonlit graveyard of gravestones numbered by trip, one marked for 'you', with a translucent ghost rising; slow push. Hard cut to the copy happily on the phone outside the machine while a small sad ghost face floats out of the machine (the ghost faces from the hook return). Hard cut to a phone-screen card: a trip-rating prompt with stars filling in."
+    },
+    {
+      "t": "51-54s",
+      "role": "cta",
+      "pattern": "Return to the opening setting: the hero stands outside the glowing machine, its open door casting light and a 'step inside?' label on the base; the camera holds, then pushes in slightly. The narrator asks the viewer directly whether they would still use it; the question is left open for the comments."
+    }
+  ],
+  "whyViral": "The hook puts the darkest claim (mass death nobody notices) in the first 4 seconds, backed by a big ticking counter, so the viewer stays to find out how that can be true. Constant second person ('imagine you…', 'where did you go') makes the viewer the victim. A cozy montage of everyday convenience sets up a status quo that the glitch then breaks, and the split-screen duplicate is a striking visual turn. The answer comes as an authoritative 'classified' blueprint graphic, and the closing reframe (every trip killed the original) recasts everything shown before, which adds rewatch value: the early ghost faces, the handprint on the glass and the happy step-outs all mean something new the second time. The recurring machine prop anchors every act and returns in the last shot as a literal open door. The video ends on a moral yes/no question that invites comment debate. Pacing is a hard cut about every 2.8s, there is near-constant camera motion, and the word-by-word captions keep viewers watching to the end.",
+  "cast": [
+    {
+      "role": "the everyman hero (you)",
+      "traits": "simple stick-figure commuter, cheerful in routine, later confused and scared; appears as two identical copies"
+    },
+    {
+      "role": "the duplicate",
+      "traits": "identical to the hero, equally sure they are the original, the same ID badge"
+    },
+    {
+      "role": "the narrator",
+      "traits": "calm, ominous, speaks to the viewer as 'you', poses rhetorical questions"
+    },
+    {
+      "role": "background extras",
+      "traits": "bystanders, office coworker, out-of-work worker, queues of commuters; show society-wide change"
+    },
+    {
+      "role": "the ghost",
+      "traits": "pale translucent face that drifts out of the machine; a quiet sign of the hidden cost"
+    }
+  ],
+  "needs": {
+    "actions": [
+      "walk-in",
+      "step-into-pod",
+      "step-out",
+      "sit-eat",
+      "sit-on-bench",
+      "look-at-phone",
+      "point-at-each-other",
+      "jitter-glitch",
+      "ghost-float-up",
+      "phone-call",
+      "hold-sign",
+      "stand-and-stare"
+    ],
+    "settings": [
+      "city-street-day-with-pod",
+      "city-street-night-rain",
+      "foreign-city-night-with-landmark",
+      "pod-hall-with-big-counter",
+      "empty-airport",
+      "office",
+      "restaurant-counter",
+      "investigation-board-room",
+      "graveyard-night",
+      "blueprint-schematic",
+      "atom-scan-macro",
+      "phone-rating-screen",
+      "split-screen-two-locations",
+      "count-up",
+      "location-tags",
+      "id-badge-signs",
+      "red-x-crossout",
+      "data-arc-graphic"
+    ]
+  },
+  "score": null
+}

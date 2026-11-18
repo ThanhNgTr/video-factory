@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "reach",
+  "dur": 0.6,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "armR": 20
+    },
+    {
+      "t": 0.5,
+      "x": 0.1,
+      "rot": -6,
+      "armR": 95
+    },
+    {
+      "t": 1,
+      "x": 0.08,
+      "rot": -5,
+      "armR": 90
+    }
+  ]
+}

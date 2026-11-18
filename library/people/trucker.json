@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "trucker",
+  "name": "Hank",
+  "genre": "people",
+  "build": {
+    "height": 1.15,
+    "width": 1.3,
+    "head": 1.05,
+    "shape": "square"
+  },
+  "skin": "#c98e6b",
+  "hair": {
+    "style": "short",
+    "color": "#3b2a1e"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "tshirt",
+    "topColor": "#d9a53a",
+    "pants": "#3d4a63",
+    "accent": "#2f5d8a",
+    "pattern": "plaid"
+  },
+  "wear": [
+    "cap"
+  ],
+  "voice": {
+    "id": "en-US-GuyNeural",
+    "pitch": "-8Hz",
+    "rate": "-4%"
+  },
+  "personality": "a regular trucker; loud and friendly, always takes the same stool, never touches what he orders"
+}

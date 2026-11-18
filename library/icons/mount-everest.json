@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "mount-everest",
+  "brief": "Mount Everest, snowy peak, side view",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"440\" rx=\"210\" ry=\"18\" fill=\"#000\" opacity=\"0.12\"/><path d=\"M20 435 L150 270 L195 300 L290 110 L492 435 Z\" fill=\"#8a8f9e\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/><path d=\"M290 110 L492 435 L360 435 L330 290 L300 230 Z\" fill=\"#646a7c\"/><path d=\"M150 270 L20 435 L130 435 L170 340 Z\" fill=\"#a9aebb\"/><path d=\"M290 110 L335 185 L310 175 L290 215 L260 175 L232 220 L255 160 Z\" fill=\"#ffffff\"/><path d=\"M290 110 L335 185 L318 180 L300 230 L312 150 Z\" fill=\"#cfe3f5\"/><path d=\"M290 110 L335 185 L310 175 L290 215 L260 175 L232 220 L255 160 Z\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linejoin=\"round\"/><path d=\"M150 270 L195 300 L175 330 L150 305 L135 290 Z\" fill=\"#fff\" stroke=\"#1d1b22\" stroke-width=\"6\" stroke-linejoin=\"round\"/><path d=\"M205 330 L240 380 M330 290 L350 350 M270 300 L285 360\" stroke=\"#1d1b22\" stroke-width=\"5\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M20 435 L150 270 L195 300 L290 110 L492 435 Z\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"12\" stroke-linejoin=\"round\"/></svg>",
+  "score": 7
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "lena",
+  "name": "Lena",
+  "genre": "people",
+  "build": {
+    "height": 1.05,
+    "width": 0.8,
+    "head": 1.05,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#e9b98f",
+  "hair": {
+    "style": "bob",
+    "color": "#141016"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "iris": "#3a8f6a",
+    "lashes": true
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#c8915a",
+    "pants": "#1b1b24",
+    "accent": "#9d0208",
+    "inner": "#2b2d42"
+  },
+  "wear": [
+    "scarf"
+  ],
+  "voice": {
+    "id": "en-US-EmmaNeural",
+    "pitch": "-2Hz",
+    "rate": "+0%"
+  },
+  "personality": "A calm twenty-four-year-old who has seen strange things before, speaks little and precisely, and is always one step ahead."
+}

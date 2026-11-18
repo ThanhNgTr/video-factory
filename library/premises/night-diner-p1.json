@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "id": "night-diner-p1",
+  "title": "The Halfway Diner - Part 1",
+  "premise": "You start your first night shift at the Halfway Diner. night-cook (Dot) gives you three rules: cook every order and never ask who placed it, never tell a customer your name, and at 3:33 stay behind the counter. Then she says 'same as last night, hon', though it is your first shift. trucker (Hank) sits at his stool without touching his food. pajama-kid (Theo) walks in barefoot at 2 AM and calls you by name. An order prints for empty booth four, the coffee you pour vanishes, and the customer count",
+  "cast": [
+    "night-cook",
+    "trucker",
+    "pajama-kid",
+    "the-driver"
+  ]
+}

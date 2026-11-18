@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "sleep",
+  "dur": 3.4,
+  "loop": true,
+  "posture": "lie",
+  "keys": [
+    {
+      "t": 0,
+      "rot": 90,
+      "y": 0,
+      "armL": 10,
+      "armR": 40,
+      "legL": -10,
+      "legR": -18,
+      "kneeL": 30,
+      "kneeR": 40,
+      "face": "sleepy"
+    },
+    {
+      "t": 0.5,
+      "sx": 1.03
+    },
+    {
+      "t": 1,
+      "sx": 1
+    }
+  ]
+}

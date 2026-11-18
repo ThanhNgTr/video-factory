@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "id": "toilet-paper-roll",
+  "brief": "a white toilet paper roll",
+  "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\"><ellipse cx=\"256\" cy=\"452\" rx=\"150\" ry=\"22\" fill=\"#1d1b22\" opacity=\"0.15\"/><path d=\"M120 170V400A136 44 0 0 0 392 400V170Z\" fill=\"#f1f2f7\" stroke=\"#1d1b22\" stroke-width=\"11\" stroke-linejoin=\"round\"/><path d=\"M340 205V435A136 44 0 0 0 392 400V170Z\" fill=\"#cdd2e2\"/><path d=\"M142 200V392\" stroke=\"#ffffff\" stroke-width=\"16\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M120 300A136 44 0 0 0 392 300\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"5\" stroke-dasharray=\"14 12\"/><path d=\"M120 170V400A136 44 0 0 0 392 400V170\" fill=\"none\" stroke=\"#1d1b22\" stroke-width=\"11\" stroke-linejoin=\"round\"/><ellipse cx=\"256\" cy=\"170\" rx=\"136\" ry=\"44\" fill=\"#ffffff\" stroke=\"#1d1b22\" stroke-width=\"11\"/><ellipse cx=\"256\" cy=\"170\" rx=\"62\" ry=\"22\" fill=\"#c98f55\" stroke=\"#1d1b22\" stroke-width=\"8\"/><path d=\"M196 166A62 22 0 0 0 316 166A62 18 0 0 1 196 166Z\" fill=\"#8f5d30\"/><path d=\"M158 150A110 32 0 0 1 220 134\" fill=\"none\" stroke=\"#dfe3ee\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg>",
+  "score": 8
+}

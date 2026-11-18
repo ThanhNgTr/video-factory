@@ -30,6 +30,9 @@ export const PoseKey = z.object({
   armR: z.number().min(-180).max(180).optional(),
   legL: z.number().min(-90).max(90).optional(),
   legR: z.number().min(-90).max(90).optional(),
+  // knee fold, degrees: 0 = straight, 90 = shin at a right angle to the thigh (sitting, kneeling)
+  kneeL: z.number().min(0).max(170).optional(),
+  kneeR: z.number().min(0).max(170).optional(),
   face: Face.optional(),
 });
 
@@ -38,6 +41,8 @@ export const Action = z.object({
   id: Id,
   dur: z.number().min(0.2).max(4),
   loop: z.boolean(),
+  // sit: the hips rest on the spot's seat (a chair, a sofa, a stool); lie: the body lies on it (a bed) or the floor
+  posture: z.enum(["stand", "sit", "lie"]).default("stand"),
   keys: z.array(PoseKey).min(1).max(24),
 });
 
@@ -50,24 +55,49 @@ export const Person = z.object({
     height: z.number().min(0.6).max(1.6).default(1), // 0.7 = child, 1.4+ = unnaturally tall
     width: z.number().min(0.7).max(1.5).default(1),
     head: z.number().min(0.8).max(1.4).default(1),
+    shape: z.enum(["soft", "round", "square", "lean"]).default("soft"), // body silhouette
+    headShape: z.enum(["round", "oval", "square"]).default("round"),
   }),
   skin: Color,
-  hair: z.object({ style: z.enum(["none", "short", "messy", "long", "bun", "bald-sides"]), color: Color }),
+  // ponytail, bob and curly: added with iris, lashes, blush and an inner shirt for better-looking leads. Additive:
+  // every older person parses unchanged, schemaVersion stays 1
+  hair: z.object({
+    style: z.enum(["none", "short", "messy", "long", "bun", "bald-sides", "ponytail", "bob", "curly"]),
+    color: Color,
+  }),
   face: z.object({
     eyes: z.enum(["dot", "big", "glow", "none"]).default("dot"),
     brows: z.enum(["thin", "bushy", "none"]).default("thin"),
     mustache: z.boolean().default(false),
     glasses: z.boolean().default(false),
     grin: z.boolean().default(false), // permanent too-wide grin (monsters)
+    iris: Color.optional(), // a coloured ring round the pupil; without it the eye is white and black
+    lashes: z.boolean().default(false), // a lined upper lid with two lashes at the outer corner
+    blush: z.boolean().default(false), // pink cheeks always, not only when happy
   }),
   outfit: z.object({
     top: z.enum(["tshirt", "hoodie", "coat", "suit", "dress", "uniform"]),
     topColor: Color,
     pants: Color,
     accent: Color.default("#c9a227"),
+    pattern: z.enum(["none", "plaid", "stars", "stripes"]).default("none"), // printed on the top, in the accent colour
+    inner: Color.optional(), // a shirt showing down the front of an open coat or hoodie
   }),
   wear: z
-    .array(z.enum(["top-hat", "cap", "scarf", "tie", "apron", "badge", "raincoat-hood", "gloves"]))
+    .array(
+      z.enum([
+        "top-hat",
+        "cap",
+        "scarf",
+        "tie",
+        "apron",
+        "badge",
+        "raincoat-hood",
+        "gloves",
+        "name-tag",
+        "long-fingers",
+      ]),
+    )
     .max(4)
     .default([]),
   voice: Voice,
@@ -95,6 +125,8 @@ export const Spot = z.object({
   pos: V2,
   facing: z.enum(["camera", "left", "right", "away"]).default("camera"),
   note: EnglishText(80).optional(),
+  // a seat at this spot (a chair, a sofa, a stool, a bed): its height in metres. Sitting and lying actions rest on it
+  seat: z.number().min(0.1).max(1.5).optional(),
 });
 
 export const Set3D = z.object({
@@ -106,6 +138,9 @@ export const Set3D = z.object({
   floorStyle: z.enum(["plain", "planks", "tiles"]).default("plain"),
   wallStyle: z.enum(["plain", "stripes"]).default("plain"),
   wainscot: Color.optional(),
+  // outdoors (a street, a yard, a building site): no ceiling, side walls or ceiling lamps; the sky behind
+  outdoor: z.boolean().default(false),
+  sky: Color.default("#9fd3f2"),
   lamps: z.array(V3).max(12),
   props: z
     .array(
@@ -131,6 +166,9 @@ export const Formula = z.object({
   lengthS: z.number().positive(),
   language: z.string(),
   summary: z.string(),
+  // the sample's subject in a few words ("exponential growth: folding paper to the Moon"); a topic is not content,
+  // so `vf like` may make a new video on it (ADR 0017). Older formulas have none.
+  topic: z.string().max(160).optional(),
   beats: z
     .array(z.object({ t: z.string(), role: z.enum(BEAT_ROLES), pattern: z.string() }))
     .min(2)
@@ -145,12 +183,36 @@ export const Formula = z.object({
 export const Format = z.object({
   schemaVersion: z.literal(1),
   id: Id,
-  kind: z.enum(["series", "skit"]),
+  kind: z.enum(["series", "skit", "explainer"]),
   lengthS: z.object({ min: z.number(), max: z.number() }),
   beats: z.object({ min: z.number().int(), max: z.number().int() }),
   maxSpokenChars: z.number().int(),
   rules: z.array(z.string()).min(1),
+  // how the director stages this genre, learned from the sample's measured motion (ADR 0024): how often and how the
+  // camera moves, how much characters move, shot length. Hand-written formats may leave it empty.
+  staging: z.array(z.string()).max(8).default([]),
   defaultMood: z.enum(["bright", "night", "horror"]),
+  // a game-like overlay (title, clock, counter) for the whole video: a genre choice, not a habit. Off unless the
+  // format's sample keeps one on screen (the night-shift series does); additive, older formats read as off
+  hud: z.boolean().default(false),
+  // how much the sample's picture moves, measured at ingest (ADR 0024): the share of seconds the whole picture moves
+  // and the seconds between hard cuts. video.qa measures the finished video the same way and reports the gap
+  motion: z.object({ moving: z.number().min(0).max(1), secondsPerCut: z.number().positive() }).optional(),
+  // what the script critic checks for this format, on top of the criteria every short shares (ADR 0015).
+  // A new genre (knowledge, comedy, ...) brings its own rubric as data; `must` items decide pass or fail.
+  rubric: z
+    .array(z.object({ id: Id, check: z.string().min(10), must: z.boolean().default(true) }))
+    .max(12)
+    .default([]),
+});
+
+// A flat vector drawing (SVG) Claude made for a graphic and a reviewer passed (ADR 0017). Kept and reused.
+export const Icon = z.object({
+  schemaVersion: z.literal(1),
+  id: Id,
+  brief: EnglishText(160), // what it shows
+  svg: z.string().min(40).max(40_000),
+  score: z.number().min(0).max(10), // the reviewer's recognisability score when it was drawn
 });
 
 // Series bible: what the next part must stay consistent with. Updated after every part.
@@ -163,6 +225,7 @@ export const SeriesBible = z.object({
   narratorVoice: Voice,
   cast: z.array(Id).min(1),
   rules: z.array(EnglishText(120)).max(6),
+  sets: z.array(Id).min(1).optional(), // the only sets this series may be staged in (all sets when absent)
   parts: z.array(
     z.object({
       part: z.number().int().positive(),
@@ -172,6 +235,15 @@ export const SeriesBible = z.object({
       audienceChoice: z.enum(["1", "2"]).optional(),
     }),
   ),
+});
+
+// What one finished video was about (ADR 0023): kept so the next writer takes another angle, protagonist and place.
+export const Premise = z.object({
+  schemaVersion: z.literal(1),
+  id: Id, // the run id
+  title: EnglishText(60),
+  premise: EnglishText(500),
+  cast: z.array(Id).max(6),
 });
 
 export type Face = z.infer<typeof Face>;
@@ -184,6 +256,8 @@ export type Set3D = z.infer<typeof Set3D>;
 export type Formula = z.infer<typeof Formula>;
 export type Format = z.infer<typeof Format>;
 export type SeriesBible = z.infer<typeof SeriesBible>;
+export type Icon = z.infer<typeof Icon>;
+export type Premise = z.infer<typeof Premise>;
 
 export const Library = z.object({
   people: z.record(Id, Person),
@@ -197,5 +271,7 @@ export const Library = z.object({
     z.object({ id: Id, file: z.string(), mood: z.array(z.string()), seconds: z.number(), license: z.string() }),
   ),
   sfx: z.record(Id, z.object({ id: Id, file: z.string(), seconds: z.number(), license: z.string() })),
+  icons: z.record(Id, Icon).default({}),
+  premises: z.record(Id, Premise).default({}),
 });
 export type Library = z.infer<typeof Library>;

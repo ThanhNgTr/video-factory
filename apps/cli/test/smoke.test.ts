@@ -18,7 +18,13 @@ afterAll(() => rmSync(tmp, { recursive: true, force: true }));
 
 describe("vf make (fakes)", () => {
   it("produces video.mp4, qa.json and a series bible; a second run is fully cached", async () => {
-    const llm = new FakeLlm({ script: fixture("script.json"), scene: fixture("scene.json") });
+    const llm = new FakeLlm({
+      premises: fixture("premises.json"),
+      script: fixture("script.json"),
+      scene: fixture("scene.json"),
+      "script-review": fixture("script-review.json"),
+      "frame-review": { defects: [] },
+    });
     const w = wire({ llm, tts: new FakeTts(), renderer: new FakeRenderer() });
     const state = new RunState(join(tmp, "state.sqlite"));
     const ctx: StageContext<Deps> = {
@@ -30,11 +36,18 @@ describe("vf make (fakes)", () => {
     expect(ctx.store.exists("video.mp4")).toBe(true);
     expect(ctx.store.readJson("qa.json", Qa).pass).toBe(true);
     expect(ctx.store.exists("thumb.jpg")).toBe(true);
-    expect(llm.calls.map((c) => c.schemaName)).toEqual(["script", "scene"]);
+    expect(llm.calls.map((c) => c.schemaName)).toEqual([
+      "premises",
+      "script",
+      "script-review",
+      "scene",
+      "frame-review",
+    ]);
+    expect(ctx.store.exists("script-review.json") && ctx.store.exists("frame-review.json")).toBe(true);
     expect(state.listStages("smoke").every((s) => s.status === "done")).toBe(true);
 
     await runStages(ctx, state, MAKE);
-    expect(llm.calls).toHaveLength(2); // nothing re-ran
+    expect(llm.calls).toHaveLength(5); // nothing re-ran
     state.close();
   }, 120_000);
 });

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "the-driver",
+  "name": "The Driver",
+  "genre": "monster",
+  "build": {
+    "height": 1.35,
+    "width": 0.85,
+    "head": 0.95,
+    "shape": "lean",
+    "headShape": "oval"
+  },
+  "skin": "#cfd3dc",
+  "hair": {
+    "style": "none",
+    "color": "#111111"
+  },
+  "face": {
+    "eyes": "glow",
+    "brows": "none",
+    "mustache": false,
+    "glasses": false,
+    "grin": true
+  },
+  "outfit": {
+    "top": "uniform",
+    "topColor": "#2a2140",
+    "pants": "#1a1528",
+    "accent": "#c9a227"
+  },
+  "wear": [
+    "cap",
+    "gloves",
+    "long-fingers"
+  ],
+  "voice": {
+    "id": "en-US-RogerNeural",
+    "pitch": "-14Hz",
+    "rate": "-12%"
+  },
+  "personality": "a pale delivery driver who walks in at 3:33 AM every night with an order nobody placed; polite, never blinks"
+}

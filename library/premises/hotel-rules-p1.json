@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "hotel-rules-p1",
+  "title": "Floor Twelve - Part 1",
+  "premise": "You are a temp night housekeeper on your first shift, sent up the service elevator to an empty twelfth floor where every door says Do Not Disturb except Room 1207. The housekeeper (Rosa) gives you three rules: knock three times and walk away if something knocks back twice, never step out if the elevator stops on 13, and never hand a key to any guest, not even a child. She says \"same as last night,\" although it is your first night. Two knocks come from inside 1207, then the raincoat-girl (Lily) a",
+  "cast": [
+    "housekeeper",
+    "raincoat-girl",
+    "tall-guest"
+  ]
+}

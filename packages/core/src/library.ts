@@ -1,7 +1,7 @@
 // Loads library/ once at the composition root. A broken file fails loudly with its path (trust boundary: parse).
 import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import { Action, Format, Formula, type Library, Person, SeriesBible, Set3D } from "@vf/contracts";
+import { Action, Format, Formula, Icon, type Library, Person, Premise, SeriesBible, Set3D } from "@vf/contracts";
 import { z } from "zod";
 import { StageError } from "./errors.ts";
 
@@ -43,5 +43,7 @@ export function loadLibrary(root: string): Library {
     series: loadDir(root, "series", SeriesBible),
     music: loadDir(root, "music", MusicMeta),
     sfx: loadDir(root, "sfx", SfxMeta),
+    icons: loadDir(root, "icons", Icon),
+    premises: loadDir(root, "premises", Premise),
   };
 }

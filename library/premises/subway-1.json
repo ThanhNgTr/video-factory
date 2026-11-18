@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "subway-1",
+  "title": "Don't Count the Passengers - Part 1",
+  "premise": "You, a commuter seen only as a hand with a phone, are on Car 4 of the 3 AM local when it stops in a black tunnel with Ava, trucker Hank and Jay, a quiet busker. A speaker voice says twice: do not count the passengers. The window shows five reflections for four people and adds one more every shot. Hank vanishes and leaves his steaming thermos. Twist: your transit app's rider log shows 3 riders without Ava, and Jay has no reflection.",
+  "cast": [
+    "ava",
+    "trucker",
+    "busker"
+  ]
+}

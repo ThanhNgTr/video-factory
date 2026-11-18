@@ -1,7 +1,7 @@
 // Builds the ffmpeg filter graph for the final mix: speech at its timeline position, music ducked under speech,
 // SFX cues, then loudness normalisation. Pure: returns inputs + filter string, runs nothing.
 export type MixClip = { file: string; startS: number };
-export type MixCue = { file: string; startS: number };
+export type MixCue = { file: string; startS: number; gainDb?: number };
 export type MixPlan = { inputs: string[]; filter: string; outLabel: string };
 
 export function planMix(o: {
@@ -31,7 +31,7 @@ export function planMix(o: {
   const sfxLabels = o.sfx.map((c, i) => {
     const idx = add(c.file);
     parts.push(
-      `[${idx}:a]aresample=48000,aformat=channel_layouts=mono,adelay=${ms(c.startS)}:all=1,volume=-6dB[fx${i}]`,
+      `[${idx}:a]aresample=48000,aformat=channel_layouts=mono,adelay=${ms(c.startS)}:all=1,volume=${c.gainDb ?? -6}dB[fx${i}]`,
     );
     return `[fx${i}]`;
   });

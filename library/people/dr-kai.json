@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "dr-kai",
+  "name": "Dr. Kai",
+  "genre": "people",
+  "build": {
+    "height": 1.0,
+    "width": 1.0,
+    "head": 1.15,
+    "shape": "soft",
+    "headShape": "round"
+  },
+  "skin": "#d9a37e",
+  "hair": {
+    "style": "short",
+    "color": "#26222b"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "glasses": true,
+    "iris": "#2f6fdb"
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#f4f6f8",
+    "pants": "#2b2d42",
+    "accent": "#1fa3a3",
+    "inner": "#1fa3a3"
+  },
+  "wear": [
+    "badge"
+  ],
+  "voice": {
+    "id": "en-US-SteffanNeural",
+    "pitch": "+0Hz",
+    "rate": "+2%"
+  },
+  "personality": "A cheerful scientist who explains anything with a grin and a wild comparison, and gets visibly excited when the numbers get huge."
+}

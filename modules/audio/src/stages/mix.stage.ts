@@ -1,13 +1,16 @@
 import { Audio, Scene, Timeline } from "@vf/contracts";
 import { ffmpeg, ffmpegInfo, mediaSeconds, StageError } from "@vf/core";
 import { stage } from "@vf/pipeline";
-import { planMix } from "../domain/mix-plan.ts";
+import { type MixCue, planMix } from "../domain/mix-plan.ts";
 import type { AudioDeps } from "../ports.ts";
+
+// levels of the picture's sound cues, dB (the director's story cues play at -6)
+const CUE_GAIN: Record<string, number> = { tick: -12, ticks: -15, pop: -9, whoosh: -15, thud: -8, ding: -9 };
 
 // Final soundtrack: speech placed by the timeline, music ducked under it, SFX cues, -14 LUFS.
 export const audioMix = stage<AudioDeps>({
   name: "audio.mix",
-  version: 1,
+  version: 2, // + the picture's sound cues; music set a fixed distance under the measured speech
   inputs: ["scene.json", "audio.json", "timeline.json"],
   outputs: ["mix.wav", "mix.json"],
   run: async (ctx) => {
@@ -21,7 +24,7 @@ export const audioMix = stage<AudioDeps>({
       return s?.speechFrom === undefined ? [] : [{ file: ctx.store.path(c.file), startS: s.speechFrom / fps }];
     });
     const libDir = ctx.config.libraryDir;
-    const sfx = scene.shots.flatMap((shot) => {
+    const sfx: MixCue[] = scene.shots.flatMap((shot) => {
       const s = byShot.get(shot.id);
       if (!s) return [];
       return shot.sfx.flatMap((cue) => {
@@ -29,13 +32,29 @@ export const audioMix = stage<AudioDeps>({
         return meta ? [{ file: `${libDir}/sfx/${meta.file}`, startS: s.from / fps + cue.at }] : [];
       });
     });
+    // the picture's own sounds (video.timeline), quieter than the director's story cues
+    for (const cue of tl.cues) {
+      const meta = ctx.library.sfx[cue.id];
+      if (meta)
+        sfx.push({ file: `${libDir}/sfx/${meta.file}`, startS: cue.frame / fps, gainDb: CUE_GAIN[cue.id] ?? -12 });
+    }
     const wanted = scene.music?.mood ?? scene.mood;
     const track =
       Object.values(ctx.library.music).find((m) => m.mood.includes(wanted)) ?? Object.values(ctx.library.music)[0];
     const totalS = tl.totalFrames / fps;
+    // music sits musicDuckDb under the narration whatever level its file was made at (a quiet pad came out inaudible)
+    const musicFile = track ? `${libDir}/music/${track.file}` : "";
+    // (silent fake speech in tests measures -70: then the usual level of narration stands in)
+    const measured = speech[0] ? await measureLufs(speech[0].file) : Number.NaN;
+    const speechLufs = Number.isFinite(measured) && measured > -50 ? measured : -20;
+    const musicLufs = track ? await measureLufs(musicFile) : Number.NaN;
+    const musicGain =
+      Number.isFinite(speechLufs) && Number.isFinite(musicLufs)
+        ? Math.round((speechLufs + ctx.config.audio.musicDuckDb - musicLufs) * 10) / 10
+        : ctx.config.audio.musicDuckDb;
     const plan = planMix({
       speech,
-      music: track ? { file: `${libDir}/music/${track.file}`, gainDb: ctx.config.audio.musicDuckDb } : undefined,
+      music: track ? { file: musicFile, gainDb: musicGain } : undefined,
       sfx,
       totalS,
       targetLufs: ctx.config.audio.targetLufs,

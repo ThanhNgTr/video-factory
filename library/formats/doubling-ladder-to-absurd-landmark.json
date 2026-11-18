@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "doubling-ladder-to-absurd-landmark",
+  "kind": "explainer",
+  "lengthS": {
+    "min": 45,
+    "max": 60
+  },
+  "beats": {
+    "min": 7,
+    "max": 10
+  },
+  "maxSpokenChars": 530,
+  "rules": [
+    "Hook in the first 3 seconds: show a cartoon character doing one tiny everyday action while a big counter jumps from 1 to N, then cut to a giant text card with 'N times' and a stacked all-caps question ('HOW TALL?', 'HOW MUCH?'). By second 7 the narrator gives the absurd answer and the picture shows the start object next to the far landmark. Give the answer before any proof.",
+    "Pick a start object with a tiny, familiar base size and a process that doubles (or grows by one fixed factor) each step. Choose N so the last step lands close to a real, famous landmark value, and check the math before you write a line.",
+    "Right after the answer, the host character reacts in a simple room set with one short line that promises an easy proof ('no equations, promise'). After that the narrator carries every number; the host comes back only for short reactions.",
+    "Build: a numbered list of steps fills the frame and the first 8-10 values appear one per beat of speech, in quick rhythm. At the step-10 value, cut to the host holding the object up and undersell it ('not so much') to set a low expectation on purpose.",
+    "Twist: show the shortcut as a curved arrow from step 1 to step 11 labeled '1000x' (10 doublings is about 1,024x). Then jump ten steps at a time, one arrow and one new value per jump, and switch to a bigger unit (mm to m to km) as soon as the number gets long.",
+    "Change the picture at least every 2-3 seconds. Every decade jump cuts to a side-by-side or log-scale bar of the object next to a familiar landmark of that size (a tree, a skyscraper, the edge of space), then back to the list. Keep a HUD counter showing the current step the whole time.",
+    "Payoff: write the last one or two single steps in by hand so the value lands exactly on the target promised in the hook, then return to the opening landmark shot, now with the object spanning the full distance. End on one short confirming line that matches the hook so the video loops, plus an end-card vote ('Did you believe it?').",
+    "Tone: hype and informal, a friend amazed at a fact ('mind blown', 'that's insane'), short sentences, no jargon, no formulas on screen beyond 'x2' and '1000x'. Say numbers the way people read them aloud.",
+    "In every line wrap 1-3 key words in *asterisks* (they render highlighted). No emoji."
+  ],
+  "defaultMood": "bright",
+  "rubric": [
+    {
+      "id": "accurate",
+      "check": "Every number, unit and fact is correct and the arithmetic checks out; rounding is honest.",
+      "must": true
+    },
+    {
+      "id": "answer-first",
+      "check": "The absurd final answer and its landmark are stated and shown within the first 8 seconds, before any of the doubling steps.",
+      "must": true
+    },
+    {
+      "id": "shortcut-reveal",
+      "check": "The script names one simple mental shortcut (such as 10 doublings is about 1000x), shows it as a labeled jump, and reuses it at least twice to skip ahead.",
+      "must": true
+    },
+    {
+      "id": "landmark-ladder",
+      "check": "At least two in-between values are tied to familiar real landmarks of matching size, each shown as a visual comparison, growing in scale toward the final target.",
+      "must": true
+    },
+    {
+      "id": "deliberate-undersell",
+      "check": "Partway through, the script plays down a modest midpoint value before the shortcut reveal makes the growth explode.",
+      "must": false
+    },
+    {
+      "id": "exact-landing",
+      "check": "The last step is written out on its own and lands on the exact number promised in the hook, and the final shot mirrors the opening answer shot.",
+      "must": false
+    }
+  ]
+}

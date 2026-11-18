@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "lean-in",
+  "dur": 0.7,
+  "loop": false,
+  "keys": [
+    {
+      "t": 0,
+      "rot": 0,
+      "armL": 20,
+      "armR": 20
+    },
+    {
+      "t": 0.6,
+      "x": 0.12,
+      "rot": -9,
+      "armL": 25,
+      "armR": 40
+    },
+    {
+      "t": 1,
+      "x": 0.1,
+      "rot": -7,
+      "armL": 24,
+      "armR": 38
+    }
+  ]
+}

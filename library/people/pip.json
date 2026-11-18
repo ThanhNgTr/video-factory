@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "pip",
+  "name": "Pip",
+  "genre": "people",
+  "build": {
+    "height": 0.72,
+    "width": 0.85,
+    "head": 1.4,
+    "shape": "lean",
+    "headShape": "round"
+  },
+  "skin": "#f2c7a5",
+  "hair": {
+    "style": "bun",
+    "color": "#f26b1d"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": true,
+    "grin": false
+  },
+  "outfit": {
+    "top": "hoodie",
+    "topColor": "#1fb5a8",
+    "pants": "#2b2d42",
+    "accent": "#ff9f1c",
+    "pattern": "stripes"
+  },
+  "wear": [
+    "gloves"
+  ],
+  "voice": {
+    "id": "en-US-AnaNeural",
+    "pitch": "+4Hz",
+    "rate": "+10%"
+  },
+  "personality": "A ten-year-old inventor who talks fast, fixes everything with tape, and is sure every plan will work the first time."
+}

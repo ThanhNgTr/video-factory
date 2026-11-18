@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "pajama-kid",
+  "name": "Theo",
+  "genre": "people",
+  "build": {
+    "height": 0.7,
+    "width": 0.85,
+    "head": 1.2,
+    "shape": "round",
+    "headShape": "round"
+  },
+  "skin": "#f1c9a5",
+  "hair": {
+    "style": "messy",
+    "color": "#c9853c"
+  },
+  "face": {
+    "eyes": "big",
+    "brows": "thin",
+    "mustache": false,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "tshirt",
+    "topColor": "#f3dc8a",
+    "pants": "#f3dc8a",
+    "accent": "#5a7fcf",
+    "pattern": "stars"
+  },
+  "wear": [],
+  "voice": {
+    "id": "en-US-AnaNeural",
+    "pitch": "+0Hz",
+    "rate": "-5%"
+  },
+  "personality": "a small boy in pajamas who walks in alone at 2 AM and asks for pancakes; polite, already knows your name"
+}

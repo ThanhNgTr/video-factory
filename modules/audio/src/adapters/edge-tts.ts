@@ -5,8 +5,9 @@ import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from
 import { join } from "node:path";
 import { promisify } from "node:util";
 import { type Voice, Word } from "@vf/contracts";
-import { mediaSeconds, StageError, sha256 } from "@vf/core";
+import { ffmpeg, ffmpegInfo, mediaSeconds, StageError, sha256 } from "@vf/core";
 import { z } from "zod";
+import { keptSpans, parseSilences, planCuts, shiftWords } from "../domain/silence.ts";
 import type { TtsProvider, TtsResult } from "../ports.ts";
 
 const run = promisify(execFile);
@@ -63,8 +64,31 @@ export class EdgeTts implements TtsProvider {
       }
       writeFileSync(cachedJson, stdout);
     }
-    copyFileSync(cachedMp3, outFile);
     const { words } = Out.parse(JSON.parse(readFileSync(cachedJson, "utf8")));
-    return { file: outFile, seconds: await mediaSeconds(outFile), words };
+    // the cache keeps the raw clip; the artifact gets edge-tts's long pauses cut down (see domain/silence.ts)
+    const total = await mediaSeconds(cachedMp3);
+    const log = await ffmpegInfo(["-i", cachedMp3, "-af", "silencedetect=n=-40dB:d=0.3", "-f", "null", "-"]);
+    const cuts = planCuts(parseSilences(log, total), total);
+    if (cuts.length) {
+      const keep = keptSpans(cuts, total);
+      const trims = keep.map(
+        (k, i) => `[0:a]atrim=${k.start.toFixed(3)}:${k.end.toFixed(3)},asetpts=PTS-STARTPTS[k${i}]`,
+      );
+      const graph = `${trims.join(";")};${keep.map((_, i) => `[k${i}]`).join("")}concat=n=${keep.length}:v=0:a=1[out]`;
+      await ffmpeg([
+        "-i",
+        cachedMp3,
+        "-filter_complex",
+        graph,
+        "-map",
+        "[out]",
+        "-c:a",
+        "libmp3lame",
+        "-q:a",
+        "4",
+        outFile,
+      ]);
+    } else copyFileSync(cachedMp3, outFile);
+    return { file: outFile, seconds: await mediaSeconds(outFile), words: shiftWords(words, cuts) };
   }
 }

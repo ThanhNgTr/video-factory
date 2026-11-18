@@ -1,15 +1,23 @@
-# @vf/assets — B. characters and sets
+# @vf/assets — B. characters, sets and icons
 
-Owns the look: block characters, sets with named spots, the action engine, and the reference check.
+Owns the look: characters, sets with named spots, the action engine, icons Claude draws, and the reference check.
 
-| Stage          | Reads                 | Writes                                              |
-| -------------- | --------------------- | --------------------------------------------------- |
-| `assets.check` | `scene.json`, library | `assets.json` (people, actions, sets used, inlined) |
+| Stage           | Reads                                               | Writes                                                     |
+| --------------- | --------------------------------------------------- | ---------------------------------------------------------- |
+| `assets.design` | `script.json`, library people and sets              | `designs.json` (characters and sets designed for this run) |
+| `assets.draw`   | `scene.json`, library icons                         | `icons.json` (icons drawn for this run, and the left-out)  |
+| `assets.check`  | `scene.json`, `icons.json`, `designs.json`, library | `assets.json` (people, actions, sets, icons used, inlined) |
+
+- `assets.draw` (ADR 0017): for every icon `scene.json` declares that `library/icons` lacks, Claude writes an SVG (`prompts/draw.md`), `checkSvg` holds it to an allowlist, the `Rasterizer` port (`FfmpegRasterizer`, librsvg) makes a PNG, a blind viewer names it (`prompts/guess.md`) and a gate scores it (`prompts/gate.md`). Under 7 it is redrawn from the defects, at most 3 times; a failed icon is left out. `vf make` copies passed icons into `library/icons/` at the end of the run. Models: `models.draw`, `models.gate`.
+- `assets.design` (ADR 0018): characters the script describes in `newCast`, and places a scout finds missing (not for a series, not for a narrator over graphics), are written by Claude as `Person` / `Set3D` data (`prompts/person.md`, `set.md`, `scout.md`), checked (`checkSetDesign`), pictured through the `Snapshot` port (wired in `apps/cli/src/snapshot.ts` to the video compositions) and scored by a gate (`prompts/design-gate.md`); under 7 they are redesigned from the defects, at most 3 rounds, keeping the best. `vf make` copies them into `library/people` and `library/sets` at the end of the run.
+- Knees and postures (ADR 0019): `kneeL`/`kneeR` fold the shin; `Action.posture` sit/lie rest the body on a spot's `seat` (`bodyLift`, also used by the camera). Actions `sit`, `sit-talk`, `lie`, `sleep`, `kneel`, `crouch`. Check one: `pnpm vf preview trucker --action sit`.
+- Characters hold built-in items or any icon (`holds`): `Character2D` draws an icon from its SVG as a texture, decoded up front by `<IconsReady>` around the 3D canvas (`render/iconTexture.ts`). Check one: `pnpm vf preview night-cook --holds paper-sheet --action hold-up`.
+- `assets.check` fingerprints the library parts it inlines, so an edited character, set or icon reaches existing runs on their next resume.
 
 - `src/render/` is the only part another module may import (`@vf/assets/render`, used by `@vf/video`): `Character`, `SetView`, `blocks`, `samplePose`.
 - Render code is a pure function of props; randomness comes from the caller (seeded).
 - Library data: `library/people`, `library/actions`, `library/sets` (each set has `spots`). Migrated from the demo by `tools/migrate-legacy.ts`.
-- 2D variant (branch `feat/2d-characters`, ADR 0010): `Character2D.tsx` draws the same people as vector cards; it also draws held items (`holds`), drips (`drip`) and gloves.
+- 2D variant (branch `feat/2d-characters`, ADR 0010, 0013): `Character2D.tsx` draws the same people as vector cards with front, turned (3/4) and back views, dark outlines, elbows, letter-based visemes (`mouthOpen`/`mouthWide`), glances (`look`), head tilt and hair sway; it also draws held items (`holds`: card, key, phone, towel, bag, coffee, bear), drips (`drip`), gloves, patterns (`outfit.pattern`), name tags and long fingers. Leads can have a coloured iris (`face.iris`), lashes, blush, ponytail / bob / curly hair and an open coat or hoodie over an inner shirt (`outfit.inner`); all optional, so older characters draw as before (`prompts/person.md` v4 tells the designer). Body and head silhouettes come from `build.shape` / `build.headShape`.
 - Add a character/set/action = add a JSON file; the schema in `@vf/contracts` validates it on load.
 - Look at a character: `pnpm vf preview <personId> [--face shock] [--action talk]` writes `runs/previews/<id>.png` (three angles + head close-up). Iterate on `src/render/Character.tsx` with it.
 - Look: soft toon, no outline (ADR 0006, back by ADR 0008 for render speed). `blocks.tsx` holds the primitives (rounded box, sphere, capsule, lathe, tube, torus arc, plate, dome) and the toon `Paint`; parts still carry a surface kind (`m="skin" | "cloth" | "eye" | "matte"`) so the physical look of ADR 0007 can return by changing `Paint` alone. Geometry is cached by parameters; mesh density is tuned for CPU render time.

@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "captain-lou",
+  "name": "Captain Lou",
+  "genre": "people",
+  "build": {
+    "height": 1.05,
+    "width": 1.25,
+    "head": 1.05,
+    "shape": "soft",
+    "headShape": "round"
+  },
+  "skin": "#e8b99a",
+  "hair": {
+    "style": "short",
+    "color": "#f1f1f1"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "coat",
+    "topColor": "#1d3557",
+    "pants": "#14213d",
+    "accent": "#f4f1ea",
+    "pattern": "none"
+  },
+  "wear": [
+    "cap"
+  ],
+  "voice": {
+    "id": "en-US-ChristopherNeural",
+    "pitch": "-6Hz",
+    "rate": "-6%"
+  },
+  "personality": "A retired ferry captain who tells every story as a storm at sea, laughs at his own jokes, and never admits he is lost."
+}

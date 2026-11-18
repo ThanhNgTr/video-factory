@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "big-marv",
+  "name": "Marv",
+  "genre": "people",
+  "build": {
+    "height": 1.3,
+    "width": 1.5,
+    "head": 0.9,
+    "shape": "square",
+    "headShape": "square"
+  },
+  "skin": "#8d5a3b",
+  "hair": {
+    "style": "bald-sides",
+    "color": "#1a1412"
+  },
+  "face": {
+    "eyes": "dot",
+    "brows": "bushy",
+    "mustache": true,
+    "glasses": false,
+    "grin": false
+  },
+  "outfit": {
+    "top": "uniform",
+    "topColor": "#1f3a68",
+    "pants": "#16233d",
+    "accent": "#f2b632",
+    "pattern": "none"
+  },
+  "wear": [
+    "badge",
+    "gloves"
+  ],
+  "voice": {
+    "id": "en-US-RogerNeural",
+    "pitch": "-12Hz",
+    "rate": "-8%"
+  },
+  "personality": "A giant night security guard who speaks slowly and softly, takes every rule very seriously, and is secretly afraid of the dark."
+}
